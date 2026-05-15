@@ -1,34 +1,42 @@
-\documentclass[12pt,a4paper]{article}
+%% Q14 — Fermionic Matter and Chirality from Projective Dirac Admissibility
+%% Cosmochrony programme, Q-series paper 14
+%% J. Beau, 2026
+
+\documentclass[11pt,a4paper]{article}
 
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage{natbib}
 \usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.8cm,right=2.8cm}
 \usepackage{microtype}
-\usepackage{booktabs}
-\usepackage{array}
+\usepackage{mathtools}
 \usepackage{doi}
 
-\geometry{margin=2.5cm}
-
+%% Theorem environments
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 
-\hypersetup{
-  colorlinks=true,
-  linkcolor=blue,
-  citecolor=blue,
-  urlcolor=blue
-}
+%% Math operators
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Mult}{Mult}
 
-\title{}
+\title{Fermionic Matter and Chirality\\
+from Projective Dirac Admissibility}
 
-\author{J.\ Beau\\
+\author{J\'er\^ome Beau\\[4pt]
 \small Independent Researcher, France\\
 \small \texttt{jerome.beau@cosmochrony.org}}
 
@@ -39,9 +47,1211 @@
   \maketitle
 
   \begin{abstract}
+    The preceding gauge--gravity synthesis of the Cosmochrony programme showed that
+    gravity and Yang--Mills dynamics arise from the $a_2$ and $a_4$ Seeley--DeWitt
+    responses of the same admissible spectral functional.
+    The present paper extends this principle to the fermionic sector.
+    Fermions are not introduced as external matter fields.
+    They arise as the spinorial face of the Weil module already forced by non-injective
+    admissibility, once its metaplectic Lie-algebraic structure is complexified by the
+    Lorentzian metric established in the geometric branch of the programme.
+
+    Three structural results are proved.
+    First, the admissible Weil module $V_\rho$ induces, through its metaplectic lift
+    and the Lorentzian complexification
+    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
+    an admissible spinor bundle $S_\Pi$ whose symmetric and determinant tensor sectors
+    reproduce the $SU(2)_L \times U(1)_Y$ electroweak bundle structure.
+    Second, the projected Dirac operator $\mathcal{D}_{\Pi,g,A}$ contains a canonical
+    zero-order endomorphism $E_\Pi$, the internal spectral residue of non-injective
+    projection.
+    Under the spinorial lift of BI parity (Hypothesis~\ref{hyp:spinorial-bi-lift}),
+    $E_\Pi$ is left-admissible and produces the $V{-}A$ chiral structure.
+    The $\gamma_5$-weighted $a_4$ coefficient of $\mathcal{D}_{\Pi,g,A}^2$ then imposes
+    anomaly-cancellation trace constraints on the hypercharge weights, which are thereby
+    not free parameters but spectral coherence data.
+    Third, the admissible saturation invariant $\sigma_c(n_3) = 3$ admits a spinorial
+    multiplicity reading, distinct from its geometric reading as three spatial directions,
+    yielding a gauge-singlet three-generation factor
+    $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{SU(2)} \oplus Y)$.
+    The colour-coupled quark sector is obtained by tensoring with the colour module
+    $V_{\mathrm{color}}$, conditional on hypothesis~[H-color].
   \end{abstract}
 
+  \medskip
+  \noindent\textbf{Keywords:}
+  admissible spinor bundle;
+  metaplectic lift;
+  non-injective projection;
+  Weil representation;
+  projected Dirac operator;
+  chiral selection;
+  hypercharge rigidity;
+  generation multiplicity;
+  spectral anomaly cancellation;
+  Cosmochrony
+
+  \newpage
+  \tableofcontents
+
+  \newpage
+  \section{Introduction}
+    \label{sec:introduction}
+
+    \subsection{Position of the problem}
+      \label{ssec:position}
+
+      The preceding papers of the programme establish the bosonic spectral stratification
+      of admissible non-injective projection.
+      The Gravity trilogy~\cite{Beau2026h,Beau2026q12,Beau2026q13} identifies the
+      Seeley--DeWitt level as the organising principle of emergent interactions:
+      the horizontal $a_2$ response yields the Einstein sector, the vertical $a_4$
+      response yields the Yang--Mills sector, and the $a_6$ coefficient encodes the
+      leading mixed gauge--gravity coupling.
+      What lies outside this bosonic synthesis is the fermionic sector: the structural
+      origin of spinors, chirality, the distribution of hypercharge, and the generation
+      multiplicity.
+
+      The purpose of the present paper is to show that fermions need not be introduced
+      as external matter fields added to the admissible bundle.
+      They arise as the spinorial face of the Weil module already forced by non-injective
+      admissibility, once its metaplectic lift is interpreted through the Lorentzian
+      geometry closed in the geometric branch of the programme~\cite{Beau2026q11}.
+
+    \subsection{Main structural chain}
+      \label{ssec:chain}
+
+      The structural chain studied in this paper is
+      \begin{equation}
+        \label{eq:main-chain}
+        \Pi
+        \;\Rightarrow\;
+        F_n \simeq V_\rho
+        \;\Rightarrow\;
+        Mp(2,\mathbb{R})
+        \;\Rightarrow\;
+        \mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})
+        \;\leadsto\;
+        Spin(3,1) \simeq SL(2,\mathbb{C})
+        \;\Rightarrow\;
+        S_\Pi .
+      \end{equation}
+      The identification $F_n \simeq V_\rho$ is the Weil-module characterisation of the
+      admissible fibre, established from axioms A1--A3 and the Stone--von Neumann theorem
+      in~\cite{Beau2026m,Beau2026HeisenbergStructure}.
+      The passage to $Mp(2,\mathbb{R})$ is the metaplectic lift of the symplectic structure
+      canonically carried by $V_\rho$.
+      The Lorentzian closure of the effective metric forces the complexification
+      $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
+      whose Lorentzian integration is the spin group $Spin(3,1) \simeq SL(2,\mathbb{C})$,
+      yielding the admissible spinor bundle $S_\Pi$.
+
+      The tensor functors of $S_\Pi$ then define the electroweak bundle data:
+      \begin{equation}
+        \label{eq:tensor-functors}
+        \operatorname{Sym}^2(S_\Pi) \;\Rightarrow\; \operatorname{ad}_{\mathbb{C}}(P_\Pi),
+        \qquad
+        \wedge^2(S_\Pi) \;\Rightarrow\; L_Y .
+      \end{equation}
+      The symmetric sector gives the complex adjoint; after selecting the compact real
+      form, it defines the $SU(2)_L$ gauge sector.
+      The determinant line $L_Y = \wedge^2(S_\Pi)$ is the geometric support of the
+      $U(1)_Y$ factor.
+      The distribution of hypercharge weights $Y_R$ is not assumed: it is constrained
+      by requiring that the projected spectral functional
+      $S_\Pi[g, A, \mathcal{D}_{\Pi,g,A}]$ be invariant under $U(1)_Y$ gauge
+      transformations.
+
+    \subsection{Three modular results}
+      \label{ssec:results}
+
+      The paper is organised around three independent but compatible results.
+
+      \paragraph{Theorem~A (Spinorial electroweak bundle).}
+        The admissible Weil module $V_\rho$ induces, via the metaplectic lift and
+        Lorentzian complexification, a $Spin(3,1)$ spinor bundle $S_\Pi$.
+        Its symmetric and determinant tensor sectors reproduce the $SU(2)_L \times U(1)_Y$
+        electroweak bundle structure (equations~\eqref{eq:tensor-functors}).
+        This result is algebraic and functorial; it depends on the Lorentzian closure
+        of~\cite{Beau2026q11} for the complexification step.
+
+      \paragraph{Theorem~B (Chiral selection and hypercharge rigidity).}
+        The projected Dirac operator satisfies the Lichnerowicz-type identity
+      \begin{equation}
+        \label{eq:lichnerowicz}
+        \mathcal{D}_{\Pi,g,A}^2
+        = -(\nabla^{S,A})^2
+        + \frac{R}{4}
+        + \frac{1}{2}\gamma^\mu\gamma^\nu F^a_{\mu\nu} T^a_R
+        + E_\Pi ,
+        \end{equation}
+        where $E_\Pi$ is the internal spectral residue of non-injective projection in the
+        spinorial sector.
+        The term $E_\Pi$ is responsible for chiral selection $P_L S_\Pi$, for the
+        $V{-}A$ structure of weak couplings, and for the spectral coherence conditions
+        constraining the hypercharge assignments $Y_R$ via anomaly cancellation.
+        This result is spectral and variational; it depends on the gauge sector
+        of~\cite{Beau2026q6a,Beau2026q12} and on the gauge--gravity synthesis
+        of~\cite{Beau2026q13} for the coupling of the Dirac sector to the joint spectral
+        geometry.
+
+      \paragraph{Theorem~C (Generation multiplicity).}
+        The admissible saturation invariant $\sigma_c(n_3) = 3$~\cite{Beau2026a27}
+        admits two functorially distinct readings of the same rank-three admissible
+        invariant.
+        In the geometric branch it yields the three effective spatial directions
+        (established in~\cite{Beau2026q5b,Beau2026q11}).
+        In the spinorial branch it yields a gauge-singlet generation space
+      \begin{equation}
+        \label{eq:generation-space}
+        \mathbb{C}^3_{\mathrm{gen}}
+        \;\subset\;
+        \ker\!\left(\operatorname{ad}_{SU(2)} \oplus Y\right),
+        \end{equation}
+        which is not identified with $\operatorname{Sym}^2(S_\Pi)$.
+        The three-generation structure is a separate functorial image of the same
+        admissible rank-three invariant, and
+        $\mathbb{R}^3_{\mathrm{space}} \neq \mathbb{C}^3_{\mathrm{gen}}$ is established
+        explicitly in Section~\ref{sec:generations}.
+        This result is combinatorial and representational; it depends on~\cite{Beau2026a27}.
+
+  \subsection{Conditional status and dependencies}
+    \label{ssec:status}
+
+    The full matter content targeted by the construction is
+    \begin{equation}
+      \label{eq:matter-content}
+      S_\Pi^{\mathrm{matter}}
+      = \bigl(S_\Pi \oplus (S_\Pi \otimes V_{\mathrm{color}})\bigr)
+      \otimes \mathbb{C}^3_{\mathrm{gen}},
+    \end{equation}
+    where $V_{\mathrm{color}} \in \mathrm{Rep}(SU(3))$.
+    The following status distinctions apply throughout the paper.
+    The electroweak spinorial sector is structural once Theorem~A is established.
+    The colour-coupled quark bundle $S_\Pi \otimes V_{\mathrm{color}}$ is conditional
+    on hypothesis~[H-color], as inherited from~\cite{Beau2026a35,Beau2026a36}.
+    The hypercharge rigidity of Theorem~B and the generation multiplicity of
+    Theorem~C are proved below; they are not assumed as inputs.
+
+    The only additional technical condition used in the fermionic sector is the
+    spinorial lift of BI parity.
+    It is isolated as Hypothesis~\ref{hyp:spinorial-bi-lift}; all subsequent uses of
+    chirality and $V{-}A$ depend on this explicitly stated condition.
+
+    This paper depends simultaneously on four layers of the programme: the admissible
+    Weil fibre structure (Foundation, HeisenbergStructure, O-series); the closed
+    Lorentzian geometry (Q5b through Q11); the gauge connection (Q6a, Q12); and the
+    gauge--gravity synthesis (Q13, Gravity~3.0).
+    It is accordingly the first paper of the Q-series whose construction depends on
+    the simultaneous use of all four layers.
+
+  \subsection{Organisation}
+    \label{ssec:organisation}
+
+    Section~\ref{sec:metaplectic} constructs the metaplectic lift and the admissible
+    spinor bundle $S_\Pi$, proving Theorem~A.
+    Section~\ref{sec:dirac} defines the projected Dirac operator, identifies $E_\Pi$
+    as the spectral residue of non-injective projection in the spinorial sector, and
+    proves the chiral selection result of Theorem~B.
+    Section~\ref{sec:anomaly} derives the hypercharge rigidity from spectral anomaly
+    cancellation.
+    Section~\ref{sec:generations} establishes the spinorial multiplicity reading of
+    $\sigma_c(n_3) = 3$ and proves Theorem~C.
+    Section~\ref{sec:colour} discusses the colour-coupled quark sector and its
+    conditional status under~[H-color].
+    Section~\ref{sec:conclusion} summarises the results and identifies the remaining
+    open directions.
+
+    \newpage
+  \section{Metaplectic Lift and the Admissible Spinor Bundle}
+  \label{sec:metaplectic}
+
+  \subsection{From the Weil module to the metaplectic lift}
+    \label{ssec:weil-metaplectic}
+
+    The admissible fibre $F_n$ has been identified with the Weil module $V_\rho$ of
+    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ from the axioms A1--A3 and the
+    Stone--von Neumann theorem~\cite{Beau2026m,Beau2026HeisenbergStructure}.
+    This identification is not merely a representation-theoretic convenience.
+    The Weil module carries the canonical symplectic structure associated with the
+    Heisenberg commutator.
+    Consequently, the automorphisms preserving the admissible commutator act through
+    the metaplectic lift:
+    \[
+      F_n \simeq V_\rho
+      \quad\Rightarrow\quad
+      Mp(2,\mathbb{R}).
+    \]
+    The passage to $Mp(2,\mathbb{R})$ is therefore structural: it is the double cover
+    naturally associated with the symplectic action underlying the Weil representation.
+
+  \subsection{Lorentzian complexification}
+    \label{ssec:lorentzian-complexification}
+
+    The metaplectic lift is initially real and symplectic.
+    The effective geometry closed in the geometric branch is Lorentzian: the effective
+    co-metric established in~\cite{Beau2026q11} satisfies
+    \[
+      g^{\mu\nu} = 2\eta^{\mu\nu}.
+    \]
+    The relevant spin group is therefore not the compact group $SU(2)$, but
+    $Spin(3,1) \simeq SL(2,\mathbb{C})$.
+
+    The Lorentzian closure does not require an independent postulate of a spin group.
+    It complexifies the real metaplectic Lie algebra:
+    \begin{equation}
+      \label{eq:metaplectic-complexification}
+      \mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C}).
+    \end{equation}
+    The Lorentzian spin group integrating this complexified algebra is
+    \begin{equation}
+      \label{eq:spin-group-lorentzian}
+      Spin(3,1) \simeq SL(2,\mathbb{C}).
+    \end{equation}
+    This defines the admissible spinor bundle $S_\Pi$ as the associated bundle
+    carrying the fundamental $SL(2,\mathbb{C})$ spin representation.
+
+  \subsection{The admissible spin frame bundle}
+    \label{ssec:spin-frame-bundle}
+
+    Let $P_\Pi$ denote the principal $Spin(3,1)$-bundle obtained from the Lorentzian
+    complexification of the metaplectic lift.
+    The admissible spinor bundle is
+    \[
+      S_\Pi = P_\Pi \times_{Spin(3,1)} \mathbb{C}^2 .
+    \]
+    The construction is projective: $P_\Pi$ is not postulated as an independent spin
+    frame bundle over a pre-existing manifold.
+    It is induced from the Weil fibre through the metaplectic lift and the Lorentzian
+    closure of the effective metric.
+
+  \subsection{Electroweak tensor sectors}
+    \label{ssec:electroweak-tensors}
+
+    The tensor functors of $S_\Pi$ define the electroweak bundle data.
+    The symmetric square gives the complex adjoint sector:
+    \begin{equation}
+      \label{eq:sym2-adjoint}
+      \operatorname{Sym}^2(S_\Pi) \simeq \operatorname{ad}_{\mathbb{C}}(P_\Pi).
+    \end{equation}
+    Equivalently, fibrewise,
+    \begin{equation}
+      \label{eq:sym2-fibre}
+      \operatorname{Sym}^2(\mathbb{C}^2) \simeq \mathfrak{sl}_2(\mathbb{C}).
+    \end{equation}
+    The Hermitian structure inherited from the admissible Weil module selects the
+    compact real form
+    \[
+      \mathfrak{su}(2) \subset \mathfrak{sl}_2(\mathbb{C}),
+    \]
+    and hence the $SU(2)_L$ gauge sector.
+
+    The antisymmetric square gives the determinant line:
+    \[
+      \wedge^2(S_\Pi) = L_Y .
+    \]
+    This line is the geometric support of the $U(1)_Y$ factor.
+    It fixes the existence of the hypercharge line, while the distribution of
+    hypercharge weights is constrained by spectral anomaly cancellation in
+    Section~\ref{sec:anomaly}.
+
+    \begin{theorem}[Spinorial electroweak bundle]
+      \label{thm:spinorial-electroweak-bundle}
+      The admissible Weil module $V_\rho$ induces, through its metaplectic lift and
+      the Lorentzian complexification forced by the effective metric~\cite{Beau2026q11},
+      an admissible spinor bundle $S_\Pi$.
+      Its tensor sectors satisfy
+      \[
+        \operatorname{Sym}^2(S_\Pi) \simeq \operatorname{ad}_{\mathbb{C}}(P_\Pi),
+        \qquad
+        \wedge^2(S_\Pi) = L_Y .
+      \]
+      After selection of the compact real form, these define the
+      $SU(2)_L \times U(1)_Y$ electroweak bundle data.
+    \end{theorem}
+
+    \begin{proof}
+      The identification $F_n \simeq V_\rho$ gives the admissible fibre the canonical
+      symplectic structure of the Weil representation~\cite{Beau2026m,Beau2026HeisenbergStructure}.
+      The automorphisms preserving this structure lift to $Mp(2,\mathbb{R})$.
+      The Lorentzian metric $g^{\mu\nu} = 2\eta^{\mu\nu}$~\cite{Beau2026q11} forces the
+      complexification $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
+      whose Lorentzian integration is $Spin(3,1) \simeq SL(2,\mathbb{C})$.
+      The associated fundamental bundle is $S_\Pi$.
+      The fibrewise identities
+      \[
+        \operatorname{Sym}^2(\mathbb{C}^2) \simeq \mathfrak{sl}_2(\mathbb{C}),
+        \qquad
+        \wedge^2(\mathbb{C}^2) \simeq \det(\mathbb{C}^2)
+      \]
+      give the complex adjoint sector and the determinant line.
+      The Hermitian admissibility structure selects the compact real form $\mathfrak{su}(2)$,
+      while the determinant line gives $L_Y$.
+    \end{proof}
+
+    Fermions arise from the spinorial interpretation of the Weil module after the
+    Lorentzian complexification of its metaplectic Lie-algebraic structure.
+
+  \section{The Projected Dirac Operator and the Projective Endomorphism}
+  \label{sec:dirac}
+
+  The preceding section constructs the admissible spinor bundle $S_\Pi$.
+  We now define the Dirac operator carried by this bundle, isolate the endomorphism
+  induced by non-injective projection, and establish its role in chiral selection.
+
+  \subsection{The minimal spin--gauge Dirac operator}
+    \label{ssec:minimal-dirac}
+
+    Let $\nabla^{S,A}$ denote the spin--gauge connection on $S_\Pi$, obtained by
+    combining the Levi--Civita spin connection of the effective metric $g$ with the
+    admissible gauge connection $A$ of~\cite{Beau2026q6a,Beau2026q12}.
+    The minimally coupled Dirac operator is
+    \begin{equation}
+      \label{eq:minimal-dirac}
+      \mathcal{D}_{g,A} = \gamma^\mu \nabla^{S,A}_\mu .
+    \end{equation}
+    In an ordinary $\mathrm{spin}^c$ geometry over a given manifold, the square of
+    this operator is governed by the standard Lichnerowicz formula.
+    In the present setting, $S_\Pi$ is not a primitive spinor bundle over a pre-existing
+    manifold: it is the spinorial face of the admissible Weil fibre, and the projection
+    $\Pi$ acts non-trivially on the spinorial sector.
+
+  \subsection{The projective correction and the definition of
+  \texorpdfstring{$E_\Pi$}{E\_Pi}}
+    \label{ssec:projective-correction}
+
+    Let $\Pi_S \colon S \to S_\Pi$ denote the restriction of the admissible projection
+    to the spinorial bundle.
+    The projected Dirac operator is defined by
+    \begin{equation}
+      \label{eq:projected-dirac}
+      \mathcal{D}_{\Pi,g,A} := \Pi_S \circ \mathcal{D}_{g,A} \circ \Pi_S^* ,
+    \end{equation}
+    where $\Pi_S^*$ denotes the admissible minimal lift, equivalently the adjoint of
+    $\Pi_S$ after choosing the induced Hermitian structure on the projected spinor
+    bundle.
+    We do not assume that $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$; this identity holds
+    precisely in the injectively resolved limit and is in general replaced by a
+    non-trivial projector.
+    We assume throughout this section that the admissible lift is symbol-compatible:
+    the principal symbol of $\mathcal{D}_{\Pi,g,A}$ coincides with the projected
+    Clifford symbol $\gamma^\mu \xi_\mu$.
+    Equivalently, the projection defect affects only the zero-order part of
+    $\mathcal{D}_{\Pi,g,A}^2$, not its principal symbol.
+
+    \begin{definition}[Projective endomorphism]
+      \label{def:projective-endomorphism}
+      The projective endomorphism $E_\Pi \in \Gamma(\operatorname{End}(S_\Pi))$ is
+      defined by
+      \begin{equation}
+        \label{eq:epi-definition}
+        E_\Pi
+        :=
+        \mathcal{D}_{\Pi,g,A}^2
+        -
+        \left(
+          -(\nabla^{S,A})^2
+        + \frac{R}{4}
+          + \frac{1}{2}\gamma^\mu\gamma^\nu F^a_{\mu\nu} T^a_R
+        \right).
+      \end{equation}
+    \end{definition}
+
+    The right-hand side of~\eqref{eq:epi-definition} collects the terms of the
+    standard Lichnerowicz formula.
+    The endomorphism $E_\Pi$ is therefore not an additional matter potential.
+    It is the internal spectral residue of non-injective projection in the spinorial
+    sector: the part of $\mathcal{D}_{\Pi,g,A}^2$ not resolved by the effective
+    pair $(g, A)$.
+
+    \begin{lemma}[Projective origin of $E_\Pi$]
+      \label{lem:projective-endomorphism}
+      Let $S_\Pi$ be the admissible spinor bundle induced by the Weil fibre, and assume
+      that the admissible lift $\Pi_S^*$ is symbol-compatible with the spin--gauge
+      connection.
+      The projected square $\mathcal{D}_{\Pi,g,A}^2$ then differs from the ordinary
+      spin--gauge Lichnerowicz square by a canonical zero-order endomorphism
+      $E_\Pi \in \Gamma(\operatorname{End}(S_\Pi))$.
+      If the spinorial projection is injectively resolved by the effective pair $(g,A)$,
+      then $E_\Pi = 0$.
+      Conversely, $E_\Pi \neq 0$ whenever the non-injective spinorial fibres leave a
+      non-trivial zero-order trace in the projected square.
+      Thus axiom~A2 of~\cite{Beau2026m} makes $E_\Pi$ the natural place where
+      structural non-injectivity enters the spinorial spectral action.
+    \end{lemma}
+
+    \begin{proof}
+      When $\Pi_S$ is injective, $\Pi_S^*$ is its right inverse and
+      $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$.
+      The composition~\eqref{eq:projected-dirac} then reduces to $\mathcal{D}_{g,A}$
+      on $S_\Pi$, whose square is the standard Lichnerowicz formula; hence $E_\Pi = 0$.
+      When $\Pi_S \Pi_S^* \neq \mathrm{id}_{S_\Pi}$, the squared projected operator
+      contains additional terms controlled by the projection defect.
+      By symbol-compatibility, these terms do not modify the principal Clifford symbol
+      and therefore contribute only to the zero-order part of the Laplace-type operator.
+      They are collected canonically in $E_\Pi$ via
+      Definition~\ref{def:projective-endomorphism}.
+    \end{proof}
+
+    \begin{remark}
+      \label{rem:symbol-compatibility-seeley-dewitt}
+      Symbol-compatibility is also required in Section~\ref{sec:anomaly}: the computation
+      of the Seeley--DeWitt coefficients of $\mathcal{D}_{\Pi,g,A}^2$ via the standard
+      heat-kernel expansion presupposes that the principal symbol is the Clifford symbol,
+      so that the leading heat-kernel term is the standard Gaussian.
+      The hypothesis is therefore not an isolated technical convenience, but a coherence
+      condition between the projective construction and the spectral action formalism.
+    \end{remark}
+
+  \subsection{Comparison with the Connes--Chamseddine approach}
+    \label{ssec:comparison-cc}
+
+    This is the point at which the present construction differs structurally from the
+    Connes--Chamseddine spectral action~\cite{ConnesChamseddine1997}.
+    In the almost-commutative setting, the finite internal Dirac operator is part of
+    the input data of the spectral triple, and Yukawa matrices and fermion masses are
+    encoded directly in this finite component.
+    Here $E_\Pi$ is not postulated as a finite Dirac datum: it is induced by the
+    non-injective projection itself.
+    The task is therefore not to choose $E_\Pi$, but to determine which endomorphisms
+    are compatible with admissibility, gauge invariance, and spectral coherence.
+    This inversion of logical order is the distinctive feature of the present approach:
+    internal fermionic structure is not input but output.
+
+  \subsection{Chiral admissibility and the \texorpdfstring{$V{-}A$}{V-A} structure}
+    \label{ssec:chiral-admissibility}
+
+    Let $\gamma_5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3$ be the chirality operator
+    of $\mathrm{Cl}(T^* M_{\mathrm{eff}}, g^{\mu\nu})$, whose existence as a global
+    section depends on the Lorentzian closure of~\cite{Beau2026q11}.
+    Define the chiral projectors
+    \[
+      P_L = \frac{1}{2}(1 - \gamma_5),
+      \qquad
+      P_R = \frac{1}{2}(1 + \gamma_5).
+    \]
+
+    \begin{definition}[Chiral projective admissibility]
+      \label{def:chiral-admissibility}
+      The projective endomorphism $E_\Pi$ is called \emph{left-admissible} if
+      \begin{equation}
+        \label{eq:left-admissible}
+        P_R \, E_\Pi \, P_R = 0 .
+      \end{equation}
+      Equivalently, the purely right-handed self-coupling of the projective residue
+      vanishes.
+    \end{definition}
+
+  \subsection{Spinorial lift of BI parity}
+    \label{ssec:proof-bi-left}
+
+    \begin{hypothesis}[Spinorial BI lift]
+      \label{hyp:spinorial-bi-lift}
+      The BI parity relation on conjugate Weil sectors lifts to an antilinear
+      endomorphism $J_\Pi$ of $S_\Pi$ satisfying
+      \begin{equation}
+        \label{eq:jpi-conditions}
+        J_\Pi^2 = -1,
+        \qquad
+        J_\Pi \gamma_5 = -\gamma_5 J_\Pi .
+      \end{equation}
+    \end{hypothesis}
+
+    The first condition in~\eqref{eq:jpi-conditions} expresses the quaternionic
+    character of the spinorial lift.
+    The second states that $J_\Pi$ reverses chirality.
+    Together they imply
+    \begin{equation}
+      \label{eq:jpi-chiral-exchange}
+      J_\Pi P_L = P_R J_\Pi,
+      \qquad
+      J_\Pi P_R = P_L J_\Pi,
+    \end{equation}
+    so the BI parity lift exchanges the two chiral subbundles $P_L S_\Pi$ and
+    $P_R S_\Pi$.
+
+    \begin{proposition}[BI parity and left-admissibility]
+      \label{prop:bi-left-admissibility}
+      Assume Hypothesis~\ref{hyp:spinorial-bi-lift}, and assume that admissibility
+      selects the orientation-compatible branch.
+      Then $E_\Pi$ is left-admissible:
+      \[
+        P_R E_\Pi P_R = 0 .
+      \]
+    \end{proposition}
+
+    \begin{proof}
+      By~\eqref{eq:jpi-chiral-exchange}, any right-handed self-coupling of a section
+      of $S_\Pi$ is mapped under $J_\Pi$ to a left-handed coupling.
+      The admissibility condition selects the branch compatible with the orientation
+      carried by $J_\Pi$; equivalently, projective self-couplings of $P_R S_\Pi$ are
+      not orientation-compatible with the BI parity involution.
+      Hence $P_R E_\Pi P_R = 0$.
+    \end{proof}
+
+    The commutator
+    \begin{equation}
+      \label{eq:epi-gamma5-commutator}
+      [E_\Pi, \gamma_5]
+    \end{equation}
+    measures the failure of the projective residue to be chirally symmetric.
+    Under the orientation-compatible admissibility branch, a non-trivial projective
+    endomorphism $E_\Pi$ need not commute with $\gamma_5$.
+    The commutator~\eqref{eq:epi-gamma5-commutator} is therefore the projective measure
+    of chiral asymmetry entering both the $V{-}A$ structure and the spectral anomaly
+    condition of Section~\ref{sec:anomaly}.
+
+  \section{Spectral Anomaly Cancellation and Hypercharge Rigidity}
+  \label{sec:anomaly}
+
+  The preceding section shows that $\mathcal{D}_{\Pi,g,A}^2$ is a Laplace-type
+  operator with standard Clifford principal symbol and projective endomorphism $E_\Pi$.
+  We now use this structure to formulate the hypercharge consistency condition.
+  The guiding principle is that the projected spectral functional
+  $S_\Pi[g, A, \mathcal{D}_{\Pi,g,A}]$ must be invariant under $U(1)_Y$ gauge
+  transformations.
+  In the spinorial sector, this invariance imposes trace constraints on the
+  hypercharge weights carried by the projected components of $E_\Pi$.
+  These constraints are the spectral form of anomaly cancellation.
+
+  \subsection{Projected \texorpdfstring{$U(1)_Y$}{U(1)\_Y} variation}
+    \label{ssec:u1-variation}
+
+    Let $L_Y = \wedge^2(S_\Pi)$ be the determinant line identified in
+    Section~\ref{sec:metaplectic}.
+    The projected spinorial sector decomposes into irreducible components
+    $S_R \subset S_\Pi$, each carrying a definite chirality and hypercharge weight
+    $Y_R$.
+    A $U(1)_Y$ gauge transformation acts by
+    \begin{equation}
+      \label{eq:u1-action}
+      \psi_R \longmapsto e^{i Y_R \alpha} \psi_R ,
+    \end{equation}
+    and the infinitesimal action is generated by the endomorphism
+    $Y = \bigoplus_R Y_R \, \mathrm{id}_{S_R}$.
+    The projected spectral functional is hypercharge-consistent if
+    \begin{equation}
+      \label{eq:u1-invariance}
+      \delta_{\alpha Y} S_\Pi[g, A, \mathcal{D}_{\Pi,g,A}] = 0
+    \end{equation}
+    for all smooth gauge parameters $\alpha$.
+
+  \subsection{The \texorpdfstring{$\gamma_5$-weighted $a_4$}{gamma5-weighted a4}
+  coefficient}
+    \label{ssec:gamma5-a4}
+
+    By symbol-compatibility (Section~\ref{ssec:projective-correction}),
+    $\mathcal{D}_{\Pi,g,A}^2$ is a Laplace-type operator with Clifford principal symbol,
+    written in standard form as
+    \begin{equation}
+      \label{eq:laplace-form}
+      \mathcal{D}_{\Pi,g,A}^2 = -(\nabla^{S,A})^2 + E,
+    \end{equation}
+    with
+    \begin{equation}
+      \label{eq:endomorphism-E}
+      E = \frac{R}{4} + \frac{1}{2}\gamma^\mu\gamma^\nu F^a_{\mu\nu} T^a_R + E_\Pi .
+    \end{equation}
+    In four dimensions, the local chiral anomaly is controlled by the
+    $\gamma_5$-weighted $a_4$ coefficient of the Seeley--DeWitt expansion.
+    We denote the corresponding local endomorphism-valued anomaly density by
+    $\mathcal{A}_\Pi$.
+    After taking the spinorial trace, it defines the scalar anomaly density entering
+    the variation of the projected spectral functional.
+    It is determined by the curvature of $\nabla^{S,A}$, the projective endomorphism
+    $E_\Pi$, and the effective metric $g$.
+
+    The local chiral anomaly density is
+    \begin{equation}
+      \label{eq:anomaly-density-a4}
+      \mathcal{A}_\Pi(x) = a_4\!\left(x,\, \mathcal{D}_{\Pi,g,A}^2;\, \gamma_5\right).
+    \end{equation}
+
+    \begin{lemma}[Spectral trace form of the anomaly]
+      \label{lem:spectral-anomaly-trace}
+      Assume symbol-compatibility of the projected Dirac operator.
+      Then the anomalous $U(1)_Y$ variation of the projected spectral functional is
+      \begin{equation}
+        \label{eq:anomaly-trace}
+        \delta_{\alpha Y} S_\Pi
+        =
+        \int_{M_{\mathrm{eff}}}
+        \alpha \,
+        \operatorname{Tr}_{S_\Pi}\!\left(
+                                     \gamma_5 \, Y \, \mathcal{A}_\Pi(x)
+        \right)
+        \sqrt{|g|} \, d^4x ,
+      \end{equation}
+      where $\mathcal{A}_\Pi$ is the local endomorphism-valued $a_4$ Seeley--DeWitt
+      density of $\mathcal{D}_{\Pi,g,A}^2$.
+      Gauge invariance therefore requires the local vanishing condition
+      \begin{equation}
+        \label{eq:anomaly-vanishing}
+        \operatorname{Tr}_{S_\Pi}\!\left(
+                                     \gamma_5 \, Y \, \mathcal{A}_\Pi(x)
+        \right) = 0
+        \qquad
+        \text{for all } x \in M_{\mathrm{eff}} .
+      \end{equation}
+    \end{lemma}
+
+    \begin{remark}
+      \label{rem:seeley-dewitt-hierarchy}
+      The appearance of the $\gamma_5$-weighted $a_4$ coefficient is consistent with
+      the spectral stratification established in the bosonic sector~\cite{Beau2026q13}.
+      In the bosonic variation, the $a_2$ coefficient gives the gravitational response
+      and the $a_4$ coefficient gives the gauge response.
+      In the spinorial sector, the same $a_4$ level controls the local chiral anomaly
+      and therefore the hypercharge consistency of the fermionic gauge coupling.
+      Anomaly cancellation is therefore not a new spectral layer: it is the chiral
+      consistency condition of the gauge-level response, located at exactly the same
+      Seeley--DeWitt order as Yang--Mills dynamics.
+      Schematically:
+      \begin{equation}
+        \label{eq:a4-two-faces}
+        a_4 \;\longrightarrow\;
+        \begin{cases}
+          \delta_A S_\Pi \Rightarrow \text{Yang--Mills dynamics}, \\[4pt]
+          \delta_g S_\Pi\big|_{a_4} \Rightarrow \text{Yang--Mills stress tensor}, \\[4pt]
+          \operatorname{Tr}_{S_\Pi}(\gamma_5 \, \delta_{\alpha Y}) \Rightarrow
+          \text{anomaly cancellation}.
+        \end{cases}
+      \end{equation}
+    \end{remark}
+
+  \subsection{Trace constraints on projected hypercharge weights}
+    \label{ssec:trace-constraints}
+
+    Only terms in $a_4$ containing four Clifford matrices survive the $\gamma_5$-trace.
+    The gauge-curvature part of~\eqref{eq:endomorphism-E} contributes the topological
+    density
+    \begin{equation}
+      \label{eq:topological-density}
+      \operatorname{Tr}_{S_\Pi}\!\left(
+                                   \gamma_5 Y \, \gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma
+                                   F_{\mu\nu} F_{\rho\sigma}
+      \right)
+      \propto \operatorname{tr}_R(Y F \wedge F).
+    \end{equation}
+    For the abelian factor this gives the cubic $U(1)_Y$ anomaly; for non-abelian
+    factors it gives the mixed $U(1)_Y \times G^2$ anomalies.
+    The projective endomorphism $E_\Pi$ contributes additional chiral traces through
+    its $\gamma_5$-odd part, equivalently through the components that fail to commute
+    with $\gamma_5$.
+    Left-admissibility, $P_R E_\Pi P_R = 0$, constrains these contributions to the
+    orientation-compatible sector.
+    They are therefore absorbed into the same projected anomaly condition, without
+    generating independent constraints beyond those arising from the gauge-curvature
+    sector.
+
+    Let $\chi_R \in \{+1, -1\}$ denote the chirality eigenvalue of sector $R$:
+    $\chi_R = +1$ for left-handed sectors ($S_R \subset P_L S_\Pi$) and
+    $\chi_R = -1$ for right-handed sectors ($S_R \subset P_R S_\Pi$), as determined
+    by the left-admissibility condition of Definition~\ref{def:chiral-admissibility}.
+    The vanishing condition~\eqref{eq:anomaly-vanishing} specialises, at leading
+    Seeley--DeWitt order, to the following set of spectral coherence constraints:
+    \begin{align}
+      \label{eq:anomaly-linear}
+      \sum_R \chi_R \, Y_R \, \dim(R) &= 0 , \\
+      \label{eq:anomaly-cubic}
+      \sum_R \chi_R \, Y_R^3 \, \dim(R) &= 0 , \\
+      \label{eq:anomaly-mixed}
+      \sum_R \chi_R \, Y_R \, \operatorname{tr}_R(T^a T^b) &= 0 .
+    \end{align}
+    Equations~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed} are the
+    gravitational, cubic $U(1)_Y$, and mixed $U(1)_Y \times G^2$ anomaly conditions,
+    respectively.
+    They are not imposed externally; they follow from requiring that the projected
+    spectral functional be well-defined under $U(1)_Y$.
+
+    \begin{proposition}[Spectral anomaly constraints]
+      \label{prop:spectral-anomaly-constraints}
+      Assume symbol-compatibility and left-admissibility of $E_\Pi$
+      (Hypothesis~\ref{hyp:spinorial-bi-lift},
+      Proposition~\ref{prop:bi-left-admissibility}).
+      Then $U(1)_Y$ invariance of the projected spectral functional imposes the
+      projected anomaly constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed}
+      on the hypercharge weights $Y_R$.
+      The explicit numerical coefficients of $a_4$ are collected in
+      Appendix~\ref{app:seeley-dewitt}; only the structural
+      form~\eqref{eq:topological-density} is required for the
+      derivation of~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed}.
+    \end{proposition}
+
+  \subsection{Hypercharge rigidity}
+    \label{ssec:hypercharge-rigidity}
+
+    \begin{proposition}[Hypercharge rigidity from spectral coherence]
+      \label{prop:hypercharge-rigidity}
+      Assume that the projected spinorial sectors are precisely those of the admissible
+      matter decomposition~\eqref{eq:matter-content}, with the colour factor conditional
+      on~\emph{[H-color]}.
+      Then $U(1)_Y$ gauge invariance of the projected spectral functional imposes
+      the constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed} on the
+      hypercharge weights $Y_R$.
+      The allowed assignments are therefore not free parameters of the projected Dirac
+      operator, but spectral coherence data constrained by $E_\Pi$.
+    \end{proposition}
+
+    \begin{proposition}[Minimal hypercharge assignment]
+      \label{prop:minimal-hypercharge}
+      If, in addition, the determinant line $L_Y = \wedge^2(S_\Pi)$ carries the minimal
+      integral normalisation compatible with the $U(1)_Y$ action on the projected
+      spinorial sectors, then the
+      constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed} select the
+      Standard Model hypercharge pattern up to an overall sign and rescaling.
+    \end{proposition}
+
+    The hypercharge weights are therefore not inserted as independent labels of matter
+    fields.
+    They are the weights of the determinant-line action that survive the spectral
+    coherence condition imposed by the projected Dirac operator.
+    The three-step derivation is:
+    \begin{equation}
+      \label{eq:hypercharge-chain}
+      L_Y = \wedge^2(S_\Pi)
+      \;\Rightarrow\;
+      \text{support of } U(1)_Y
+      \;\Rightarrow\;
+      \delta_{\alpha Y} S_\Pi = 0
+      \;\Rightarrow\;
+      Y_R \text{ rigidity}.
+    \end{equation}
+
+  \section{Generation Multiplicity from the Rank-Three Admissible Invariant}
+  \label{sec:generations}
+
+  The preceding sections derive the spinorial electroweak bundle and the hypercharge
+  consistency conditions, accounting for the leptonic spinorial sector.
+  We now address the third structural output of the fermionic sector: generation
+  multiplicity.
+  The starting point is the admissible saturation invariant established in the
+  spectral admissibility sub-programme~\cite{Beau2026a27},
+  \begin{equation}
+    \label{eq:sigma-n3}
+    \sigma_c(n_3) = 3 .
+  \end{equation}
+  This invariant has already been used in the geometric branch of the programme:
+  under the geometric reconstruction functor it yields the three effective spatial
+  directions (Q5b~\cite{Beau2026q5b}, Q11~\cite{Beau2026q11}).
+  The purpose of the present section is to show that the same invariant admits a
+  distinct spinorial multiplicity reading.
+
+  \subsection{Two functorial readings of the same invariant}
+    \label{ssec:two-functors}
+
+    Let $\mathcal{A}_3$ denote the rank-three admissible sector selected at BI
+    saturation:
+    \begin{equation}
+      \label{eq:admissible-sector}
+      \dim \mathcal{A}_3 = 3 .
+    \end{equation}
+    Let $\{e_1, e_2, e_3\}$ be a basis of stable admissible directions in
+    $\mathcal{A}_3$, orthogonal with respect to the admissibility form.
+    There are two distinct functorial readings of $\mathcal{A}_3$.
+
+    The geometric reading
+    \begin{equation}
+      \label{eq:geometric-functor}
+      \mathcal{F}_{\mathrm{geom}} \colon \mathcal{A}_3 \longrightarrow
+      \mathbb{R}^3_{\mathrm{space}}
+    \end{equation}
+    sends each stable admissible direction to a spatial tangent direction.
+    This is the branch used in the reconstruction of the effective Lorentzian
+    metric~\cite{Beau2026q5b,Beau2026q11}.
+
+    The spinorial multiplicity reading is defined as follows.
+
+    \begin{definition}[Spinorial multiplicity functor]
+      \label{def:spinorial-functor}
+      The spinorial multiplicity functor
+      $\mathcal{F}_{\mathrm{spin}} \colon \mathcal{A}_3 \to \Mult(S_\Pi)$
+      assigns to each stable admissible direction $e \in \mathcal{A}_3$ a copy
+      $S_\Pi^{(e)}$ of the admissible spinor bundle, subject to the following conditions:
+      \begin{enumerate}
+        \item[\emph{(i)}]   $S_\Pi^{(e)} \cong S_\Pi$ as $Spin(3,1)$ spinor bundles;
+        \item[\emph{(ii)}]  the gauge group $G_\Pi$ acts on $S_\Pi^{(e)}$ via the same
+        representation as on $S_\Pi$;
+        \item[\emph{(iii)}] the admissible projection $\Pi$ acts on $S_\Pi^{(e)}$ via
+        the same kernel structure as on $S_\Pi$;
+        \item[\emph{(iv)}]  distinct directions define orthogonal multiplicity sectors:
+        the corresponding projectors $P_e$ satisfy
+        \[
+          P_e P_{e'} = 0 \quad (e \neq e'),
+          \qquad
+          [P_e, \rho(g)] = 0 \quad \text{for all } g \in G_\Pi .
+        \]
+      \end{enumerate}
+    \end{definition}
+
+    Condition~(iv) is the key constraint: it prevents the three copies from being
+    interpreted as a gauge triplet.
+    They form a multiplicity space on which $G_\Pi$ acts trivially, rather than a
+    new non-trivial representation of $G_\Pi$.
+
+  \subsection{Gauge-singlet character of the generation space}
+    \label{ssec:gauge-singlet-generation}
+
+    The generation space $\mathbb{C}^3_{\mathrm{gen}}$ is the indexing space of the
+    functor $\mathcal{F}_{\mathrm{spin}}$, spanned by $\{e_1, e_2, e_3\}$.
+    It is not the adjoint triplet $\operatorname{Sym}^2(S_\Pi)$, which carries the
+    $SU(2)$ adjoint action and belongs to the gauge bundle.
+    By condition~(ii) of Definition~\ref{def:spinorial-functor}, the gauge group acts
+    on each copy $S_\Pi^{(e_i)}$ in the same way as on $S_\Pi$; it acts trivially on
+    the indexing labels $e_i$.
+    Therefore
+    \begin{equation}
+      \label{eq:generation-singlet}
+      \mathbb{C}^3_{\mathrm{gen}}
+      \;\subset\;
+      \ker\!\left(\operatorname{ad}_{SU(2)} \oplus Y\right).
+    \end{equation}
+
+    \begin{theorem}[Generation multiplicity]
+      \label{thm:generation-multiplicity}
+      Assume the admissible saturation invariant $\sigma_c(n_3) = 3$~\cite{Beau2026a27}
+      and the spinorial multiplicity functor $\mathcal{F}_{\mathrm{spin}}$ of
+      Definition~\ref{def:spinorial-functor}.
+      Then the fermionic matter bundle carries a three-dimensional gauge-singlet
+      multiplicity factor:
+      \begin{equation}
+        \label{eq:fermionic-matter}
+        S_\Pi^{\mathrm{fermion}}
+        = S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}},
+        \qquad
+        \mathbb{C}^3_{\mathrm{gen}}
+        \subset
+        \ker\!\left(\operatorname{ad}_{SU(2)} \oplus Y\right).
+      \end{equation}
+      The three-generation structure is the spinorial multiplicity image of the same
+      rank-three admissible invariant that yields the three spatial directions in the
+      geometric branch.
+    \end{theorem}
+
+    \begin{proof}
+      By~\eqref{eq:sigma-n3}, $\mathcal{A}_3$ has dimension three and admits a basis of
+      three mutually orthogonal stable admissible directions $\{e_1, e_2, e_3\}$.
+      Applying $\mathcal{F}_{\mathrm{spin}}$ yields three copies
+      $S_\Pi^{(e_1)}, S_\Pi^{(e_2)}, S_\Pi^{(e_3)}$.
+      By condition~(iv) of Definition~\ref{def:spinorial-functor}, these copies define
+      orthogonal projective sectors commuting with the $G_\Pi$-action, so their direct
+      sum decomposes as
+      \[
+        \bigoplus_{i=1}^{3} S_\Pi^{(e_i)} \;\cong\; S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}.
+      \]
+      The gauge group acts on each factor $S_\Pi^{(e_i)}$ via the spinorial
+      representation and trivially on $\mathbb{C}^3_{\mathrm{gen}}$ by condition~(ii),
+      giving~\eqref{eq:generation-singlet}.
+    \end{proof}
+
+    \begin{remark}
+      \label{rem:space-generation-distinction}
+      The equality $\dim \mathbb{R}^3_{\mathrm{space}} = \dim \mathbb{C}^3_{\mathrm{gen}} = 3$
+      does not identify the two spaces.
+      They are distinct functorial images of the same admissible invariant
+      $\mathcal{A}_3$: the geometric image carries spatial tangent structure, while the
+      multiplicity image carries no electroweak charge.
+      This distinction prevents the generation triplet from being confused with the
+      adjoint $SU(2)$ triplet $\operatorname{Sym}^2(S_\Pi)$.
+    \end{remark}
+
+  \section{The Conditional Colour Sector}
+  \label{sec:colour}
+
+  The preceding sections derive the spinorial electroweak structure and the
+  generation multiplicity factor, accounting for the leptonic spinorial sector.
+  The quark sector requires, in addition, a colour representation.
+  In the present framework, the colour factor is not introduced by enlarging the
+  spinorial construction itself, but by tensoring the admissible spinor bundle with
+  the colour representation supplied by the admissible gauge-fibre
+  programme~\cite{Beau2026a35,Beau2026a36}.
+
+  Let $V_{\mathrm{color}}$ denote the fundamental colour representation of the
+  admissible $SU(3)$ sector.
+  The quark spinor bundle is defined as
+  \begin{equation}
+    \label{eq:quark-bundle}
+    S_\Pi^{\mathrm{quark}} = S_\Pi \otimes V_{\mathrm{color}} .
+  \end{equation}
+  The full fermionic matter bundle targeted by the construction is therefore
+  \begin{equation}
+    \label{eq:matter-bundle-full}
+    S_\Pi^{\mathrm{matter}}
+    =
+    \left(
+      S_\Pi \oplus (S_\Pi \otimes V_{\mathrm{color}})
+    \right)
+    \otimes \mathbb{C}^3_{\mathrm{gen}} .
+  \end{equation}
+
+  \subsection{Status of the colour factor}
+    \label{ssec:colour-status}
+
+    The construction of $S_\Pi$, $L_Y$, and $\mathbb{C}^3_{\mathrm{gen}}$ does not
+    depend on the colour hypothesis.
+    By contrast, the factor $V_{\mathrm{color}}$ inherits the conditional status of
+    the $SU(3)$ sector.
+
+    The identification of $SU(3)$ as the colour gauge group depends on the colour
+    co-admissibility hypothesis~[H-color], according to which the admissible colour
+    triplet sectors are co-admissible in the pre-saturation window.
+    This hypothesis is supported numerically for $q \in \{61, 151, 211\}$ by the
+    O32 campaign~\cite{Beau2026a36}, but its analytical derivation from the Foundation
+    axioms remains open.
+    Under~[H-color], the triplet colour module defines
+    $V_{\mathrm{color}} \in \operatorname{Rep}(SU(3))$ and the quark
+    sector~\eqref{eq:quark-bundle} is well defined.
+    Without~[H-color], the electroweak spinorial sector remains intact, but the
+    colour-coupled quark sector is not claimed as an unconditional output of the
+    present paper.
+
+    \begin{proposition}[Conditional colour extension]
+      \label{prop:conditional-colour-extension}
+      Assume~\emph{[H-color]}, so that the admissible colour triplet defines a
+      fundamental $SU(3)$ representation
+      $V_{\mathrm{color}}$~\cite{Beau2026a35,Beau2026a36}.
+      Then the spinorial matter bundle admits the colour-coupled extension
+      \begin{equation}
+        \label{eq:conditional-colour}
+        S_\Pi^{\mathrm{matter}}
+        =
+        \left(
+          S_\Pi \oplus (S_\Pi \otimes V_{\mathrm{color}})
+        \right)
+        \otimes \mathbb{C}^3_{\mathrm{gen}} .
+      \end{equation}
+      The first summand is the leptonic sector.
+      The second summand is the quark sector.
+      The generation factor $\mathbb{C}^3_{\mathrm{gen}}$ remains a gauge-singlet
+      multiplicity space under both summands.
+    \end{proposition}
+
+    \begin{remark}
+      \label{rem:colour-does-not-affect-spinorial-construction}
+      The colour extension does not modify the construction of the admissible spinor
+      bundle $S_\Pi$.
+      It adds an independent gauge representation factor, conditional on the
+      colour-sector result.
+      The logical status of the fermionic construction is therefore stratified:
+      \begin{equation}
+        \label{eq:status-table}
+        \begin{cases}
+          S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}
+          & \text{electroweak/leptonic carrier, independent of [H-color],} \\[4pt]
+          S_\Pi \otimes V_{\mathrm{color}} \otimes \mathbb{C}^3_{\mathrm{gen}}
+          & \text{quark carrier, conditional on [H-color].}
+        \end{cases}
+      \end{equation}
+    \end{remark}
+
+    \newpage
+  \section{Conclusion and Open Directions}
+  \label{sec:conclusion}
+
+  This paper completes the fermionic step of the spectral stratification programme.
+  The preceding gauge--gravity synthesis showed that gravity and gauge dynamics
+  arise from different Seeley--DeWitt responses of the same admissible spectral
+  functional.
+  The present work extends this principle to the spinorial sector.
+  Fermions are not introduced as external matter fields added to the admissible
+  bundle.
+  They arise as the spinorial face of the Weil module already forced by non-injective
+  admissibility, revealed through the Lorentzian complexification of its metaplectic
+  lift.
+
+  The structural chain established in the paper is
+  \[
+    \Pi
+    \Rightarrow
+    F_n \simeq V_\rho
+    \Rightarrow
+    Mp(2,\mathbb{R})
+    \Rightarrow
+    \mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})
+    \leadsto
+    Spin(3,1)
+    \Rightarrow
+    S_\Pi .
+  \]
+  The admissible spinor bundle $S_\Pi$ then generates the electroweak bundle data
+  through its tensor functors:
+  \[
+    \operatorname{Sym}^2(S_\Pi)
+    \Rightarrow
+    \operatorname{ad}_{\mathbb{C}}(P_\Pi),
+    \qquad
+    \wedge^2(S_\Pi)
+    \Rightarrow
+    L_Y .
+  \]
+  The first sector gives the complex adjoint, from which the $SU(2)_L$ triplet is
+  selected by the compact real form.
+  The second gives the determinant line supporting the $U(1)_Y$ factor.
+  This establishes the spinorial electroweak carrier without introducing an
+  independent electroweak matter bundle.
+
+  The projected Dirac operator
+  \[
+    \mathcal{D}_{\Pi,g,A}
+    =
+    \Pi_S \circ \mathcal{D}_{g,A} \circ \Pi_S^*
+  \]
+  was shown to have a Laplace-type square with standard Clifford principal symbol
+  and a projective zero-order endomorphism $E_\Pi$:
+  \[
+    \mathcal{D}_{\Pi,g,A}^2
+    =
+    -(\nabla^{S,A})^2
+    +
+    \frac{R}{4}
+    +
+    \frac{1}{2} \gamma^\mu\gamma^\nu F^a_{\mu\nu}T^a_R
+    +
+    E_\Pi .
+  \]
+  The endomorphism $E_\Pi$ is the internal spectral residue of non-injective
+  projection in the spinorial sector.
+  It is the locus where chirality, hypercharge coherence, and fermionic internal
+  structure enter the spectral action.
+  In this sense, the analogue of the finite internal Dirac operator is not postulated
+  as additional data: it is induced by the projective construction.
+
+  The chiral and hypercharge constraints arise from two complementary uses of
+  $E_\Pi$.
+  First, left-admissibility of the projective endomorphism yields the $V{-}A$
+  structure:
+  \[
+    P_R E_\Pi P_R = 0 .
+  \]
+  Second, $U(1)_Y$ invariance of the projected spectral functional imposes the
+  local anomaly-cancellation condition
+  \[
+    \operatorname{Tr}_{S_\Pi}
+    \!\left(
+        \gamma_5\,Y\,\mathcal{A}_\Pi(x)
+    \right)
+    =
+    0
+    \qquad
+    \text{for all } x\in M_{\mathrm{eff}} ,
+  \]
+  where $\mathcal{A}_\Pi$ is the $\gamma_5$-weighted $a_4$ Seeley--DeWitt density
+  of $\mathcal{D}_{\Pi,g,A}^2$.
+  Thus anomaly cancellation is not an additional spectral layer.
+  It is the chiral consistency condition of the same $a_4$ level that yields
+  Yang--Mills dynamics in the bosonic variation.
+
+  The third output is generation multiplicity.
+  The rank-three admissible invariant $\sigma_c(n_3)=3$ has two distinct functorial
+  readings.
+  In the geometric branch, it yields the three effective spatial directions.
+  In the fermionic branch, the spinorial multiplicity functor sends it to a
+  gauge-singlet generation factor:
+  \[
+    \mathbb{C}^3_{\mathrm{gen}}
+    \subset
+    \ker\!\left(\operatorname{ad}_{SU(2)}\oplus Y\right).
+  \]
+  This generation space is not the $SU(2)$ adjoint triplet
+  $\operatorname{Sym}^2(S_\Pi)$.
+  It is a multiplicity space commuting with the gauge action.
+  The resulting fermionic carrier is
+  \[
+    S_\Pi^{\mathrm{fermion}}
+    =
+    S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}
+  \]
+  in the electroweak/leptonic sector.
+
+  The colour-coupled quark sector is obtained by tensoring with the colour module:
+  \[
+    S_\Pi^{\mathrm{quark}}
+    =
+    S_\Pi \otimes V_{\mathrm{color}} .
+  \]
+  This step inherits the conditional status of the colour co-admissibility
+  hypothesis~[H-color].
+  Accordingly, the matter carrier addressed by the construction is
+  \[
+    S_\Pi^{\mathrm{matter}}
+    =
+    \left(
+      S_\Pi \oplus (S_\Pi\otimes V_{\mathrm{color}})
+    \right)
+    \otimes
+    \mathbb{C}^3_{\mathrm{gen}},
+  \]
+  with the first summand independent of~[H-color] and the second conditional on it.
+
+  Several open directions remain sharply delimited.
+  First, the spinorial lift of BI parity must be derived analytically: showing that
+  the antilinear conjugation $\pi_{q-c}(v) = \overline{\pi_c(v)}$ lifts to an
+  antilinear endomorphism $J_\Pi$ satisfying~\eqref{eq:jpi-conditions} is the
+  remaining technical core of the $V{-}A$ result.
+  Second, the minimal integral normalisation of the determinant line $L_Y$ must be
+  connected explicitly to the Standard Model hypercharge pattern.
+  The anomaly constraints restrict the allowed weights, while the determinant-line
+  normalisation fixes their scale.
+  Third, the analytical derivation of~[H-color] from the Foundation axioms remains
+  the open condition for promoting the quark colour sector from conditional to
+  unconditional status.
+
+  A further direction concerns the physical content of $E_\Pi$.
+  Since $E_\Pi$ is the internal spectral residue of non-injective projection, it is
+  the natural place where fermion masses, effective Yukawa couplings, and
+  inter-generation mixing should enter.
+  The present paper identifies the structural carrier of these data but does not
+  derive the numerical mass spectrum.
+  The next step is therefore to study the eigenstructure of $E_\Pi$ on
+  $S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}$,
+  and to compare it with the charged-lepton mass hierarchy established in the
+  spectral admissibility sub-programme~\cite{Beau2026a4,Beau2026a29}
+  and possible quark mixing patterns.
+
+  The conclusion of the fermionic step is therefore precise.
+  The Standard Model matter carrier is not postulated as an independent field content.
+  Its spinorial, electroweak, chiral, and generation structures arise from distinct
+  functorial readings of the same admissible Weil fibre, while the colour sector
+  retains the explicit conditional status inherited from the gauge-fibre programme.
+  The remaining open problems are not structural gaps in the architecture, but
+  specific rigidity problems for $E_\Pi$, $L_Y$, and~[H-color].
+
+  \newpage
+  \begin{appendix}
+
+    \section{Seeley--DeWitt Coefficients for the Projected Dirac Square}
+      \label{app:seeley-dewitt}
+
+      Under symbol-compatibility (Section~\ref{ssec:projective-correction}),
+      $\mathcal{D}_{\Pi,g,A}^2$ is a Laplace-type operator of the form
+      $D = -(\nabla^{S,A})^2 + E$ with $E$ as in~\eqref{eq:endomorphism-E}.
+      The standard Seeley--DeWitt expansion gives~\cite{Vassilevich2003}
+      \begin{align}
+        \label{eq:sdw-a0}
+        a_0(x, D) &= (4\pi)^{-2} \operatorname{tr}(\mathrm{id}), \\
+        \label{eq:sdw-a2}
+        a_2(x, D) &= (4\pi)^{-2} \operatorname{tr}\!\left(\tfrac{R}{6}\,\mathrm{id} - E\right), \\
+        \label{eq:sdw-a4}
+        a_4(x, D) &= (4\pi)^{-2} \operatorname{tr}\!\left(
+                                                      \tfrac{1}{2}E^2 - \tfrac{1}{6}RE
+          + \tfrac{1}{30}\Delta R\,\mathrm{id}
+                                                      + \tfrac{1}{12}\Omega_{\mu\nu}\Omega^{\mu\nu}
+                                                      + \text{(curvature}^2\text{ terms)}
+        \right),
+      \end{align}
+      where $\Omega_{\mu\nu}$ is the curvature of $\nabla^{S,A}$ and the curvature$^2$
+      terms are tabulated in~\cite{Vassilevich2003}, Section~4.
+
+      The $\gamma_5$-weighted variant replaces $\operatorname{tr}$ by
+      $\operatorname{tr}(\gamma_5\,\cdot\,)$.
+      Only terms containing four Clifford matrices survive; the gauge-curvature part
+      yields the topological density~\eqref{eq:topological-density}, which controls the
+      anomaly constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed}.
+
+  \end{appendix}
+
+  \newpage
+  \bibliographystyle{plain}
   \bibliography{cosmochrony-bibliography,external-refs}
-  \bibliographystyle{plainnat}
 
 \end{document}
