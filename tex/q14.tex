@@ -4,6 +4,8 @@
 
 \documentclass[11pt,a4paper]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage{natbib}
@@ -32,6 +34,11 @@
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\ad}{ad}
 \DeclareMathOperator{\Mult}{Mult}
+\newcommand{\Mp}{\operatorname{Mp}}
+\newcommand{\Spin}{\operatorname{Spin}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\SU}{\operatorname{SU}}
+\newcommand{\Rep}{\operatorname{Rep}}
 
 \title{Fermionic Matter and Chirality\\
 from Projective Dirac Admissibility}
@@ -61,7 +68,7 @@ from Projective Dirac Admissibility}
     and the Lorentzian complexification
     $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
     an admissible spinor bundle $S_\Pi$ whose symmetric and determinant tensor sectors
-    reproduce the $SU(2)_L \times U(1)_Y$ electroweak bundle structure.
+    reproduce the $\SU(2)_L \times U(1)_Y$ electroweak bundle structure.
     Second, the projected Dirac operator $\mathcal{D}_{\Pi,g,A}$ contains a canonical
     zero-order endomorphism $E_\Pi$, the internal spectral residue of non-injective
     projection.
@@ -73,7 +80,7 @@ from Projective Dirac Admissibility}
     Third, the admissible saturation invariant $\sigma_c(n_3) = 3$ admits a spinorial
     multiplicity reading, distinct from its geometric reading as three spatial directions,
     yielding a gauge-singlet three-generation factor
-    $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{SU(2)} \oplus Y)$.
+    $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\SU(2)} \oplus Y)$.
     The colour-coupled quark sector is obtained by tensoring with the colour module
     $V_{\mathrm{color}}$, conditional on hypothesis~[H-color].
   \end{abstract}
@@ -128,22 +135,22 @@ from Projective Dirac Admissibility}
         \;\Rightarrow\;
         F_n \simeq V_\rho
         \;\Rightarrow\;
-        Mp(2,\mathbb{R})
+        \Mp(2,\mathbb{R})
         \;\Rightarrow\;
         \mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})
         \;\leadsto\;
-        Spin(3,1) \simeq SL(2,\mathbb{C})
+        \Spin(3,1) \simeq \SL(2,\mathbb{C})
         \;\Rightarrow\;
         S_\Pi .
       \end{equation}
       The identification $F_n \simeq V_\rho$ is the Weil-module characterisation of the
       admissible fibre, established from axioms A1--A3 and the Stone--von Neumann theorem
       in~\cite{Beau2026m,Beau2026HeisenbergStructure}.
-      The passage to $Mp(2,\mathbb{R})$ is the metaplectic lift of the symplectic structure
+      The passage to $\Mp(2,\mathbb{R})$ is the metaplectic lift of the symplectic structure
       canonically carried by $V_\rho$.
       The Lorentzian closure of the effective metric forces the complexification
       $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
-      whose Lorentzian integration is the spin group $Spin(3,1) \simeq SL(2,\mathbb{C})$,
+      whose Lorentzian integration is the spin group $\Spin(3,1) \simeq \SL(2,\mathbb{C})$,
       yielding the admissible spinor bundle $S_\Pi$.
 
       The tensor functors of $S_\Pi$ then define the electroweak bundle data:
@@ -154,7 +161,7 @@ from Projective Dirac Admissibility}
         \wedge^2(S_\Pi) \;\Rightarrow\; L_Y .
       \end{equation}
       The symmetric sector gives the complex adjoint; after selecting the compact real
-      form, it defines the $SU(2)_L$ gauge sector.
+      form, it defines the $\SU(2)_L$ gauge sector.
       The determinant line $L_Y = \wedge^2(S_\Pi)$ is the geometric support of the
       $U(1)_Y$ factor.
       The distribution of hypercharge weights $Y_R$ is not assumed: it is constrained
@@ -169,8 +176,8 @@ from Projective Dirac Admissibility}
 
       \paragraph{Theorem~A (Spinorial electroweak bundle).}
         The admissible Weil module $V_\rho$ induces, via the metaplectic lift and
-        Lorentzian complexification, a $Spin(3,1)$ spinor bundle $S_\Pi$.
-        Its symmetric and determinant tensor sectors reproduce the $SU(2)_L \times U(1)_Y$
+        Lorentzian complexification, a $\Spin(3,1)$ spinor bundle $S_\Pi$.
+        Its symmetric and determinant tensor sectors reproduce the $\SU(2)_L \times U(1)_Y$
         electroweak bundle structure (equations~\eqref{eq:tensor-functors}).
         This result is algebraic and functorial; it depends on the Lorentzian closure
         of~\cite{Beau2026q11} for the complexification step.
@@ -206,7 +213,7 @@ from Projective Dirac Admissibility}
         \label{eq:generation-space}
         \mathbb{C}^3_{\mathrm{gen}}
         \;\subset\;
-        \ker\!\left(\operatorname{ad}_{SU(2)} \oplus Y\right),
+        \ker\!\left(\operatorname{ad}_{\SU(2)} \oplus Y\right),
         \end{equation}
         which is not identified with $\operatorname{Sym}^2(S_\Pi)$.
         The three-generation structure is a separate functorial image of the same
@@ -225,7 +232,7 @@ from Projective Dirac Admissibility}
       = \bigl(S_\Pi \oplus (S_\Pi \otimes V_{\mathrm{color}})\bigr)
       \otimes \mathbb{C}^3_{\mathrm{gen}},
     \end{equation}
-    where $V_{\mathrm{color}} \in \mathrm{Rep}(SU(3))$.
+    where $V_{\mathrm{color}} \in \Rep(\SU(3))$.
     The following status distinctions apply throughout the paper.
     The electroweak spinorial sector is structural once Theorem~A is established.
     The colour-coupled quark bundle $S_\Pi \otimes V_{\mathrm{color}}$ is conditional
@@ -280,9 +287,9 @@ from Projective Dirac Admissibility}
     \[
       F_n \simeq V_\rho
       \quad\Rightarrow\quad
-      Mp(2,\mathbb{R}).
+      \Mp(2,\mathbb{R}).
     \]
-    The passage to $Mp(2,\mathbb{R})$ is therefore structural: it is the double cover
+    The passage to $\Mp(2,\mathbb{R})$ is therefore structural: it is the double cover
     naturally associated with the symplectic action underlying the Weil representation.
 
   \subsection{Lorentzian complexification}
@@ -294,8 +301,8 @@ from Projective Dirac Admissibility}
     \[
       g^{\mu\nu} = 2\eta^{\mu\nu}.
     \]
-    The relevant spin group is therefore not the compact group $SU(2)$, but
-    $Spin(3,1) \simeq SL(2,\mathbb{C})$.
+    The relevant spin group is therefore not the compact group $\SU(2)$, but
+    $\Spin(3,1) \simeq \SL(2,\mathbb{C})$.
 
     The Lorentzian closure does not require an independent postulate of a spin group.
     It complexifies the real metaplectic Lie algebra:
@@ -306,19 +313,19 @@ from Projective Dirac Admissibility}
     The Lorentzian spin group integrating this complexified algebra is
     \begin{equation}
       \label{eq:spin-group-lorentzian}
-      Spin(3,1) \simeq SL(2,\mathbb{C}).
+      \Spin(3,1) \simeq \SL(2,\mathbb{C}).
     \end{equation}
     This defines the admissible spinor bundle $S_\Pi$ as the associated bundle
-    carrying the fundamental $SL(2,\mathbb{C})$ spin representation.
+    carrying the fundamental $\SL(2,\mathbb{C})$ spin representation.
 
   \subsection{The admissible spin frame bundle}
     \label{ssec:spin-frame-bundle}
 
-    Let $P_\Pi$ denote the principal $Spin(3,1)$-bundle obtained from the Lorentzian
+    Let $P_\Pi$ denote the principal $\Spin(3,1)$-bundle obtained from the Lorentzian
     complexification of the metaplectic lift.
     The admissible spinor bundle is
     \[
-      S_\Pi = P_\Pi \times_{Spin(3,1)} \mathbb{C}^2 .
+      S_\Pi = P_\Pi \times_{\Spin(3,1)} \mathbb{C}^2 .
     \]
     The construction is projective: $P_\Pi$ is not postulated as an independent spin
     frame bundle over a pre-existing manifold.
@@ -344,7 +351,7 @@ from Projective Dirac Admissibility}
     \[
       \mathfrak{su}(2) \subset \mathfrak{sl}_2(\mathbb{C}),
     \]
-    and hence the $SU(2)_L$ gauge sector.
+    and hence the $\SU(2)_L$ gauge sector.
 
     The antisymmetric square gives the determinant line:
     \[
@@ -367,16 +374,16 @@ from Projective Dirac Admissibility}
         \wedge^2(S_\Pi) = L_Y .
       \]
       After selection of the compact real form, these define the
-      $SU(2)_L \times U(1)_Y$ electroweak bundle data.
+      $\SU(2)_L \times U(1)_Y$ electroweak bundle data.
     \end{theorem}
 
     \begin{proof}
       The identification $F_n \simeq V_\rho$ gives the admissible fibre the canonical
       symplectic structure of the Weil representation~\cite{Beau2026m,Beau2026HeisenbergStructure}.
-      The automorphisms preserving this structure lift to $Mp(2,\mathbb{R})$.
+      The automorphisms preserving this structure lift to $\Mp(2,\mathbb{R})$.
       The Lorentzian metric $g^{\mu\nu} = 2\eta^{\mu\nu}$~\cite{Beau2026q11} forces the
       complexification $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
-      whose Lorentzian integration is $Spin(3,1) \simeq SL(2,\mathbb{C})$.
+      whose Lorentzian integration is $\Spin(3,1) \simeq \SL(2,\mathbb{C})$.
       The associated fundamental bundle is $S_\Pi$.
       The fibrewise identities
       \[
@@ -869,7 +876,7 @@ from Projective Dirac Admissibility}
       assigns to each stable admissible direction $e \in \mathcal{A}_3$ a copy
       $S_\Pi^{(e)}$ of the admissible spinor bundle, subject to the following conditions:
       \begin{enumerate}
-        \item[\emph{(i)}]   $S_\Pi^{(e)} \cong S_\Pi$ as $Spin(3,1)$ spinor bundles;
+        \item[\emph{(i)}]   $S_\Pi^{(e)} \cong S_\Pi$ as $\Spin(3,1)$ spinor bundles;
         \item[\emph{(ii)}]  the gauge group $G_\Pi$ acts on $S_\Pi^{(e)}$ via the same
         representation as on $S_\Pi$;
         \item[\emph{(iii)}] the admissible projection $\Pi$ acts on $S_\Pi^{(e)}$ via
@@ -895,7 +902,7 @@ from Projective Dirac Admissibility}
     The generation space $\mathbb{C}^3_{\mathrm{gen}}$ is the indexing space of the
     functor $\mathcal{F}_{\mathrm{spin}}$, spanned by $\{e_1, e_2, e_3\}$.
     It is not the adjoint triplet $\operatorname{Sym}^2(S_\Pi)$, which carries the
-    $SU(2)$ adjoint action and belongs to the gauge bundle.
+    $\SU(2)$ adjoint action and belongs to the gauge bundle.
     By condition~(ii) of Definition~\ref{def:spinorial-functor}, the gauge group acts
     on each copy $S_\Pi^{(e_i)}$ in the same way as on $S_\Pi$; it acts trivially on
     the indexing labels $e_i$.
@@ -904,7 +911,7 @@ from Projective Dirac Admissibility}
       \label{eq:generation-singlet}
       \mathbb{C}^3_{\mathrm{gen}}
       \;\subset\;
-      \ker\!\left(\operatorname{ad}_{SU(2)} \oplus Y\right).
+      \ker\!\left(\operatorname{ad}_{\SU(2)} \oplus Y\right).
     \end{equation}
 
     \begin{theorem}[Generation multiplicity]
@@ -921,7 +928,7 @@ from Projective Dirac Admissibility}
         \qquad
         \mathbb{C}^3_{\mathrm{gen}}
         \subset
-        \ker\!\left(\operatorname{ad}_{SU(2)} \oplus Y\right).
+        \ker\!\left(\operatorname{ad}_{\SU(2)} \oplus Y\right).
       \end{equation}
       The three-generation structure is the spinorial multiplicity image of the same
       rank-three admissible invariant that yields the three spatial directions in the
@@ -952,7 +959,7 @@ from Projective Dirac Admissibility}
       $\mathcal{A}_3$: the geometric image carries spatial tangent structure, while the
       multiplicity image carries no electroweak charge.
       This distinction prevents the generation triplet from being confused with the
-      adjoint $SU(2)$ triplet $\operatorname{Sym}^2(S_\Pi)$.
+      adjoint $\SU(2)$ triplet $\operatorname{Sym}^2(S_\Pi)$.
     \end{remark}
 
   \section{The Conditional Colour Sector}
@@ -967,7 +974,7 @@ from Projective Dirac Admissibility}
   programme~\cite{Beau2026a35,Beau2026a36}.
 
   Let $V_{\mathrm{color}}$ denote the fundamental colour representation of the
-  admissible $SU(3)$ sector.
+  admissible $\SU(3)$ sector.
   The quark spinor bundle is defined as
   \begin{equation}
     \label{eq:quark-bundle}
@@ -990,16 +997,16 @@ from Projective Dirac Admissibility}
     The construction of $S_\Pi$, $L_Y$, and $\mathbb{C}^3_{\mathrm{gen}}$ does not
     depend on the colour hypothesis.
     By contrast, the factor $V_{\mathrm{color}}$ inherits the conditional status of
-    the $SU(3)$ sector.
+    the $\SU(3)$ sector.
 
-    The identification of $SU(3)$ as the colour gauge group depends on the colour
+    The identification of $\SU(3)$ as the colour gauge group depends on the colour
     co-admissibility hypothesis~[H-color], according to which the admissible colour
     triplet sectors are co-admissible in the pre-saturation window.
     This hypothesis is supported numerically for $q \in \{61, 151, 211\}$ by the
     O32 campaign~\cite{Beau2026a36}, but its analytical derivation from the Foundation
     axioms remains open.
     Under~[H-color], the triplet colour module defines
-    $V_{\mathrm{color}} \in \operatorname{Rep}(SU(3))$ and the quark
+    $V_{\mathrm{color}} \in \operatorname{Rep}(\SU(3))$ and the quark
     sector~\eqref{eq:quark-bundle} is well defined.
     Without~[H-color], the electroweak spinorial sector remains intact, but the
     colour-coupled quark sector is not claimed as an unconditional output of the
@@ -1008,7 +1015,7 @@ from Projective Dirac Admissibility}
     \begin{proposition}[Conditional colour extension]
       \label{prop:conditional-colour-extension}
       Assume~\emph{[H-color]}, so that the admissible colour triplet defines a
-      fundamental $SU(3)$ representation
+      fundamental $\SU(3)$ representation
       $V_{\mathrm{color}}$~\cite{Beau2026a35,Beau2026a36}.
       Then the spinorial matter bundle admits the colour-coupled extension
       \begin{equation}
@@ -1065,11 +1072,11 @@ from Projective Dirac Admissibility}
     \Rightarrow
     F_n \simeq V_\rho
     \Rightarrow
-    Mp(2,\mathbb{R})
+    \Mp(2,\mathbb{R})
     \Rightarrow
     \mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})
     \leadsto
-    Spin(3,1)
+    \Spin(3,1) \simeq \SL(2,\mathbb{C})
     \Rightarrow
     S_\Pi .
   \]
@@ -1084,7 +1091,7 @@ from Projective Dirac Admissibility}
     \Rightarrow
     L_Y .
   \]
-  The first sector gives the complex adjoint, from which the $SU(2)_L$ triplet is
+  The first sector gives the complex adjoint, from which the $\SU(2)_L$ triplet is
   selected by the compact real form.
   The second gives the determinant line supporting the $U(1)_Y$ factor.
   This establishes the spinorial electroweak carrier without introducing an
@@ -1150,9 +1157,9 @@ from Projective Dirac Admissibility}
   \[
     \mathbb{C}^3_{\mathrm{gen}}
     \subset
-    \ker\!\left(\operatorname{ad}_{SU(2)}\oplus Y\right).
+    \ker\!\left(\operatorname{ad}_{\SU(2)}\oplus Y\right).
   \]
-  This generation space is not the $SU(2)$ adjoint triplet
+  This generation space is not the $\SU(2)$ adjoint triplet
   $\operatorname{Sym}^2(S_\Pi)$.
   It is a multiplicity space commuting with the gauge action.
   The resulting fermionic carrier is
