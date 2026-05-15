@@ -1,4 +1,4 @@
-# Q17
+# Q14
 
 J. Beau, Independent Researcher, France
 
@@ -9,8 +9,8 @@ In preparation.
 ## Compilation
 
 ```bash
-cd q17
+cd q14
 bash compile.sh
 # or manually:
-pdflatex -output-directory=out tex/q17.tex
+pdflatex -output-directory=out tex/q14.tex
 ```

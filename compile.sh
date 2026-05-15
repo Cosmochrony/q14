@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Q17 paper compilation script
+# Q14 paper compilation script
 
 set -e
 
-TEX_FILE="tex/q17.tex"
+TEX_FILE="tex/q14.tex"
 OUTPUT_DIR="out"
-MAIN_NAME="q17"
+MAIN_NAME="q14"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-echo -e "${GREEN}=== Compiling Q17 paper ===${NC}"
+echo -e "${GREEN}=== Compiling Q14 paper ===${NC}"
 
 if [ ! -d "$OUTPUT_DIR" ]; then
     echo -e "${YELLOW}Creating output directory: $OUTPUT_DIR${NC}"
