@@ -82,7 +82,8 @@ from Projective Dirac Admissibility}
     yielding a gauge-singlet three-generation factor
     $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\SU(2)} \oplus Y)$.
     The colour-coupled quark sector is obtained by tensoring with the colour module
-    $V_{\mathrm{color}}$, conditional on hypothesis~[H-color].
+    $V_{\mathrm{color}}$, unconditional at the effective level
+    ($[H\text{-color}]_{\mathrm{eff}}$ established in~\cite{Beau2026a35,Beau2026a36}).
   \end{abstract}
 
   \medskip
@@ -235,8 +236,9 @@ from Projective Dirac Admissibility}
     where $V_{\mathrm{color}} \in \Rep(\SU(3))$.
     The following status distinctions apply throughout the paper.
     The electroweak spinorial sector is structural once Theorem~A is established.
-    The colour-coupled quark bundle $S_\Pi \otimes V_{\mathrm{color}}$ is conditional
-    on hypothesis~[H-color], as inherited from~\cite{Beau2026a35,Beau2026a36}.
+    The colour-coupled quark bundle $S_\Pi \otimes V_{\mathrm{color}}$ is unconditional
+    at the effective level: $[H\text{-color}]_{\mathrm{eff}}$ is established
+    analytically in~\cite{Beau2026a35,Beau2026a36}.
     The hypercharge rigidity of Theorem~B and the generation multiplicity of
     Theorem~C are proved below; they are not assumed as inputs.
 
@@ -264,8 +266,8 @@ from Projective Dirac Admissibility}
     cancellation.
     Section~\ref{sec:generations} establishes the spinorial multiplicity reading of
     $\sigma_c(n_3) = 3$ and proves Theorem~C.
-    Section~\ref{sec:colour} discusses the colour-coupled quark sector and its
-    conditional status under~[H-color].
+    Section~\ref{sec:colour} discusses the colour-coupled quark sector and the
+    analytical status of $[H\text{-color}]_{\mathrm{eff}}$.
     Section~\ref{sec:conclusion} summarises the results and identifies the remaining
     open directions.
 
@@ -791,8 +793,8 @@ from Projective Dirac Admissibility}
     \begin{proposition}[Hypercharge rigidity from spectral coherence]
       \label{prop:hypercharge-rigidity}
       Assume that the projected spinorial sectors are precisely those of the admissible
-      matter decomposition~\eqref{eq:matter-content}, with the colour factor conditional
-      on~\emph{[H-color]}.
+      matter decomposition~\eqref{eq:matter-content}, with the colour factor unconditional
+      at the effective level~\cite{Beau2026a35,Beau2026a36}.
       Then $U(1)_Y$ gauge invariance of the projected spectral functional imposes
       the constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed} on the
       hypercharge weights $Y_R$.
@@ -996,26 +998,23 @@ from Projective Dirac Admissibility}
 
     The construction of $S_\Pi$, $L_Y$, and $\mathbb{C}^3_{\mathrm{gen}}$ does not
     depend on the colour hypothesis.
-    By contrast, the factor $V_{\mathrm{color}}$ inherits the conditional status of
-    the $\SU(3)$ sector.
+    The factor $V_{\mathrm{color}}$ depends on the $\SU(3)$ sector, which is now
+    unconditional at the effective level.
 
-    The identification of $\SU(3)$ as the colour gauge group depends on the colour
-    co-admissibility hypothesis~[H-color], according to which the admissible colour
-    triplet sectors are co-admissible in the pre-saturation window.
-    This hypothesis is supported numerically for $q \in \{61, 151, 211\}$ by the
-    O32 campaign~\cite{Beau2026a36}, but its analytical derivation from the Foundation
-    axioms remains open.
-    Under~[H-color], the triplet colour module defines
-    $V_{\mathrm{color}} \in \operatorname{Rep}(\SU(3))$ and the quark
-    sector~\eqref{eq:quark-bundle} is well defined.
-    Without~[H-color], the electroweak spinorial sector remains intact, but the
-    colour-coupled quark sector is not claimed as an unconditional output of the
-    present paper.
+    The identification of $\SU(3)$ as the colour gauge group follows from
+    $[H\text{-color}]_{\mathrm{eff}}$ (equality of effective BFS capacity
+    exponents $\delta_c = \delta_{\omega c} = \delta_{\omega^2 c}$), established
+    analytically in~\cite{Beau2026a35,Beau2026a36} via two complementary
+    mechanisms: the intra-coset Vandermonde symmetry (O31) and the
+    modulation-frequency argument for the O12 fingerprint observable (O32).
+    The triplet colour module therefore unconditionally defines
+    $V_{\mathrm{color}} \in \operatorname{Rep}(\SU(3))$ in the effective limit,
+    and the quark sector~\eqref{eq:quark-bundle} is an unconditional output
+    of the present paper at this level.
 
-    \begin{proposition}[Conditional colour extension]
+    \begin{proposition}[Colour sector extension]
       \label{prop:conditional-colour-extension}
-      Assume~\emph{[H-color]}, so that the admissible colour triplet defines a
-      fundamental $\SU(3)$ representation
+      The admissible colour triplet defines a fundamental $\SU(3)$ representation
       $V_{\mathrm{color}}$~\cite{Beau2026a35,Beau2026a36}.
       Then the spinorial matter bundle admits the colour-coupled extension
       \begin{equation}
@@ -1037,16 +1036,16 @@ from Projective Dirac Admissibility}
       \label{rem:colour-does-not-affect-spinorial-construction}
       The colour extension does not modify the construction of the admissible spinor
       bundle $S_\Pi$.
-      It adds an independent gauge representation factor, conditional on the
-      colour-sector result.
+      It adds an independent gauge representation factor, proved unconditional
+      at the effective level~\cite{Beau2026a35,Beau2026a36}.
       The logical status of the fermionic construction is therefore stratified:
       \begin{equation}
         \label{eq:status-table}
         \begin{cases}
           S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}
-          & \text{electroweak/leptonic carrier, independent of [H-color],} \\[4pt]
+          & \text{electroweak/leptonic carrier, unconditional,} \\[4pt]
           S_\Pi \otimes V_{\mathrm{color}} \otimes \mathbb{C}^3_{\mathrm{gen}}
-          & \text{quark carrier, conditional on [H-color].}
+          & \text{quark carrier, unconditional at the effective level.}
         \end{cases}
       \end{equation}
     \end{remark}
@@ -1176,8 +1175,9 @@ from Projective Dirac Admissibility}
     =
     S_\Pi \otimes V_{\mathrm{color}} .
   \]
-  This step inherits the conditional status of the colour co-admissibility
-  hypothesis~[H-color].
+  This step is unconditional at the effective level:
+  $[H\text{-color}]_{\mathrm{eff}}$ is established analytically
+  in~\cite{Beau2026a35,Beau2026a36}.
   Accordingly, the matter carrier addressed by the construction is
   \[
     S_\Pi^{\mathrm{matter}}
@@ -1188,7 +1188,7 @@ from Projective Dirac Admissibility}
     \otimes
     \mathbb{C}^3_{\mathrm{gen}},
   \]
-  with the first summand independent of~[H-color] and the second conditional on it.
+  with both summands unconditional at the effective level.
 
   Several open directions remain sharply delimited.
   First, the spinorial lift of BI parity must be derived analytically: showing that
@@ -1199,9 +1199,10 @@ from Projective Dirac Admissibility}
   connected explicitly to the Standard Model hypercharge pattern.
   The anomaly constraints restrict the allowed weights, while the determinant-line
   normalisation fixes their scale.
-  Third, the analytical derivation of~[H-color] from the Foundation axioms remains
-  the open condition for promoting the quark colour sector from conditional to
-  unconditional status.
+  Third, the connection between $[H\text{-color}]_{\mathrm{eff}}$ (proved
+  analytically in~\cite{Beau2026a35,Beau2026a36}) and the exact pointwise equality
+  of BFS capacity profiles at finite~$q$ is a separately bounded numerical question,
+  characterised quantitatively as an $O(q^{-1})$ modulation bias by O32.
 
   A further direction concerns the physical content of $E_\Pi$.
   Since $E_\Pi$ is the internal spectral residue of non-injective projection, it is
@@ -1217,11 +1218,9 @@ from Projective Dirac Admissibility}
 
   The conclusion of the fermionic step is therefore precise.
   The Standard Model matter carrier is not postulated as an independent field content.
-  Its spinorial, electroweak, chiral, and generation structures arise from distinct
-  functorial readings of the same admissible Weil fibre, while the colour sector
-  retains the explicit conditional status inherited from the gauge-fibre programme.
-  The remaining open problems are not structural gaps in the architecture, but
-  specific rigidity problems for $E_\Pi$, $L_Y$, and~[H-color].
+  Its spinorial, electroweak, chiral, generation, and colour structures arise from
+  distinct functorial readings of the same admissible Weil fibre.
+  The remaining open problems are specific rigidity problems for $E_\Pi$ and $L_Y$.
 
   \newpage
   \begin{appendix}
