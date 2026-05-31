@@ -82,8 +82,8 @@ from Projective Dirac Admissibility}
     yielding a gauge-singlet three-generation factor
     $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\SU(2)} \oplus Y)$.
     The colour-coupled quark sector is obtained by tensoring with the colour module
-    $V_{\mathrm{color}}$, unconditional at the effective level
-    ($[H\text{-color}]_{\mathrm{eff}}$ established in~\cite{Beau2026a35,Beau2026a36}).
+    $V_{\mathrm{color}}$, unconditional at the pointwise level
+    ($[H\text{-color}]_{\mathrm{pointwise}}$ established in~\cite{Beau2026a35}).
   \end{abstract}
 
   \medskip
@@ -237,8 +237,9 @@ from Projective Dirac Admissibility}
     The following status distinctions apply throughout the paper.
     The electroweak spinorial sector is structural once Theorem~A is established.
     The colour-coupled quark bundle $S_\Pi \otimes V_{\mathrm{color}}$ is unconditional
-    at the effective level: $[H\text{-color}]_{\mathrm{eff}}$ is established
-    analytically in~\cite{Beau2026a35,Beau2026a36}.
+    at the pointwise level: $[H\text{-color}]_{\mathrm{pointwise}}$ (exact equality at
+    finite~$q$) and $[H\text{-color}]_{\mathrm{eff}}$ are established analytically
+    in~\cite{Beau2026a35,Beau2026a36}.
     The hypercharge rigidity of Theorem~B and the generation multiplicity of
     Theorem~C are proved below; they are not assumed as inputs.
 
@@ -267,7 +268,7 @@ from Projective Dirac Admissibility}
     Section~\ref{sec:generations} establishes the spinorial multiplicity reading of
     $\sigma_c(n_3) = 3$ and proves Theorem~C.
     Section~\ref{sec:colour} discusses the colour-coupled quark sector and the
-    analytical status of $[H\text{-color}]_{\mathrm{eff}}$.
+    pointwise analytical status of $[H\text{-color}]$.
     Section~\ref{sec:conclusion} summarises the results and identifies the remaining
     open directions.
 
@@ -998,19 +999,22 @@ from Projective Dirac Admissibility}
 
     The construction of $S_\Pi$, $L_Y$, and $\mathbb{C}^3_{\mathrm{gen}}$ does not
     depend on the colour hypothesis.
-    The factor $V_{\mathrm{color}}$ depends on the $\SU(3)$ sector, which is now
-    unconditional at the effective level.
+    The factor $V_{\mathrm{color}}$ depends on the $\SU(3)$ sector, which is
+    unconditional at the pointwise level.
 
     The identification of $\SU(3)$ as the colour gauge group follows from
-    $[H\text{-color}]_{\mathrm{eff}}$ (equality of effective BFS capacity
-    exponents $\delta_c = \delta_{\omega c} = \delta_{\omega^2 c}$), established
-    analytically in~\cite{Beau2026a35,Beau2026a36} via two complementary
-    mechanisms: the intra-coset Vandermonde symmetry (O31) and the
-    modulation-frequency argument for the O12 fingerprint observable (O32).
+    $[H\text{-color}]_{\mathrm{pointwise}}$ (exact equality of BFS capacity
+    profiles at finite~$q$), established analytically in~\cite{Beau2026a35}
+    via the single-frequency structure of the fingerprint (Proposition~4.23
+    of O31): each fingerprint vector carries frequency
+    $B = c_1 b_1 + c_2 b_2 + c_3 b_3$, and the orbit dilation
+    $B \mapsto \omega B$ is a bijection of $\mathbb{Z}/q\mathbb{Z}$.
+    The modulation-frequency argument of O32~\cite{Beau2026a36} establishes
+    the weaker $[H\text{-color}]_{\mathrm{eff}}$.
     The triplet colour module therefore unconditionally defines
-    $V_{\mathrm{color}} \in \operatorname{Rep}(\SU(3))$ in the effective limit,
+    $V_{\mathrm{color}} \in \operatorname{Rep}(\SU(3))$ exactly at finite~$q$,
     and the quark sector~\eqref{eq:quark-bundle} is an unconditional output
-    of the present paper at this level.
+    of the present paper.
 
     \begin{proposition}[Colour sector extension]
       \label{prop:conditional-colour-extension}
@@ -1045,7 +1049,7 @@ from Projective Dirac Admissibility}
           S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}
           & \text{electroweak/leptonic carrier, unconditional,} \\[4pt]
           S_\Pi \otimes V_{\mathrm{color}} \otimes \mathbb{C}^3_{\mathrm{gen}}
-          & \text{quark carrier, unconditional at the effective level.}
+          & \text{quark carrier, unconditional at the pointwise level.}
         \end{cases}
       \end{equation}
     \end{remark}
@@ -1175,9 +1179,9 @@ from Projective Dirac Admissibility}
     =
     S_\Pi \otimes V_{\mathrm{color}} .
   \]
-  This step is unconditional at the effective level:
-  $[H\text{-color}]_{\mathrm{eff}}$ is established analytically
-  in~\cite{Beau2026a35,Beau2026a36}.
+  This step is unconditional at the pointwise level:
+  $[H\text{-color}]_{\mathrm{pointwise}}$ is established analytically
+  in~\cite{Beau2026a35}.
   Accordingly, the matter carrier addressed by the construction is
   \[
     S_\Pi^{\mathrm{matter}}
@@ -1188,7 +1192,7 @@ from Projective Dirac Admissibility}
     \otimes
     \mathbb{C}^3_{\mathrm{gen}},
   \]
-  with both summands unconditional at the effective level.
+  with both summands unconditional at the pointwise level.
 
   Several open directions remain sharply delimited.
   First, the spinorial lift of BI parity must be derived analytically: showing that
