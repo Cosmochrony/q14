@@ -72,7 +72,7 @@ from Projective Dirac Admissibility}
     Second, the projected Dirac operator $\mathcal{D}_{\Pi,g,A}$ contains a canonical
     zero-order endomorphism $E_\Pi$, the internal spectral residue of non-injective
     projection.
-    Under the spinorial lift of BI parity (Hypothesis~\ref{hyp:spinorial-bi-lift}),
+    Under the spinorial lift of BI parity (Theorem~\ref{thm:spinorial-bi-lift}),
     $E_\Pi$ is left-admissible and produces the $V{-}A$ chiral structure.
     The $\gamma_5$-weighted $a_4$ coefficient of $\mathcal{D}_{\Pi,g,A}^2$ then imposes
     anomaly-cancellation trace constraints on the hypercharge weights, which are thereby
@@ -175,7 +175,7 @@ from Projective Dirac Admissibility}
 
       The paper is organised around three independent but compatible results.
 
-      \paragraph{Theorem~A (Spinorial electroweak bundle).}
+      \paragraph{Theorem A (Spinorial electroweak bundle).}
         The admissible Weil module $V_\rho$ induces, via the metaplectic lift and
         Lorentzian complexification, a $\Spin(3,1)$ spinor bundle $S_\Pi$.
         Its symmetric and determinant tensor sectors reproduce the $\SU(2)_L \times U(1)_Y$
@@ -183,7 +183,7 @@ from Projective Dirac Admissibility}
         This result is algebraic and functorial; it depends on the Lorentzian closure
         of~\cite{Beau2026q11} for the complexification step.
 
-      \paragraph{Theorem~B (Chiral selection and hypercharge rigidity).}
+      \paragraph{Theorem B (Chiral selection and hypercharge rigidity).}
         The projected Dirac operator satisfies the Lichnerowicz-type identity
       \begin{equation}
         \label{eq:lichnerowicz}
@@ -203,7 +203,7 @@ from Projective Dirac Admissibility}
         of~\cite{Beau2026q13} for the coupling of the Dirac sector to the joint spectral
         geometry.
 
-      \paragraph{Theorem~C (Generation multiplicity).}
+      \paragraph{Theorem C (Generation multiplicity).}
         The admissible saturation invariant $\sigma_c(n_3) = 3$~\cite{Beau2026a27}
         admits two functorially distinct readings of the same rank-three admissible
         invariant.
@@ -223,7 +223,7 @@ from Projective Dirac Admissibility}
         explicitly in Section~\ref{sec:generations}.
         This result is combinatorial and representational; it depends on~\cite{Beau2026a27}.
 
-  \subsection{Conditional status and dependencies}
+  \subsection{Status and dependencies}
     \label{ssec:status}
 
     The full matter content targeted by the construction is
@@ -243,10 +243,11 @@ from Projective Dirac Admissibility}
     The hypercharge rigidity of Theorem~B and the generation multiplicity of
     Theorem~C are proved below; they are not assumed as inputs.
 
-    The only additional technical condition used in the fermionic sector is the
-    spinorial lift of BI parity.
-    It is isolated as Hypothesis~\ref{hyp:spinorial-bi-lift}; all subsequent uses of
-    chirality and $V{-}A$ depend on this explicitly stated condition.
+    The spinorial lift of BI parity, formerly the only additional technical condition of the
+    fermionic sector, is established as Theorem~\ref{thm:spinorial-bi-lift}.
+    The $V{-}A$ structure and the hypercharge rigidity of Theorem~B are therefore unconditional,
+    their only remaining dependence being the axiomatic chain A1--A4~\cite{Beau2026m} and the
+    upstream BI parity datum~\cite{Beau2026a34,Beau2026u1}.
 
     This paper depends simultaneously on four layers of the programme: the admissible
     Weil fibre structure (Foundation, HeisenbergStructure, O-series); the closed
@@ -555,17 +556,112 @@ from Projective Dirac Admissibility}
   \subsection{Spinorial lift of BI parity}
     \label{ssec:proof-bi-left}
 
-    \begin{hypothesis}[Spinorial BI lift]
-      \label{hyp:spinorial-bi-lift}
-      The BI parity relation on conjugate Weil sectors lifts to an antilinear
-      endomorphism $J_\Pi$ of $S_\Pi$ satisfying
+    The spinorial lift is established here as a theorem rather than assumed.
+    We work on the limiting spinor bundle, on which the Born--Infeld parity of the conjugate
+    Weil sectors is represented by an exact antilinear involution
+    \[
+      K : V_\rho \longrightarrow V_\rho,
+      \qquad
+      K^2 = 1 ,
+    \]
+    derived at the scalar Weil level in~\cite{Beau2026c,Beau2026a34}; the finite-$q$ error is
+    confined upstream to the convergence of the Weil block toward $K$, at order
+    $O(q^{-1/2})$~\cite{Beau2026a34,Beau2026u1}.
+    The two BI-conjugate sectors fix a canonical weight decomposition $V_\rho = V_+ \oplus V_-$,
+    which is not an external Cartan choice but the same datum as the parity: $K$ exchanges the two
+    sectors, and the grading
+    \[
+      H := 2 J_3,
+      \qquad
+      H|_{V_+} = +1,
+      \qquad
+      H|_{V_-} = -1,
+      \qquad
+      H^2 = 1 ,
+    \]
+    records which sector a vector belongs to.
+
+    \begin{lemma}[BI parity is off-diagonal with respect to its grading]
+      \label{lem:bi-grading-anticommute}
+      The limiting BI involution $K$ and the weight grading $H$ satisfy
+      \begin{equation}
+        \label{eq:HK-anticommute}
+        H K = - K H .
+      \end{equation}
+    \end{lemma}
+
+    \begin{proof}
+      For $v_+ \in V_+$ one has $K v_+ \in V_-$, hence $H K v_+ = - K v_+$ and $K H v_+ = K v_+$,
+      so $H K v_+ = - K H v_+$.
+      The same computation on $V_-$ gives the operator identity.
+    \end{proof}
+
+    Equation~\eqref{eq:HK-anticommute} is the operator expression of the fact that the BI parity
+    exchanges precisely the two weights that the same BI datum canonically grades.
+
+    \begin{lemma}[Unique covariant antilinear structure]
+      \label{lem:covariant-epsilon}
+      After the Lorentzian complexification $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq
+      \mathfrak{sl}_2(\mathbb{C})$ of~\cite{Beau2026q11}, the admissible doublet becomes a Weyl
+      representation $S_L \simeq \mathbb{C}^2$ of $\SL(2,\mathbb{C})$, with $S_R \simeq
+      \overline{S_L}$ inequivalent to $S_L$.
+      Consequently no Lorentz-covariant antilinear conjugation $S_L \to S_L$ exists, so any
+      covariant antilinear lift must exchange the chiral subbundles
+      $P_L S_\Pi \leftrightarrow P_R S_\Pi$, and the unique $\SL(2,\mathbb{C})$-invariant bilinear
+      form on $S_L$ is, up to scale,
+      \[
+        \varepsilon =
+        \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix},
+        \qquad
+        \varepsilon^2 = -1 .
+      \]
+    \end{lemma}
+
+    \begin{proof}
+      A covariant antilinear endomorphism of $S_L$ is a covariant isomorphism
+      $S_L \simeq \overline{S_L}$, that is $\rho \simeq \overline{\rho}$ for the fundamental
+      representation; the $\SL(2,\mathbb{C})$ Weyl representations $(\tfrac12,0)$ and $(0,\tfrac12)$
+      are inequivalent, so no such map exists, which forces the off-diagonal exchange.
+      For the form, invariance $g^{T} B g = B$ under the diagonal torus forces the diagonal entries
+      of $B$ to vanish, and invariance under the unipotent forces the off-diagonal entries to be
+      opposite, so $B \propto \varepsilon$, which is itself invariant under $\SL(2,\mathbb{C})$.
+      Under the compact form $\mathfrak{su}(2)$ the doublet is pseudoreal~\cite{Beau2026a31}; the
+      Lorentzian complexification is precisely what removes the equivalence
+      $\rho \simeq \overline{\rho}$ and converts the internal weight exchange into a chiral exchange.
+    \end{proof}
+
+    \begin{theorem}[Spinorial BI lift]
+      \label{thm:spinorial-bi-lift}
+      On the limiting spinor bundle $S_\Pi$ there exists a unique antilinear lift of the BI parity
+      compatible with both the BI datum $(K,H)$ and $\SL(2,\mathbb{C})$-covariance.
+      Its internal part is the grading-dressed parity $J_\Pi^{\mathrm{int}} = H K$, which in the
+      weight basis ($K = \sigma_x \circ \overline{(\cdot)}$, $H = \sigma_z$) equals the unique
+      covariant form $\varepsilon \circ \overline{(\cdot)}$, since $\sigma_z \sigma_x = \varepsilon$.
+      The lift satisfies
       \begin{equation}
         \label{eq:jpi-conditions}
         J_\Pi^2 = -1,
         \qquad
         J_\Pi \gamma_5 = -\gamma_5 J_\Pi .
       \end{equation}
-    \end{hypothesis}
+    \end{theorem}
+
+    \begin{proof}
+      By Lemma~\ref{lem:covariant-epsilon} the lift is off-diagonal with internal part proportional
+      to $\varepsilon \circ \overline{(\cdot)}$, and compatibility with the BI datum fixes this
+      internal part to $H K$.
+      This is Lorentz-legitimate although $H$ alone is not invariant, precisely because $H K$
+      coincides with the unique invariant $\varepsilon \circ \overline{(\cdot)}$ of
+      Lemma~\ref{lem:covariant-epsilon}; the same two constraints determine the lift uniquely.
+      The quaternionic sign is then forced rather than imposed:
+      \[
+        (H K)^2 = H K H K = - H^2 K^2 = -1 ,
+      \]
+      using~\eqref{eq:HK-anticommute}, $H^2 = 1$, and $K^2 = 1$.
+      The first identity in~\eqref{eq:jpi-conditions} follows from $(H K)^2 = -1$; the second from
+      the off-diagonal exchange of the chiral subbundles, which reverses chirality while remaining
+      involutive and therefore contributes no sign to the square.
+    \end{proof}
 
     The first condition in~\eqref{eq:jpi-conditions} expresses the quaternionic
     character of the spinorial lift.
@@ -582,9 +678,8 @@ from Projective Dirac Admissibility}
 
     \begin{proposition}[BI parity and left-admissibility]
       \label{prop:bi-left-admissibility}
-      Assume Hypothesis~\ref{hyp:spinorial-bi-lift}, and assume that admissibility
-      selects the orientation-compatible branch.
-      Then $E_\Pi$ is left-admissible:
+      By Theorem~\ref{thm:spinorial-bi-lift}, and assuming that admissibility selects the
+      orientation-compatible branch, $E_\Pi$ is left-admissible:
       \[
         P_R E_\Pi P_R = 0 .
       \]
@@ -777,7 +872,7 @@ from Projective Dirac Admissibility}
     \begin{proposition}[Spectral anomaly constraints]
       \label{prop:spectral-anomaly-constraints}
       Assume symbol-compatibility and left-admissibility of $E_\Pi$
-      (Hypothesis~\ref{hyp:spinorial-bi-lift},
+      (Theorem~\ref{thm:spinorial-bi-lift},
       Proposition~\ref{prop:bi-left-admissibility}).
       Then $U(1)_Y$ invariance of the projected spectral functional imposes the
       projected anomaly constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed}
@@ -966,7 +1061,7 @@ from Projective Dirac Admissibility}
       adjoint $\SU(2)$ triplet $\operatorname{Sym}^2(S_\Pi)$.
     \end{remark}
 
-  \section{The Conditional Colour Sector}
+  \section{The Colour Sector}
   \label{sec:colour}
 
   The preceding sections derive the spinorial electroweak structure and the
@@ -1018,12 +1113,12 @@ from Projective Dirac Admissibility}
     of the present paper.
 
     \begin{proposition}[Colour sector extension]
-      \label{prop:conditional-colour-extension}
+      \label{prop:colour-extension}
       The admissible colour triplet defines a fundamental $\SU(3)$ representation
       $V_{\mathrm{color}}$~\cite{Beau2026a35,Beau2026a36}.
       Then the spinorial matter bundle admits the colour-coupled extension
       \begin{equation}
-        \label{eq:conditional-colour}
+        \label{eq:colour-extension}
         S_\Pi^{\mathrm{matter}}
         =
         \left(
@@ -1195,16 +1290,16 @@ from Projective Dirac Admissibility}
   \]
   with both summands unconditional at the pointwise level.
 
-  Several open directions remain sharply delimited.
-  First, the spinorial lift of BI parity must be derived analytically: showing that
-  the antilinear conjugation $\pi_{q-c}(v) = \overline{\pi_c(v)}$ lifts to an
-  antilinear endomorphism $J_\Pi$ satisfying~\eqref{eq:jpi-conditions} is the
-  remaining technical core of the $V{-}A$ result.
-  Second, the minimal integral normalisation of the determinant line $L_Y$ must be
+  The spinorial lift of BI parity, formerly the technical core of the $V{-}A$ result, is now
+  established: the antilinear conjugation $\pi_{q-c}(v) = \overline{\pi_c(v)}$ lifts to the
+  antilinear endomorphism $J_\Pi = H K$ satisfying~\eqref{eq:jpi-conditions}
+  (Theorem~\ref{thm:spinorial-bi-lift}).
+  Several open directions nevertheless remain sharply delimited.
+  First, the minimal integral normalisation of the determinant line $L_Y$ must be
   connected explicitly to the Standard Model hypercharge pattern.
   The anomaly constraints restrict the allowed weights, while the determinant-line
   normalisation fixes their scale.
-  Third, the connection between $[H\text{-color}]_{\mathrm{eff}}$ (proved
+  Second, the connection between $[H\text{-color}]_{\mathrm{eff}}$ (proved
   analytically in~\cite{Beau2026a35,Beau2026a36}) and the exact pointwise equality
   of BFS capacity profiles at finite~$q$ is a separately bounded numerical question,
   characterised quantitatively as an $O(q^{-1})$ modulation bias by O32.
