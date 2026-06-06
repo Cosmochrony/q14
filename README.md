@@ -4,7 +4,7 @@ J. Beau, Independent Researcher, France
 
 ## Status
 
-Preprint. DOI: [10.5281/zenodo.20262081](https://doi.org/10.5281/zenodo.20262081)
+Preprint. DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20218409)
 
 ## Abstract
 
@@ -34,7 +34,7 @@ Three structural results are proved:
    a spinorial multiplicity reading, yielding a gauge-singlet three-generation factor
    $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\operatorname{SU}(2)} \oplus Y)$.
    The colour-coupled quark sector is obtained by tensoring with the colour module $V_{\mathrm{color}}$,
-   unconditional at the effective level ($[H\text{-color}]_{\mathrm{eff}}$ proved in O31/O32).
+   unconditional at the pointwise level ($[H\text{-color}]_{\mathrm{pointwise}}$ proved in O31).
 
 ## Position in the programme
 
