@@ -1216,6 +1216,78 @@ from Projective Dirac Admissibility}
     It returns $\alpha = +0.156$ at $t = s = 0.40$, with $\alpha_{\mathrm{rev}} = -0.156$ and
     $\mu = 0$.
 
+  \subsection{The exit-deficit dictionary}
+    \label{ssec:dg-dictionary}
+
+    The amplitude target of the lift (Subsection~\ref{ssec:dg-bridge}) is defined not by the raw
+    eigenvalues of $E_\Pi^2$ but by their \emph{deficit} relative to the central level.
+    This is the observable that matches the spectral admissibility hierarchy, where the relevant
+    quantity is the support-exit distance from the non-exiting central ADE level
+    $\lambda_2 = 1$~\cite{Beau2026a4}.
+
+    \begin{definition}[Exit deficit]
+      \label{def:dg-exit-deficit}
+      For $s_i \in \mathrm{Spec}(E_\Pi^2|_{\mathbb{C}^3_{\mathrm{gen}}})$ with $s_0$ the central
+      ($J_\Pi$-fixed) eigenvalue, the exit deficit of $e_i$ is
+      \[
+        d_{\mathrm{exit}}(e_i) := s_0 - s_i .
+      \]
+    \end{definition}
+
+    \begin{proposition}[Spectrum--ADE dictionary]
+      \label{prop:dg-dictionary}
+      For the dynamical spectrum
+      $\mathrm{Spec}(E_\Pi^2|_{\mathbb{C}^3_{\mathrm{gen}}}) = \{s_0 = 1,\ s_\pm = \tfrac12 \pm
+      \varepsilon\}$ the exit deficits are
+      \[
+        d_{\mathrm{exit}}(e_0) = 0, \qquad d_{\mathrm{exit}}(e_\pm) = \tfrac12 \mp \varepsilon .
+      \]
+      The central direction $e_0$, fixed by $J_\Pi$, maps to the non-exiting level $\lambda_2 = 1$.
+      The two outer deficits map to the exiting ADE distances
+      $\{|\lambda_1 - 1|, |\lambda_3 - 1|\} = \{\tfrac16, \tfrac14\}$ up to a single common scale
+      $\kappa$, and the external ratio condition
+      \[
+        \frac{d_{\mathrm{exit}}(e_-)}{d_{\mathrm{exit}}(e_+)}
+        = \frac{\tfrac12 + \varepsilon}{\tfrac12 - \varepsilon}
+        = \frac{|\lambda_3 - 1|}{|\lambda_1 - 1|}
+        = \frac32
+        \qquad\Longrightarrow\qquad
+        \varepsilon = \tfrac{1}{10}, \quad \kappa = \tfrac{5}{12} .
+      \]
+      The generation ordering follows: a larger deficit corresponds to an earlier support exit and
+      hence a heavier generation, so $d_{\mathrm{exit}}(e_0) = 0 < d_{\mathrm{exit}}(e_+) <
+      d_{\mathrm{exit}}(e_-)$ orders the three generations from lightest (central, non-exiting) to
+      heaviest, consistent with the ADE assignment of~\cite{Beau2026a4}.
+    \end{proposition}
+
+    \begin{proof}
+      The deficits follow from Definition~\ref{def:dg-exit-deficit} applied to the spectrum.
+      With $\varepsilon = \tfrac1{10}$ the outer deficits are $\{\tfrac25, \tfrac35\}$, in ratio
+      $\tfrac32$, matching $\{|\lambda_1 - 1|, |\lambda_3 - 1|\} = \{\tfrac16, \tfrac14\}$ also in
+      ratio $\tfrac32$; the single scale $\kappa$ solving $\kappa\, d_{\mathrm{exit}} = |\lambda - 1|$
+      is $\kappa = (\tfrac14)/(\tfrac35) = (\tfrac16)/(\tfrac25) = \tfrac{5}{12}$, consistent on both
+      levels.
+    \end{proof}
+
+    \begin{remark}[Resolution of the apparent inversion]
+      \label{rem:dg-inversion}
+      The raw eigenvalues $s_i$ measure the static coherence carried by the generation factor, for
+      which the central direction $e_0$ is maximal; the exit deficits $d_{\mathrm{exit}}$ measure the
+      deficit of exit relative to the central level, for which $e_0$ is zero (non-exiting).
+      The two observables are linked by $d_{\mathrm{exit}} = s_0 - s$, so the apparent conflict
+      between the central-maximal spectrum here and the central-midpoint level $\lambda_2 = 1$ of the
+      ADE picture dissolves: they live in different observables related by a deficit.
+      Consequently $\varepsilon = \tfrac1{10}$ is not a calibration to a desired ratio $3:2$, but the
+      deficit value that renders the $J_3$ lift as a ratio of exit deficits matching the external ADE
+      ratio.
+    \end{remark}
+
+    The common scale $\kappa = \tfrac{5}{12}$ is the passage between the normalised deficit here and
+    the ADE distance; it is not yet a mass.
+    The mass hierarchy follows by stratigraphic amplification with exponent governed by
+    $\beta^* = 1/(\delta_{\mathrm{pair}} + \tfrac12) \approx 0.126$~\cite{Beau2026a4,Beau2026a6}, and is deferred
+    together with the cascade normalisation of Subsection~\ref{ssec:dg-status}.
+
   \subsection{Status and the amplitude problem}
     \label{ssec:dg-status}
 
@@ -1234,8 +1306,8 @@ from Projective Dirac Admissibility}
     The value of $\alpha$ obtained in the real shear model is not a mass prediction.
     Only its non-vanishing and its sign reversal under cascade reversal are structural.
     The amplitude problem is deferred to the normalisation of the admissibility cascade.
-    Concretely, the observed splitting enters through a normalised coefficient $\varepsilon$, not
-    through $\alpha$ itself:
+    Concretely, the exit-deficit ratio of Proposition~\ref{prop:dg-dictionary} enters through a
+    normalised coefficient $\varepsilon$, not through $\alpha$ itself:
     \begin{equation}
       \label{eq:dg-amplitude}
       \frac{\tfrac12 + \varepsilon}{\tfrac12 - \varepsilon} = \frac32, \qquad
