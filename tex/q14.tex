@@ -1339,6 +1339,54 @@ from Projective Dirac Admissibility}
     The remaining amplitude problem is therefore to compute this transfer constant from the coupling
     of the two cascade observables, rather than to identify $\alpha$ with the capacity exponent.
 
+    The transfer observable must therefore be defined with respect to the normalised cumulative
+    projected capacity
+    \[
+      \widehat{I}(n)
+      =
+      \frac{\sigma_{\mathrm{pair}}(0) - \sigma_{\mathrm{pair}}(n)}
+      {\sigma_{\mathrm{pair}}(0) - \sigma_{\mathrm{pair}}(n_{\mathrm{sat}})} ,
+      \qquad
+      \widehat{I}(n_{\mathrm{sat}}) = 1 .
+    \]
+    The corresponding angular--radial transfer profile is
+    \[
+      \varepsilon_n
+      =
+      \sum_{m \le n} \mathcal{K}_{\mathrm{ar}}(m)\, \Delta\widehat{I}(m),
+      \qquad
+      \Delta\widehat{I}(m) = \widehat{I}(m) - \widehat{I}(m-1) .
+    \]
+    The structurally admissible locking law is the one in which the angular split is accumulated per
+    unit of projected capacity,
+    \[
+      \Delta\varepsilon(m) = \mathcal{K}_{\mathrm{ar}}\, \Delta\widehat{I}(m) .
+    \]
+    It is selected by the factorised architecture above: the metaplectic $J_3$ component does not
+    itself carry radial decay, while the radial projection sector fixes the common orientation
+    through $\widehat{I}(n)$.
+    Coupling the split instead to the bare cascade step would make the accumulated amplitude depend
+    on the parametrisation depth, and coupling it to the residual capacity would tie the split to the
+    unprojected rather than to the realised part of the cascade.
+    Both alternatives are therefore diagnostics, not the transfer law.
+
+    Under this locking law the transfer profile is constant:
+    \[
+      \mathcal{K}_{\mathrm{ar}}(m) = \mathcal{K}_{\mathrm{ar}},
+      \qquad
+      \varepsilon_{\mathrm{sat}}
+      =
+      \sum_{m \le n_{\mathrm{sat}}} \mathcal{K}_{\mathrm{ar}}\, \Delta\widehat{I}(m)
+      =
+      \mathcal{K}_{\mathrm{ar}} .
+    \]
+    Thus the cascade normalisation in \eqref{eq:dg-amplitude} is a pure angular--radial transfer
+    constant.
+    This fixes the profile and the saturation status of the amplitude, but not its absolute value.
+    The latter still requires the physical normalisation of the metaplectic $J_3$ generator; the
+    shear value $\alpha \simeq 0.156$ remains a diagnostic coefficient, not an input to the mass
+    prediction.
+
 
   \section{The Colour Sector}
   \label{sec:colour}
