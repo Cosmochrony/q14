@@ -1061,6 +1061,184 @@ from Projective Dirac Admissibility}
       adjoint $\SU(2)$ triplet $\operatorname{Sym}^2(S_\Pi)$.
     \end{remark}
 
+  \section{Dynamic lifting of the static generation degeneracy}
+  \label{sec:dyn-lift}
+
+  Theorem~\ref{thm:generation-multiplicity} establishes the generation factor
+  $\mathbb{C}^3_{\mathrm{gen}}$ as the gauge-singlet multiplicity space spanned by the three stable
+  admissible directions $\{e_1, e_2, e_3\}$ of the rank-three sector $\mathcal{A}_3$
+  (\eqref{eq:sigma-n3}, \eqref{eq:admissible-sector}), but leaves the quantitative
+  inter-generation mass splitting open.
+  This section isolates the structural mechanism by which such a splitting can be carried, prior to
+  any amplitude analysis.
+  The dimensionless generation structure is probed by the spectrum of $E_\Pi^2$
+  (Definition~\ref{def:projective-endomorphism}) on $\mathbb{C}^3_{\mathrm{gen}}$.
+  The physical mass scale and the amplitude of the splitting are not fixed at this stage; they are
+  deferred to the normalisation of the admissibility cascade.
+
+  We use the internal structure of the rank-three sector established in the spectral admissibility
+  sub-programme.
+  In the $\End(H_{\mathrm{eff}})$ reading of~\cite{Beau2026a33,Beau2026a34}, the admissible sector
+  is the symmetric square
+  \begin{equation}
+    \label{eq:a3-sym2}
+    \mathcal{A}_3 \;\cong\; \Sym^2(V)
+  \end{equation}
+  of the two-dimensional admissible carrier $V$ (the spin-$\tfrac12$ module
+  of~\cite{Beau2026a33}), carrying the Weil weight grading.
+  The orthogonal admissible basis $\{e_1, e_2, e_3\}$ is thereby reorganised into the weight basis
+  $\{e_0, e_+, e_-\}$ of $J_3$-weights $\{0, +1, -1\}$, with $e_0$ the central weight-zero
+  direction.
+  This is a structural identification, consistent with~\cite{Beau2026a33,Beau2026a34}; it probes
+  the internal structure of $\mathbb{C}^3_{\mathrm{gen}}$ and does not alter its gauge-singlet
+  character (Theorem~\ref{thm:generation-multiplicity}).
+  The reality structure is the antilinear $J_\Pi = HK$ of the spinorial BI lift
+  (Theorem~\ref{thm:spinorial-bi-lift}), realising the parity $c \leftrightarrow q-c$, which fixes
+  $e_0$ and exchanges $e_+ \leftrightarrow e_-$ antilinearly (cf.~\eqref{eq:jpi-chiral-exchange}).
+
+  \subsection{Static obstruction}
+    \label{ssec:dg-static}
+
+    \begin{proposition}[Static obstruction]
+      \label{prop:dg-static}
+      Let $C \in \End(\mathbb{C}^3_{\mathrm{gen}})$ be a static restriction of $E_\Pi^2$ to the
+      generation factor satisfying
+      \begin{enumerate}
+        \item[\emph{(i)}]  $J_\Pi$-reality, $J_\Pi\, C\, J_\Pi^{-1} = C^{\sharp}$, and
+        \item[\emph{(ii)}] weight-sector preservation, $[C, J_3] = 0$.
+      \end{enumerate}
+      Then $C_{++} = C_{--}$: the outer pair $\{e_+, e_-\}$ is degenerate, and $C$ admits no real
+      splitting of the two light generations.
+    \end{proposition}
+
+    \begin{proof}
+      Weight preservation~(ii) makes $C$ diagonal in the weight basis, so its doublet block is
+      $\operatorname{diag}(C_{++}, C_{--})$.
+      For the real representative, $J_\Pi$-reality~(i) reads $P\, C\, P = C$, where
+      $P = \left(\begin{smallmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{smallmatrix}\right)$
+      exchanges $e_+ \leftrightarrow e_-$ and fixes $e_0$.
+      Conjugating the diagonal doublet block by
+      $P|_{\{e_+,e_-\}} = \left(\begin{smallmatrix} 0 & 1 \\ 1 & 0 \end{smallmatrix}\right)$ swaps
+      its two entries, so $P\,C\,P = C$ forces $C_{++} = C_{--}$.
+    \end{proof}
+
+    \begin{remark}[Sharpness of the hypotheses]
+      \label{rem:dg-sharpness}
+      $J_\Pi$-reality alone is not sufficient.
+      The condition $P M P = M$ on the doublet admits
+      $M = \left(\begin{smallmatrix} a & b \\ b & a \end{smallmatrix}\right)$, whose eigenvalues
+      $a \pm b$ are split whenever $b \neq 0$: the parity fixes the diagonal entries equal but does
+      not diagonalise the block.
+      The degeneracy requires the static weight-sector preservation~(ii) in addition to~(i).
+      The equatorial covariance $C_c = \operatorname{diag}(1, \tfrac12, \tfrac12)$
+      of~\cite{Beau2026a34} satisfies both hypotheses and is the canonical instance.
+    \end{remark}
+
+  \subsection{The oriented odd sector}
+    \label{ssec:dg-odd}
+
+    \begin{proposition}[Oriented odd sector]
+      \label{prop:dg-odd}
+      Let $\mathcal{T}_\tau \in \End(\mathbb{C}^3_{\mathrm{gen}})$ be a lift required to
+      \begin{enumerate}
+        \item[\emph{(i)}]   annihilate the central level, $\mathcal{T}_\tau e_0 = 0$,
+        \item[\emph{(ii)}]  preserve the outer doublet,
+        $\mathcal{T}_\tau(\{e_+, e_-\}) \subseteq \{e_+, e_-\}$, and
+        \item[\emph{(iii)}] be $J_\Pi$-odd, $J_\Pi\, \mathcal{T}_\tau\, J_\Pi^{-1} = -\mathcal{T}_\tau$.
+      \end{enumerate}
+      Then the admissible lift space is two-dimensional, spanned by the weight generator
+      $J_3 = \operatorname{diag}(0, 1, -1)$ and the doublet rotation
+      $R_{\mathrm{mix}} = \left(\begin{smallmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0
+      \end{smallmatrix}\right)$.
+      The direction $J_3$ is the unique non-mixing direction producing a real mass split.
+      The Carnot dilation $D = \operatorname{diag}(2, 1, 1)$ is $J_\Pi$-even and therefore excluded
+      from this sector.
+    \end{proposition}
+
+    \begin{proof}
+      Conditions~(i)--(ii) confine $\mathcal{T}_\tau$ to a real $2 \times 2$ doublet block $M$.
+      Condition~(iii) for the real representative is $P_2\, M\, P_2 = -M$ with
+      $P_2 = \left(\begin{smallmatrix} 0 & 1 \\ 1 & 0 \end{smallmatrix}\right)$, giving
+      $M = \left(\begin{smallmatrix} a & b \\ -b & -a \end{smallmatrix}\right)$, a two-parameter
+      traceless family with $\lambda^2 = a^2 - b^2$.
+      The $a$-direction is $J_3|_{\mathrm{doublet}}$, with real eigenvalues $\pm a$ and no mixing;
+      the $b$-direction is $R_{\mathrm{mix}}$, with eigenvalues $\pm i b$ at $a = 0$ and pure
+      mixing.
+      A real split exists for any $|a| > |b|$, but $J_3$ ($b = 0$) is the only non-mixing splitting
+      direction.
+      The Carnot dilation satisfies $P D P = D$, hence even, and is excluded.
+    \end{proof}
+
+    \begin{remark}[Mixing direction]
+      \label{rem:dg-mixing}
+      The odd sector contains both a real-split direction and a mixing direction.
+      The real cascade model of Subsection~\ref{ssec:dg-bridge} activates the former but not the
+      latter; the latter is expected, if present, to require the complex metaplectic phase.
+    \end{remark}
+
+  \subsection{The cascade bridge}
+    \label{ssec:dg-bridge}
+
+    The cascade generator $\partial_\tau \in \End(\Sym^2(V_\rho))$ is the continuum limit of the
+    cascade increment, as established in~\cite{Beau2026q11}.
+    We model its restriction to the generation factor by the per-step generator of the oriented
+    metaplectic step $g = S_X(t)\, S_Y(s)$, the ordered product of the two horizontal Heisenberg
+    generators in $\SL(2)$ form, lifted to $\Sym^2(V)$ and projected onto the $J_\Pi$-odd sector of
+    Proposition~\ref{prop:dg-odd}.
+
+    \begin{proposition}[Cascade bridge]
+      \label{prop:dg-bridge}
+      In this model the $J_\Pi$-odd projection of the cascade generator on
+      $\mathbb{C}^3_{\mathrm{gen}}$ is
+      \begin{equation}
+        \label{eq:dg-projection}
+        \Pi_{J_\Pi\text{-odd}}\!\left( \partial_\tau\big|_{\mathbb{C}^3_{\mathrm{gen}}} \right)
+        = \alpha\, J_3 + \mu\, R_{\mathrm{mix}}, \qquad \alpha \neq 0 .
+      \end{equation}
+      The real-split coefficient $\alpha$ is non-vanishing already for symmetric shears $t = s$,
+      where it is produced by the order of the product, that is by the non-commutativity
+      $[X, Y] = Z$.
+      Reversal of the cascade order, $g = S_Y(t)\, S_X(s)$, reverses the sign,
+      $\alpha_{\mathrm{rev}} = -\alpha$.
+      The mixing coefficient $\mu$ vanishes throughout the real symplectic model.
+    \end{proposition}
+
+    The supporting computation builds the rank-three factor from $V = \mathbb{C}^2$ by $\Sym^2$,
+    takes $\log(g)$ on the lifted representation, and projects its $J_\Pi$-odd part onto $J_3$ and
+    $R_{\mathrm{mix}}$ in the Hilbert--Schmidt inner product.
+    It returns $\alpha = +0.156$ at $t = s = 0.40$, with $\alpha_{\mathrm{rev}} = -0.156$ and
+    $\mu = 0$.
+
+  \subsection{Status and the amplitude problem}
+    \label{ssec:dg-status}
+
+    The qualitative segment is closed:
+    \begin{equation}
+      \label{eq:dg-chain}
+      \text{static obstruction} \;\longrightarrow\; \text{oriented lift} \;\longrightarrow\;
+      \partial_\tau \text{ carries } \alpha J_3, \quad \alpha \neq 0 .
+    \end{equation}
+    The splitting of the two light generations is forbidden statically by $J_\Pi$-reality together
+    with weight preservation (Proposition~\ref{prop:dg-static}), lives in the two-dimensional
+    $J_\Pi$-odd sector (Proposition~\ref{prop:dg-odd}), and is carried by the oriented cascade
+    generator through its non-zero $J_3$ projection (Proposition~\ref{prop:dg-bridge}).
+
+    The value of $\alpha$ obtained in the real shear model is not a mass prediction.
+    Only its non-vanishing and its sign reversal under cascade reversal are structural.
+    The amplitude problem is deferred to the normalisation of the admissibility cascade.
+    Concretely, the observed splitting enters through a normalised coefficient $\varepsilon$, not
+    through $\alpha$ itself:
+    \begin{equation}
+      \label{eq:dg-amplitude}
+      \frac{\tfrac12 + \varepsilon}{\tfrac12 - \varepsilon} = \frac32, \qquad
+      \varepsilon = \mathcal{N}_{\mathrm{casc}}\, |\alpha| ,
+    \end{equation}
+    and the next step is the derivation of the cascade normalisation $\mathcal{N}_{\mathrm{casc}}$
+    from the transfer chain $c_\chi \to \delta_{\mathrm{pair}} \to \beta^*$ of the spectral
+    admissibility sub-programme~\cite{Beau2026a4,Beau2026a29}, not the matching of the model value
+    $\alpha \simeq 0.156$ to the calibration target $\varepsilon = \tfrac{1}{10}$.
+
+
   \section{The Colour Sector}
   \label{sec:colour}
 
@@ -1308,13 +1486,16 @@ from Projective Dirac Admissibility}
   Since $E_\Pi$ is the internal spectral residue of non-injective projection, it is
   the natural place where fermion masses, effective Yukawa couplings, and
   inter-generation mixing should enter.
-  The present paper identifies the structural carrier of these data but does not
-  derive the numerical mass spectrum.
-  The next step is therefore to study the eigenstructure of $E_\Pi$ on
-  $S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}$,
-  and to compare it with the charged-lepton mass hierarchy established in the
-  spectral admissibility sub-programme~\cite{Beau2026a4,Beau2026a29}
-  and possible quark mixing patterns.
+  Section~\ref{sec:dyn-lift} takes the first step on this direction: the
+  inter-generation splitting is statically obstructed on $\mathbb{C}^3_{\mathrm{gen}}$ by
+  $J_\Pi$-reality together with weight preservation (Proposition~\ref{prop:dg-static}), lives in a
+  two-dimensional $J_\Pi$-odd lift sector (Proposition~\ref{prop:dg-odd}), and is carried by the
+  oriented cascade generator through its non-zero $J_3$ projection
+  (Proposition~\ref{prop:dg-bridge}).
+  The qualitative mechanism is thereby fixed; the amplitude of the splitting remains open and is
+  deferred to the normalisation of the admissibility cascade, the comparison with the charged-lepton
+  mass hierarchy~\cite{Beau2026a4,Beau2026a29} and possible quark mixing patterns being the
+  downstream target.
 
   The conclusion of the fermionic step is therefore precise.
   The Standard Model matter carrier is not postulated as an independent field content.
