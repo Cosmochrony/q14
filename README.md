@@ -36,6 +36,12 @@ Three structural results are proved:
    The colour-coupled quark sector is obtained by tensoring with the colour module $V_{\mathrm{color}}$,
    unconditional at the pointwise level ($[H\text{-color}]_{\mathrm{pointwise}}$ proved in O31).
 
+4. **Dynamic lifting of the generation degeneracy**: A qualitative mechanism is identified by which
+   the oriented spectral cascade lifts the static $J_\Pi$-protected degeneracy of the generation
+   factor $\mathbb{C}^3_{\mathrm{gen}}$. The static obstruction is established explicitly; the
+   oriented odd sector and the cascade bridge provide the lifting channel. The amplitude of the
+   generational splitting remains deferred to the cascade normalisation.
+
 ## Position in the programme
 
 Q14 is the fermionic extension of the gauge–gravity synthesis established in Q12–Q13. Together,
