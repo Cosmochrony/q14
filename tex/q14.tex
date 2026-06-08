@@ -1311,12 +1311,81 @@ from Projective Dirac Admissibility}
     \begin{equation}
       \label{eq:dg-amplitude}
       \frac{\tfrac12 + \varepsilon}{\tfrac12 - \varepsilon} = \frac32, \qquad
-      \varepsilon = \mathcal{N}_{\mathrm{casc}}\, |\alpha| ,
+      \varepsilon = \mathcal{N}_{\mathrm{casc}}\, |\alpha| .
     \end{equation}
-    and the next step is the derivation of the cascade normalisation $\mathcal{N}_{\mathrm{casc}}$
-    from the transfer chain $c_\chi \to \delta_{\mathrm{pair}} \to \beta^*$ of the spectral
-    admissibility sub-programme~\cite{Beau2026a4,Beau2026a29}, not the matching of the model value
-    $\alpha \simeq 0.156$ to the calibration target $\varepsilon = \tfrac{1}{10}$.
+    The diagnostic architecture test further separates the two roles entering
+    \eqref{eq:dg-amplitude}.
+    The $J_3$ coefficient is an angular, metaplectic contribution: it belongs to the traceless
+    adjoint sector of $\End(\Sym^2 V)$ and preserves the Hilbert--Schmidt norm.
+    By contrast, the decay of $\sigma_{\mathrm{pair}}(n)$ is a radial capacity effect: it changes
+    the projected norm and therefore belongs to the scalar sector supplied by the non-injective
+    projection.
+    Equivalently,
+    \[
+      \langle \mathbf{1}, J_3 \rangle_{\mathrm{HS}} = 0,
+    \]
+    so the generation split and the capacity decay are distinct, Hilbert--Schmidt orthogonal
+    generators.
+
+    Thus the amplitude architecture is factorised rather than unified.
+    The same cascade arrow orients both observables: reversing the metaplectic order reverses the
+    sign of the $J_3$ split, while the cumulative projected capacity
+    $I(n) = \sigma_{\mathrm{pair}}(0) - \sigma_{\mathrm{pair}}(n)$ fixes the monotone orientation
+    of the radial projection sector.
+    However, the two generators are not identical.
+    Consequently $\mathcal{N}_{\mathrm{casc}}$ in \eqref{eq:dg-amplitude} should be read as a
+    transfer constant between the angular metaplectic split and the radial projective decay, not as
+    a parameter-free function of $\delta_{\mathrm{pair}}$ alone.
+    The remaining amplitude problem is therefore to compute this transfer constant from the coupling
+    of the two cascade observables, rather than to identify $\alpha$ with the capacity exponent.
+
+    The transfer observable must therefore be defined with respect to the normalised cumulative
+    projected capacity
+    \[
+      \widehat{I}(n)
+      =
+      \frac{\sigma_{\mathrm{pair}}(0) - \sigma_{\mathrm{pair}}(n)}
+      {\sigma_{\mathrm{pair}}(0) - \sigma_{\mathrm{pair}}(n_{\mathrm{sat}})} ,
+      \qquad
+      \widehat{I}(n_{\mathrm{sat}}) = 1 .
+    \]
+    The corresponding angular--radial transfer profile is
+    \[
+      \varepsilon_n
+      =
+      \sum_{m \le n} \mathcal{K}_{\mathrm{ar}}(m)\, \Delta\widehat{I}(m),
+      \qquad
+      \Delta\widehat{I}(m) = \widehat{I}(m) - \widehat{I}(m-1) .
+    \]
+    The structurally admissible locking law is the one in which the angular split is accumulated per
+    unit of projected capacity,
+    \[
+      \Delta\varepsilon(m) = \mathcal{K}_{\mathrm{ar}}\, \Delta\widehat{I}(m) .
+    \]
+    It is selected by the factorised architecture above: the metaplectic $J_3$ component does not
+    itself carry radial decay, while the radial projection sector fixes the common orientation
+    through $\widehat{I}(n)$.
+    Coupling the split instead to the bare cascade step would make the accumulated amplitude depend
+    on the parametrisation depth, and coupling it to the residual capacity would tie the split to the
+    unprojected rather than to the realised part of the cascade.
+    Both alternatives are therefore diagnostics, not the transfer law.
+
+    Under this locking law the transfer profile is constant:
+    \[
+      \mathcal{K}_{\mathrm{ar}}(m) = \mathcal{K}_{\mathrm{ar}},
+      \qquad
+      \varepsilon_{\mathrm{sat}}
+      =
+      \sum_{m \le n_{\mathrm{sat}}} \mathcal{K}_{\mathrm{ar}}\, \Delta\widehat{I}(m)
+      =
+      \mathcal{K}_{\mathrm{ar}} .
+    \]
+    Thus the cascade normalisation in \eqref{eq:dg-amplitude} is a pure angular--radial transfer
+    constant.
+    This fixes the profile and the saturation status of the amplitude, but not its absolute value.
+    The latter still requires the physical normalisation of the metaplectic $J_3$ generator; the
+    shear value $\alpha \simeq 0.156$ remains a diagnostic coefficient, not an input to the mass
+    prediction.
 
 
   \section{The Colour Sector}
@@ -1560,6 +1629,15 @@ from Projective Dirac Admissibility}
   Second, the amplitude of the generation splitting remains open: Section~\ref{sec:dyn-lift}
   fixes the qualitative mechanism, but the coefficient $\varepsilon$ must still be derived from the
   cascade normalisation rather than fitted.
+  The operator side of this mechanism is, by contrast, closed.
+  Using the O12 fingerprint~\cite{Beau2026a16}, whose pure Weil frequency is $B_c=\sum_i c_i b_i$, the
+  residual reflection $R_b$ left by the oriented-frontier diagnostic is forced to be the central Weil
+  lift $W(-I)=\mathrm{FT}^2$: preserving $A_c$, including its cocycle term, sends
+  $(a_i,b_i)\mapsto(-a_i,-b_i)$.
+  As the centre of the connected spin group $\SL(2,\mathbb{C})$, $R_b$ is scalar on $S_L\oplus S_R$,
+  so $[\gamma_5,R_b]=0$.
+  The $V{-}A$ selector therefore removes the residual obstruction without a spacetime parity; only the
+  amplitude coefficient $\varepsilon$ remains open.
   Third, possible generation mixing requires the complex metaplectic phase, since the real
   symplectic cascade model activates the $J_3$ split direction but not the $R_{\mathrm{mix}}$
   direction.
