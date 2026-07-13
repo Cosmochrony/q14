@@ -701,17 +701,22 @@ from Projective Dirac Admissibility}
       Hence $P_R E_\Pi P_R = 0$.
     \end{proof}
 
-    The commutator
+    On the left-admissible branch, the projective residue is chiral block-diagonal.
+    The Schur form $E_\Pi = -M^\dagger M \preceq 0$ established in~\cite{Beau2026prs},
+    together with left-admissibility $P_R E_\Pi P_R = 0$, forces the off-diagonal
+    chiral blocks to vanish: a self-adjoint negative-semidefinite operator with a
+    vanishing diagonal block has vanishing off-diagonal blocks.
+    Consequently
     \begin{equation}
       \label{eq:epi-gamma5-commutator}
-      [E_\Pi, \gamma_5]
+      [E_\Pi, \gamma_5] = 0 ,
     \end{equation}
-    measures the failure of the projective residue to be chirally symmetric.
-    Under the orientation-compatible admissibility branch, a non-trivial projective
-    endomorphism $E_\Pi$ need not commute with $\gamma_5$.
-    The commutator~\eqref{eq:epi-gamma5-commutator} is therefore the projective measure
-    of chiral asymmetry entering both the $V{-}A$ structure and the spectral anomaly
-    condition of Section~\ref{sec:anomaly}.
+    and $E_\Pi = P_L E_\Pi P_L$.
+    The chiral asymmetry of the projective residue is therefore carried not by a chiral
+    commutator but by the diagonal imbalance between $P_L E_\Pi P_L$ and
+    $P_R E_\Pi P_R = 0$, equivalently by the $\gamma_5$-graded trace, which enters both
+    the $V{-}A$ structure and the spectral anomaly condition of
+    Section~\ref{sec:anomaly}.
 
   \section{Spectral Anomaly Cancellation and Hypercharge Rigidity}
   \label{sec:anomaly}
@@ -848,8 +853,8 @@ from Projective Dirac Admissibility}
     For the abelian factor this gives the cubic $U(1)_Y$ anomaly; for non-abelian
     factors it gives the mixed $U(1)_Y \times G^2$ anomalies.
     The projective endomorphism $E_\Pi$ contributes additional chiral traces through
-    its $\gamma_5$-odd part, equivalently through the components that fail to commute
-    with $\gamma_5$.
+    the chiral imbalance of its diagonal blocks, with $E_{RR} = 0$ by left-admissibility,
+    as read by the $\gamma_5$-graded trace.
     Left-admissibility, $P_R E_\Pi P_R = 0$, constrains these contributions to the
     orientation-compatible sector.
     They are therefore absorbed into the same projected anomaly condition, without
