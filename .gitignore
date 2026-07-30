@@ -10,3 +10,11 @@ out/
 *.fdb_latexmk
 .DS_Store
 .idea/
+
+# Common build-artefact baseline
+**/.DS_Store
+.venv/
+pdfs/
+media/
+**/__pycache__/
+*.py[cod]
