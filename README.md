@@ -30,8 +30,10 @@ Three structural results are proved:
    then imposes anomaly-cancellation trace constraints on the hypercharge weights, which are thereby
    not free parameters but spectral coherence data.
 
-3. **Three-generation multiplicity**: The admissible saturation invariant $\sigma_c(n_3) = 3$ admits
-   a spinorial multiplicity reading, yielding a gauge-singlet three-generation factor
+3. **Three-generation multiplicity**: The admissible saturation invariant $\sigma_c(n_3) = 3$, a
+   supplied selection rule (O23 Theorem 3.1 proves the three-dimensionality of the neutral sector
+   of a supplied spinor carrier; carrier selection and observable identification are open), admits
+   a spinorial multiplicity reading, yielding conditionally a gauge-singlet three-generation factor
    $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\operatorname{SU}(2)} \oplus Y)$.
    The colour-coupled quark sector is obtained by tensoring with the colour module $V_{\mathrm{color}}$,
    unconditional at the pointwise level ($[H\text{-color}]_{\mathrm{pointwise}}$ proved in O31).
