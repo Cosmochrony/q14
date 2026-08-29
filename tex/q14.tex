@@ -8,6 +8,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{
+  pdftitle={Fermionic Matter and Chirality from Projective Dirac Admissibility},
+  pdfauthor={J\'er\^ome Beau},
+  pdfsubject={Fermions as the spinorial face of the admissible Weil module: chiral selection,
+    hypercharge rigidity and generation multiplicity from projective Dirac admissibility},
+  pdfkeywords={admissible spinor bundle, metaplectic lift, non-injective projection,
+    Weil representation, projected Dirac operator, chiral selection, hypercharge rigidity,
+    generation multiplicity, spectral anomaly cancellation, Cosmochrony}
+}
 \usepackage{natbib}
 \usepackage{geometry}
 \geometry{top=2.5cm,bottom=2.5cm,left=2.8cm,right=2.8cm}
@@ -59,9 +68,10 @@ from Projective Dirac Admissibility}
     responses of the same admissible spectral functional.
     The present paper extends this principle to the fermionic sector.
     Fermions are not introduced as external matter fields.
-    They arise as the spinorial face of the Weil module already forced by non-injective
-    admissibility, once its metaplectic Lie-algebraic structure is complexified by the
-    Lorentzian metric established in the geometric branch of the programme.
+    They arise as the spinorial face of the Weil module carried by the admissible fibre on a
+    supplied Heisenberg carrier, once its metaplectic Lie-algebraic structure is complexified by
+    the Lorentzian metric established in the geometric branch of the programme.
+    That carrier is supplied rather than selected by the axioms, so every result below inherits it.
 
     Three structural results are proved.
     First, the admissible Weil module $V_\rho$ induces, through its metaplectic lift
@@ -83,9 +93,12 @@ from Projective Dirac Admissibility}
     admits a spinorial multiplicity reading, distinct from its geometric reading as three
     spatial directions, yielding conditionally a gauge-singlet three-generation factor
     $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\SU(2)} \oplus Y)$.
-    The colour-coupled quark sector is obtained by tensoring with the colour module
-    $V_{\mathrm{color}}$, unconditional at the pointwise level
-    ($[H\text{-color}]_{\mathrm{pointwise}}$ established in~\cite{Beau2026a35}).
+    The colour-coupled quark sector is obtained by tensoring with a colour module
+    $V_{\mathrm{color}}$ that is a supplied input rather than a derived one: O31 is a withdrawal
+    notice, and neither the admissibility of a colour triplet nor the identification of
+    $\mathrm{SU}(3)$ is established.
+    Both the quark sector and the hypercharge selection therefore carry that supplied module as a
+    hypothesis; the $V{-}A$ structure and the generation factor do not.
     Finally, we identify a qualitative mechanism by which the oriented cascade lifts the
     static $J_\Pi$-protected degeneracy of the generation factor; the amplitude of this
     splitting remains deferred to the cascade normalisation.
@@ -127,8 +140,8 @@ from Projective Dirac Admissibility}
 
       The purpose of the present paper is to show that fermions need not be introduced
       as external matter fields added to the admissible bundle.
-      They arise as the spinorial face of the Weil module already forced by non-injective
-      admissibility, once its metaplectic lift is interpreted through the Lorentzian
+      They arise as the spinorial face of the Weil module carried by the admissible fibre on a
+      supplied Heisenberg carrier, once its metaplectic lift is interpreted through the Lorentzian
       geometry closed in the geometric branch of the programme~\cite{Beau2026q11}.
 
     \subsection{Main structural chain}
@@ -150,8 +163,14 @@ from Projective Dirac Admissibility}
         S_\Pi .
       \end{equation}
       The identification $F_n \simeq V_\rho$ is the Weil-module characterisation of the
-      admissible fibre, established from axioms A1--A3 and the Stone--von Neumann theorem
-      in~\cite{Beau2026m,Beau2026HeisenbergStructure}.
+      admissible fibre on a \emph{supplied} Heisenberg carrier.
+      It is not derived from the axioms: Foundation~\cite{Beau2026m} and
+      HeisenbergStructure~\cite{Beau2026HeisenbergStructure} establish that A1--A3 force
+      irreducibility and non-commutation, but neither makes the commutator central nor selects a
+      finite Heisenberg group, an explicit $\mathfrak{S}_3$ countermodel satisfying the extracted
+      carrier contract while violating that conclusion.
+      Stone--von Neumann is a conditional endpoint, supplying uniqueness at a fixed non-trivial
+      central character once that carrier is given.
       The passage to $\Mp(2,\mathbb{R})$ is the metaplectic lift of the symplectic structure
       canonically carried by $V_\rho$.
       The Lorentzian closure of the effective metric forces the complexification
@@ -244,19 +263,31 @@ from Projective Dirac Admissibility}
     \end{equation}
     where $V_{\mathrm{color}} \in \Rep(\SU(3))$.
     The following status distinctions apply throughout the paper.
-    The electroweak spinorial sector is structural once Theorem~A is established.
-    The colour-coupled quark bundle $S_\Pi \otimes V_{\mathrm{color}}$ is unconditional
-    at the pointwise level: $[H\text{-color}]_{\mathrm{pointwise}}$ (exact equality at
-    finite~$q$) and $[H\text{-color}]_{\mathrm{eff}}$ are established analytically
-    in~\cite{Beau2026a35,Beau2026a36}.
+    The electroweak spinorial sector is structural once Theorem~A is established, and Theorem~A
+    itself is conditional on the supplied Heisenberg carrier that fixes $F_n \simeq V_\rho$
+    (Subsection~\ref{ssec:weil-metaplectic}); that condition is upstream of, and independent of,
+    the colour module below.
+    The colour-coupled quark bundle $S_\Pi \otimes V_{\mathrm{color}}$ is \emph{conditional} on a
+    supplied colour module: O31~\cite{Beau2026a35} is a withdrawal notice, and
+    $[H\text{-color}]_{\mathrm{pointwise}}$ is among the results it withdraws
+    (Section~\ref{ssec:colour-status}).
     The hypercharge rigidity of Theorem~B and the generation multiplicity of
     Theorem~C are proved below; they are not assumed as inputs.
 
     The spinorial lift of BI parity, formerly the only additional technical condition of the
     fermionic sector, is established as Theorem~\ref{thm:spinorial-bi-lift}.
-    The $V{-}A$ structure and the hypercharge rigidity of Theorem~B are therefore unconditional,
-    their only remaining dependence being the axiomatic chain A1--A4~\cite{Beau2026m} and the
-    upstream BI parity datum~\cite{Beau2026a34,Beau2026u1}.
+    The $V{-}A$ structure of Theorem~B is therefore unconditional \emph{relative to the supplied
+    Heisenberg carrier}: its remaining dependencies are that carrier, the axiomatic chain
+    A1--A4~\cite{Beau2026m} and the upstream BI parity datum~\cite{Beau2026a34,Beau2026u1}.
+    It does not depend on the colour module.
+    The hypercharge rigidity of Theorem~B is not: the anomaly
+    constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed} are weighted by $\dim(R)$, and
+    the cubic constraint~\eqref{eq:anomaly-cubic} is the one that carries the colour multiplicity
+    --- on the Standard Model pattern it vanishes precisely at three, by direct substitution
+    in~\eqref{eq:anomaly-cubic}.
+    This paper does not analyse the constraint system at general multiplicity and does not claim
+    that the constraints force three; the multiplicity is a supplied input
+    (Section~\ref{ssec:colour-status}).
 
     This paper depends simultaneously on four layers of the programme: the admissible
     Weil fibre structure (Foundation, HeisenbergStructure, O-series); the closed
@@ -281,8 +312,8 @@ from Projective Dirac Admissibility}
     $E_\Pi^2$ on the generation factor: a static $J_\Pi$-real, weight-preserving restriction
     cannot split the outer pair, whereas the oriented cascade generator carries a non-zero $J_3$
     component capable of lifting this degeneracy.
-    Section~\ref{sec:colour} discusses the colour-coupled quark sector and the
-    pointwise analytical status of $[H\text{-color}]$.
+    Section~\ref{sec:colour} discusses the colour-coupled quark sector and the status of the
+    supplied colour module.
     Section~\ref{sec:conclusion} summarises the results and identifies the remaining
     open directions.
 
@@ -293,9 +324,10 @@ from Projective Dirac Admissibility}
   \subsection{From the Weil module to the metaplectic lift}
     \label{ssec:weil-metaplectic}
 
-    The admissible fibre $F_n$ has been identified with the Weil module $V_\rho$ of
-    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ from the axioms A1--A3 and the
-    Stone--von Neumann theorem~\cite{Beau2026m,Beau2026HeisenbergStructure}.
+    The admissible fibre $F_n$ is identified with the Weil module $V_\rho$ of
+    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ at a fixed non-trivial central character, on a
+    Heisenberg carrier that is supplied rather than selected by the
+    axioms~\cite{Beau2026m,Beau2026HeisenbergStructure}.
     This identification is not merely a representation-theoretic convenience.
     The Weil module carries the canonical symplectic structure associated with the
     Heisenberg commutator.
@@ -395,8 +427,9 @@ from Projective Dirac Admissibility}
     \end{theorem}
 
     \begin{proof}
-      The identification $F_n \simeq V_\rho$ gives the admissible fibre the canonical
-      symplectic structure of the Weil representation~\cite{Beau2026m,Beau2026HeisenbergStructure}.
+      On the supplied Heisenberg carrier of Subsection~\ref{ssec:weil-metaplectic}, the
+      identification $F_n \simeq V_\rho$ gives the admissible fibre the canonical symplectic
+      structure of the Weil representation~\cite{Beau2026m,Beau2026HeisenbergStructure}.
       The automorphisms preserving this structure lift to $\Mp(2,\mathbb{R})$.
       The Lorentzian metric $g^{\mu\nu} = 2\eta^{\mu\nu}$~\cite{Beau2026q11} forces the
       complexification $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
@@ -907,9 +940,11 @@ from Projective Dirac Admissibility}
     \begin{proposition}[Hypercharge rigidity from spectral coherence]
       \label{prop:hypercharge-rigidity}
       Assume that the projected spinorial sectors are precisely those of the admissible
-      matter decomposition~\eqref{eq:matter-content}, with the colour factor unconditional
-      at the pointwise level via the single-frequency BI fingerprint mechanism
-      of~\cite{Beau2026a35,Beau2026a36}.
+      matter decomposition~\eqref{eq:matter-content}, with a supplied colour module
+      $V_{\mathrm{color}}$ of dimension three (Section~\ref{ssec:colour-status}).
+      That module is a hypothesis of this proposition, not a consequence of the preceding
+      sections: the constraints below are weighted by $\dim(R)$, so the colour multiplicity
+      enters the sums.
       Then $U(1)_Y$ gauge invariance of the projected spectral functional imposes
       the constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed} on the
       hypercharge weights $Y_R$.
@@ -1411,12 +1446,12 @@ from Projective Dirac Admissibility}
   generation multiplicity factor, accounting for the leptonic spinorial sector.
   The quark sector requires, in addition, a colour representation.
   In the present framework, the colour factor is not introduced by enlarging the
-  spinorial construction itself, but by tensoring the admissible spinor bundle with
-  the colour representation supplied by the admissible gauge-fibre
-  programme~\cite{Beau2026a35,Beau2026a36}.
+  spinorial construction itself, but by tensoring the admissible spinor bundle with a colour
+  representation carried as a supplied input.
+  The gauge-fibre programme does not derive one: see Section~\ref{ssec:colour-status}.
 
-  Let $V_{\mathrm{color}}$ denote the fundamental colour representation of the
-  admissible $\SU(3)$ sector.
+  Let $V_{\mathrm{color}}$ denote a supplied three-dimensional colour representation; no
+  admissible colour sector is derived (Section~\ref{ssec:colour-status}).
   The quark spinor bundle is defined as
   \begin{equation}
     \label{eq:quark-bundle}
@@ -1438,27 +1473,44 @@ from Projective Dirac Admissibility}
 
     The construction of $S_\Pi$, $L_Y$, and $\mathbb{C}^3_{\mathrm{gen}}$ does not
     depend on the colour hypothesis.
-    The factor $V_{\mathrm{color}}$ depends on the $\SU(3)$ sector, which is
-    unconditional at the pointwise level.
+    The factor $V_{\mathrm{color}}$ does, and it is a supplied input.
 
-    The identification of $\SU(3)$ as the colour gauge group follows from
-    $[H\text{-color}]_{\mathrm{pointwise}}$ (exact equality of BFS capacity
-    profiles at finite~$q$), established analytically in~\cite{Beau2026a35}
-    via the single-frequency structure of the fingerprint (Proposition~4.23
-    of O31): each fingerprint vector carries frequency
-    $B = c_1 b_1 + c_2 b_2 + c_3 b_3$, and the orbit dilation
-    $B \mapsto \omega B$ is a bijection of $\mathbb{Z}/q\mathbb{Z}$.
-    The modulation-frequency argument of O32~\cite{Beau2026a36} establishes
-    the weaker $[H\text{-color}]_{\mathrm{eff}}$.
-    The triplet colour module therefore unconditionally defines
-    $V_{\mathrm{color}} \in \operatorname{Rep}(\SU(3))$ exactly at finite~$q$,
-    and the quark sector~\eqref{eq:quark-bundle} is an unconditional output
-    of the present paper.
+    No identification of $\SU(3)$ as a colour gauge group is available.
+    O31~\cite{Beau2026a35} is a withdrawal notice.
+    Among the results it withdraws are the co-admissibility of the individual capacity profiles
+    $\sigma_{c_1}$, $\sigma_{c_2}$, $\sigma_{c_3}$ --- which is the content of
+    $[H\text{-color}]_{\mathrm{pointwise}}$ and of its Proposition~4.23 --- the uniqueness of
+    $\SU(3)$ among connected compact subgroups acting irreducibly on $\mathbb{C}^3$; the
+    irreducibility of the group of fibre-preserving transformations of the colour eigenspace; the
+    arithmetic criterion $q \equiv 1 \pmod 3$ for the existence of colour triplets; and every
+    derivation of a gauge factor.
+    Three counterexamples are given there: $\operatorname{SO}(3) \subset \SU(3)$, a proper
+    connected compact subgroup acting irreducibly on $\mathbb{C}^3$ with determinant one; the diagonal torus $T^2$,
+    which satisfies every constraint that was imposed while acting reducibly; and
+    $\{1, 2, q-3\}$, an admissible triplet for every prime $q \geq 7$ irrespective of
+    $q \bmod 3$.
+    Nothing withdrawn there is replaced by a weaker positive statement.
+
+    O32~\cite{Beau2026a36} measures the finite-$q$ residual variance of the capacity profiles.
+    Those are measurements; this paper takes no position on their interpretation and does not read
+    them as identifying a group.
+
+    $V_{\mathrm{color}} \in \operatorname{Rep}(\SU(3))$ of dimension three is therefore carried
+    as a hypothesis, and the quark sector~\eqref{eq:quark-bundle} is a conditional output of the
+    present paper.
+    Two results of this paper rest on it: the quark carrier itself, and the hypercharge selection.
+    Proposition~\ref{prop:hypercharge-rigidity} carries the supplied module in its hypothesis, and
+    Proposition~\ref{prop:minimal-hypercharge}, which is where the selection of the Standard Model
+    pattern is stated, inherits it through its ``If, in addition'' clause: the cubic
+    constraint~\eqref{eq:anomaly-cubic} vanishes on that pattern precisely at colour multiplicity
+    three.
+    The $V{-}A$ structure, the spinorial lift of BI parity, the leptonic carrier and the generation
+    factor $\mathbb{C}^3_{\mathrm{gen}}$ do not.
 
     \begin{proposition}[Colour sector extension]
       \label{prop:colour-extension}
-      The admissible colour triplet defines a fundamental $\SU(3)$ representation
-      $V_{\mathrm{color}}$~\cite{Beau2026a35,Beau2026a36}.
+      Let $V_{\mathrm{color}}$ be a supplied three-dimensional representation of a colour group,
+      carried as a hypothesis rather than derived (Section~\ref{ssec:colour-status}).
       Then the spinorial matter bundle admits the colour-coupled extension
       \begin{equation}
         \label{eq:colour-extension}
@@ -1479,18 +1531,20 @@ from Projective Dirac Admissibility}
       \label{rem:colour-does-not-affect-spinorial-construction}
       The colour extension does not modify the construction of the admissible spinor
       bundle $S_\Pi$.
-      It adds an independent gauge representation factor, proved unconditional
-      at the effective level~\cite{Beau2026a35,Beau2026a36}.
+      It adds an independent gauge representation factor, which is supplied rather than derived.
       The logical status of the fermionic construction is therefore stratified:
       \begin{equation}
         \label{eq:status-table}
         \begin{cases}
           S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}
-          & \text{electroweak/leptonic carrier, unconditional,} \\[4pt]
+          & \text{electroweak/leptonic carrier, no further condition,} \\[4pt]
           S_\Pi \otimes V_{\mathrm{color}} \otimes \mathbb{C}^3_{\mathrm{gen}}
-          & \text{quark carrier, unconditional at the pointwise level.}
+          & \text{quark carrier, conditional on the supplied } V_{\mathrm{color}}.
         \end{cases}
       \end{equation}
+      Both rows are stated relative to the supplied Heisenberg carrier of
+      Subsection~\ref{ssec:weil-metaplectic}, which the whole construction inherits; the
+      distinction drawn here is the additional colour condition carried by the second row alone.
     \end{remark}
 
     \newpage
@@ -1504,8 +1558,8 @@ from Projective Dirac Admissibility}
   The present work extends this principle to the spinorial sector.
   Fermions are not introduced as external matter fields added to the admissible
   bundle.
-  They arise as the spinorial face of the Weil module already forced by non-injective
-  admissibility, revealed through the Lorentzian complexification of its metaplectic
+  They arise as the spinorial face of the Weil module carried by the admissible fibre on a
+  supplied Heisenberg carrier, revealed through the Lorentzian complexification of its metaplectic
   lift.
 
   The structural chain established in the paper is
@@ -1619,9 +1673,9 @@ from Projective Dirac Admissibility}
     =
     S_\Pi \otimes V_{\mathrm{color}} .
   \]
-  This step is unconditional at the pointwise level:
-  $[H\text{-color}]_{\mathrm{pointwise}}$ is established analytically
-  in~\cite{Beau2026a35}.
+  This step is conditional: $V_{\mathrm{color}}$ is a supplied three-dimensional representation,
+  and O31~\cite{Beau2026a35} withdraws every derivation of one
+  (Section~\ref{ssec:colour-status}).
   Accordingly, the matter carrier addressed by the construction is
   \[
     S_\Pi^{\mathrm{matter}}
@@ -1632,7 +1686,8 @@ from Projective Dirac Admissibility}
     \otimes
     \mathbb{C}^3_{\mathrm{gen}},
   \]
-  with both summands unconditional at the pointwise level.
+  whose first summand carries no condition beyond the supplied Heisenberg carrier, and whose
+  second carries the supplied colour module as well.
 
   The spinorial lift of BI parity, formerly the technical core of the $V{-}A$ result, is now
   established: the antilinear conjugation $\pi_{q-c}(v) = \overline{\pi_c(v)}$ lifts to the
