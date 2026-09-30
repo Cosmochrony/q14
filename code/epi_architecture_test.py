@@ -4,22 +4,22 @@ epi_architecture_test.py
 Architecture test for the amplitude programme (step 4, before deriving N_casc).
 
 Question (Q14 cascade bridge, Subsection ssec:dg-bridge):
-    Is the J_3-split component of the cascade generator d_tau the SAME operator as the
+    Is the J_3-split component of the oriented cascade generator G_g = log(g) the SAME operator as the
     generator of the capacity decay sigma_pair(n) ~ n^{-delta_pair}?
         - SAME  -> unified architecture: N_casc = F(delta_pair, n_3^obs, saturation)
         - DISTINCT (coupled) -> factorised: N_casc = transfer constant.
 
 Method (bias-independent, built from V = C^2 by Sym^2):
-    Decompose the metaplectic cascade generator d_tau = log(rho_1(g)),
+    Decompose the metaplectic step generator G_g = log(rho_1(g)),
     g = S_X(t) S_Y(s), under SU(2): End(Sym^2 V) = scalar(1) (+) adjoint(3) (+) spin2(5).
         - the J_3 split lives in the ADJOINT sector;
         - a capacity-decay (norm/magnitude) generator must populate the SCALAR sector
           (net trace = net norm change).
-    If d_tau^{metaplectic} is traceless, it carries NO scalar component, so the decay
+    If G_g is traceless, it carries NO scalar component, so the decay
     (a magnitude effect of the non-injective projection) is a DISTINCT generator.
 
 Outputs:
-    - stdout: sector weights of d_tau, scalar component, HS-orthogonality with J_3
+    - stdout: sector weights of G_g, scalar component, HS-orthogonality with J_3
     - epi_architecture_test.png
 """
 
@@ -118,10 +118,10 @@ trace_dtau = np.real(np.trace(dtau))
 det_rho1 = np.real(np.linalg.det(rho1))
 
 print("=" * 72)
-print("METAPLECTIC CASCADE GENERATOR d_tau = log(rho_1(S_X S_Y))")
+print("METAPLECTIC STEP GENERATOR G_g = log(rho_1(S_X S_Y))")
 print("=" * 72)
 print(f"  det rho_1(g)            : {det_rho1:.6f}   (=1 -> volume preserving)")
-print(f"  Tr(d_tau)               : {trace_dtau:+.3e}  (scalar/capacity-decay component)")
+print(f"  Tr(G_g)                 : {trace_dtau:+.3e}  (scalar/capacity-decay component)")
 print(f"  HS norm^2 total         : {tot:.5f}")
 print(f"  sector weights (fraction of HS norm^2):")
 print(f"    scalar  (Id, capacity decay)  : {w_scalar/tot:6.3%}")
@@ -148,7 +148,7 @@ print()
 print("=" * 72)
 print("VERDICT")
 print("=" * 72)
-print("  - d_tau^{metaplectic} is TRACELESS (det rho_1 = 1): it carries NO scalar")
+print("  - G_g is TRACELESS (det rho_1 = 1): it carries NO scalar")
 print("    component, hence no net capacity-decay direction. Its content is purely")
 print("    adjoint (J_3 split + mixing) plus spin-2.")
 print("  - The capacity decay sigma_pair(n) ~ n^{-delta_pair} is a magnitude effect:")
@@ -176,8 +176,8 @@ labels = ["scalar\n(decay)", "adjoint\n($J_3$ split)", "spin-2"]
 vals = [w_scalar/tot, w_adjoint/tot, w_spin2/tot]
 colors = ["#bbbbbb", "#a83232", "#3b7a57"]
 ax.bar(labels, vals, color=colors, width=0.55)
-ax.set_ylabel(r"fraction of $\|\partial_\tau\|^2_{\rm HS}$")
-ax.set_title(r"$\partial_\tau^{\rm metaplectic}$ has zero scalar (decay) component")
+ax.set_ylabel(r"fraction of $\|\mathcal{G}_g\|^2_{\rm HS}$")
+ax.set_title(r"$\mathcal{G}_g$ has zero scalar (decay) component")
 ax.set_ylim(0, 1.05)
 for i, v in enumerate(vals):
     ax.text(i, v + 0.02, f"{v:.0%}", ha="center", fontsize=9)

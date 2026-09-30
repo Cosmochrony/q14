@@ -1,4 +1,4 @@
-%% Q14 — Fermionic Matter and Chirality from Projective Dirac Admissibility
+%% Q14 — Toward Fermionic Matter from Projective Dirac Admissibility
 %% Cosmochrony programme, Q-series paper 14
 %% J. Beau, 2026
 
@@ -9,12 +9,13 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \hypersetup{
-  pdftitle={Fermionic Matter and Chirality from Projective Dirac Admissibility},
+  pdftitle={Toward Fermionic Matter from Projective Dirac Admissibility: The Electroweak Spinor Algebra,
+    and Chirality Conditional on a Lorentzian Spin Structure},
   pdfauthor={J\'er\^ome Beau},
-  pdfsubject={Fermions as the spinorial face of the admissible Weil module: chiral selection,
-    hypercharge rigidity and generation multiplicity from projective Dirac admissibility},
+  pdfsubject={Fermions read from the admissible Weil module: the electroweak spinor algebra is proved;
+    chiral selection and hypercharge constraints are conditional on a Lorentzian spin structure},
   pdfkeywords={admissible spinor bundle, metaplectic lift, non-injective projection,
-    Weil representation, projected Dirac operator, chiral selection, hypercharge rigidity,
+    Weil representation, Lorentzian spin structure, projected Dirac operator, chiral selection, hypercharge rigidity,
     generation multiplicity, spectral anomaly cancellation, Cosmochrony}
 }
 \usepackage{natbib}
@@ -49,8 +50,9 @@
 \newcommand{\SU}{\operatorname{SU}}
 \newcommand{\Rep}{\operatorname{Rep}}
 
-\title{Fermionic Matter and Chirality\\
-from Projective Dirac Admissibility}
+\title{Toward Fermionic Matter from Projective Dirac Admissibility:\\
+The Electroweak Spinor Algebra, and Chirality\\
+Conditional on a Lorentzian Spin Structure}
 
 \author{J\'er\^ome Beau\\[4pt]
 \small Independent Researcher, France\\
@@ -63,45 +65,44 @@ from Projective Dirac Admissibility}
   \maketitle
 
   \begin{abstract}
-    The preceding gauge--gravity synthesis of the Cosmochrony programme showed that
-    gravity and Yang--Mills dynamics arise from the $a_2$ and $a_4$ Seeley--DeWitt
-    responses of the same admissible spectral functional.
-    The present paper extends this principle to the fermionic sector.
-    Fermions are not introduced as external matter fields.
-    They arise as the spinorial face of the Weil module carried by the admissible fibre on a
-    supplied Heisenberg carrier, once its metaplectic Lie-algebraic structure is complexified by
-    the Lorentzian metric established in the geometric branch of the programme.
-    That carrier is supplied rather than selected by the axioms, so every result below inherits it.
+    The gauge--gravity synthesis of the Cosmochrony programme reads gravity and Yang--Mills dynamics,
+    conditionally, as the $a_2$ and $a_4$ Seeley--DeWitt responses of one admissible spectral functional.
+    This paper asks what the fermionic sector requires when fermions are read from the Weil module of the
+    admissible fibre on a supplied Heisenberg carrier, which every result below inherits.
 
-    Three structural results are proved.
-    First, the admissible Weil module $V_\rho$ induces, through its metaplectic lift
-    and the Lorentzian complexification
-    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
-    an admissible spinor bundle $S_\Pi$ whose symmetric and determinant tensor sectors
-    reproduce the $\SU(2)_L \times U(1)_Y$ electroweak bundle structure.
-    Second, the projected Dirac operator $\mathcal{D}_{\Pi,g,A}$ contains a canonical
-    zero-order endomorphism $E_\Pi$, the internal spectral residue of non-injective
-    projection.
-    Under the spinorial lift of BI parity (Theorem~\ref{thm:spinorial-bi-lift}),
-    $E_\Pi$ is left-admissible and produces the $V{-}A$ chiral structure.
-    The $\gamma_5$-weighted $a_4$ coefficient of $\mathcal{D}_{\Pi,g,A}^2$ then imposes
-    anomaly-cancellation trace constraints on the hypercharge weights, which are thereby
-    not free parameters but spectral coherence data.
-    Third, the admissible saturation invariant $\sigma_c(n_3) = 3$, a supplied selection rule
-    (O23 proves the three-dimensionality of the neutral sector of a supplied spinor carrier;
-    the carrier selection and the identification of $\Sigma_c$ with that dimension are open),
-    admits a spinorial multiplicity reading, distinct from its geometric reading as three
-    spatial directions, yielding conditionally a gauge-singlet three-generation factor
+    The algebraic part is proved.
+    The complexified metaplectic algebra is
+    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$; on the abstract doublet
+    its symmetric square is the adjoint and its exterior square the trivial line, and a Hermitian form
+    selects the compact real form $\mathfrak{su}(2)$.
+    Given the supplied Born--Infeld parity datum, the internal parity $HK$ satisfies $(HK)^2 = -1$ without
+    any metric.
+    The physical readings require two distinct hypotheses, stated in the paper and supplied by no source.
+    [H-Spin] identifies the $\SL(2,\mathbb{C})$ acting on the doublet with the spin group of a
+    four-dimensional Lorentzian co-metric on the effective base; the geometric branch supplies such a
+    co-metric only conditionally, and nothing relates the metaplectic action to its frames.
+    [H-Weak] supplies a distinct rank-two weak factor: by Schur's lemma a weak action commuting with
+    Lorentz transformations cannot live on the same copy of the doublet, so the symmetric square of the
+    spinor factor is a Lorentz sector and its exterior square carries no hypercharge.
+    Under [H-Spin], the projected Dirac operator contains a canonical zero-order endomorphism $E_\Pi$, the
+    spectral residue of non-injective projection; the spinorial lift of the parity is unique and reverses
+    chirality, and $E_\Pi$ is left-admissible on the orientation-compatible branch.
+    The chiral selection of the weak interaction, the $V{-}A$ structure, and the anomaly-cancellation
+    constraints on the hypercharge weights require [H-Weak] as well, and left-admissibility does not
+    select the chiral assignment.
+    Both hypotheses are missing identifications, not refutations.
+    The supplied rank-three selection rule $\sigma_c(n_3) = 3$ (O23) admits a spinorial multiplicity
+    reading, giving conditionally a gauge-singlet three-generation factor
     $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\SU(2)} \oplus Y)$.
-    The colour-coupled quark sector is obtained by tensoring with a colour module
-    $V_{\mathrm{color}}$ that is a supplied input rather than a derived one: O31 is a withdrawal
-    notice, and neither the admissibility of a colour triplet nor the identification of
-    $\mathrm{SU}(3)$ is established.
-    Both the quark sector and the hypercharge selection therefore carry that supplied module as a
-    hypothesis; the $V{-}A$ structure and the generation factor do not.
-    Finally, we identify a qualitative mechanism by which the oriented cascade lifts the
-    static $J_\Pi$-protected degeneracy of the generation factor; the amplitude of this
-    splitting remains deferred to the cascade normalisation.
+    The quark sector uses a supplied colour module; no $\mathrm{SU}(3)$ is derived.
+    Finally, in a metaplectic step model the ordered step generator $\log g$ has a non-zero $J_3$
+    component in the sector that can lift the static degeneracy of the generation factor; its
+    identification with an emergent ordering derivative is not supplied, and the amplitude is open.
+    Interpretive outlook (a reading, not a result): chirality is where the internal algebra of the
+    admissible fibre must meet spacetime geometry and the weak interaction at once.
+    The paper locates that meeting point in two explicit hypotheses, which turns the question of why
+    weak interactions are left-handed into the question of how the metaplectic symmetry of the fibre is
+    joined to Lorentz frames and to a separate internal doublet.
   \end{abstract}
 
   \medskip
@@ -110,6 +111,7 @@ from Projective Dirac Admissibility}
   metaplectic lift;
   non-injective projection;
   Weil representation;
+  Lorentzian spin structure;
   projected Dirac operator;
   chiral selection;
   hypercharge rigidity;
@@ -127,22 +129,32 @@ from Projective Dirac Admissibility}
     \subsection{Position of the problem}
       \label{ssec:position}
 
-      The preceding papers of the programme establish the bosonic spectral stratification
+      The preceding papers of the programme propose a bosonic spectral stratification
       of admissible non-injective projection.
-      The Gravity trilogy~\cite{Beau2026h,Beau2026q12,Beau2026q13} identifies the
-      Seeley--DeWitt level as the organising principle of emergent interactions:
-      the horizontal $a_2$ response yields the Einstein sector, the vertical $a_4$
-      response yields the Yang--Mills sector, and the $a_6$ coefficient encodes the
-      leading mixed gauge--gravity coupling.
+      In the Gravity trilogy~\cite{Beau2026h,Beau2026q12,Beau2026q13}, the horizontal $a_2$
+      response gives an Einstein--Hilbert contribution in an explicit cutoff scheme, with the Newton
+      constant fixed by a matching condition, the vertical $a_4$ response gives a Yang--Mills sector
+      for a supplied gauge group, and the $a_6$ coefficient gives a list of candidate mixed
+      gauge--gravity invariants, none of which is singled out.
+      Reading the Seeley--DeWitt order as the organising principle of emergent interactions is an
+      interpretive outlook of that synthesis, not a theorem~\cite{Beau2026q13}.
       What lies outside this bosonic synthesis is the fermionic sector: the structural
       origin of spinors, chirality, the distribution of hypercharge, and the generation
       multiplicity.
 
       The purpose of the present paper is to show that fermions need not be introduced
       as external matter fields added to the admissible bundle.
-      They arise as the spinorial face of the Weil module carried by the admissible fibre on a
-      supplied Heisenberg carrier, once its metaplectic lift is interpreted through the Lorentzian
-      geometry closed in the geometric branch of the programme~\cite{Beau2026q11}.
+      They are read from the Weil module carried by the admissible fibre on a supplied Heisenberg
+      carrier, through the complexification of its metaplectic Lie algebra.
+      That complexification is algebra and needs no metric.
+      Reading its integrated group as the spin group of an emergent spacetime is a separate step: it
+      requires a four-dimensional Lorentzian co-metric and a spin structure identified with the
+      metaplectic action, which this paper states once as Hypothesis~\ref{hyp:spin-solder} ([H-Spin]).
+      The geometric branch of the programme supplies the co-metric only
+      conditionally~\cite{Beau2026q5b,BeauQ8,Beau2026q11}, and no source supplies the identification.
+      Reading the same algebra as the weak doublet is a third step, and it cannot use the same copy of
+      the doublet: a weak action commuting with Lorentz transformations needs a distinct rank-two
+      factor, stated as Hypothesis~\ref{hyp:weak-factor} ([H-Weak]) and not constructed here.
 
     \subsection{Main structural chain}
       \label{ssec:chain}
@@ -157,7 +169,7 @@ from Projective Dirac Admissibility}
         \Mp(2,\mathbb{R})
         \;\Rightarrow\;
         \mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})
-        \;\leadsto\;
+        \;\overset{\text{[H-Spin]}}{\leadsto}\;
         \Spin(3,1) \simeq \SL(2,\mathbb{C})
         \;\Rightarrow\;
         S_\Pi .
@@ -173,22 +185,29 @@ from Projective Dirac Admissibility}
       central character once that carrier is given.
       The passage to $\Mp(2,\mathbb{R})$ is the metaplectic lift of the symplectic structure
       canonically carried by $V_\rho$.
-      The Lorentzian closure of the effective metric forces the complexification
-      $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
-      whose Lorentzian integration is the spin group $\Spin(3,1) \simeq \SL(2,\mathbb{C})$,
-      yielding the admissible spinor bundle $S_\Pi$.
+      The complexification
+      $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$ is a statement about
+      Lie algebras and holds without any metric; its simply connected integration is
+      $\SL(2,\mathbb{C})$.
+      The arrow marked [H-Spin] is not an implication: identifying this $\SL(2,\mathbb{C})$ with the
+      spin group $\Spin(3,1)$ of a Lorentzian co-metric on the effective base, and hence defining the
+      admissible spinor bundle $S_\Pi$ as a spinor bundle of spacetime, is the content of
+      Hypothesis~\ref{hyp:spin-solder}.
 
-      The tensor functors of $S_\Pi$ then define the electroweak bundle data:
+      On the spinor factor, $\operatorname{Sym}^2(S_L)$ is a Lorentz sector and $\wedge^2(S_L)$ is a
+      trivial line; neither is electroweak data.
+      Under [H-Weak], the same tensor functors applied to the distinct weak factor
+      $E_{\mathrm{weak}}$ define the electroweak bundle data:
       \begin{equation}
         \label{eq:tensor-functors}
-        \operatorname{Sym}^2(S_\Pi) \;\Rightarrow\; \operatorname{ad}_{\mathbb{C}}(P_\Pi),
+        \operatorname{Sym}^2(E_{\mathrm{weak}}) \;\Rightarrow\; \operatorname{ad}_{\mathbb{C}}(\mathfrak{su}(2)_L),
         \qquad
-        \wedge^2(S_\Pi) \;\Rightarrow\; L_Y .
+        \wedge^2(E_{\mathrm{weak}}) \;\Rightarrow\; L_Y .
       \end{equation}
-      The symmetric sector gives the complex adjoint; after selecting the compact real
+      The symmetric sector gives the complex weak adjoint; after selecting the compact real
       form, it defines the $\SU(2)_L$ gauge sector.
-      The determinant line $L_Y = \wedge^2(S_\Pi)$ is the geometric support of the
-      $U(1)_Y$ factor.
+      The determinant line $L_Y = \wedge^2(E_{\mathrm{weak}})$ supports the $U(1)_Y$ factor, non-trivially
+      only because the structure group of $E_{\mathrm{weak}}$ is $U(2)$, a choice made in [H-Weak].
       The distribution of hypercharge weights $Y_R$ is not assumed: it is constrained
       by requiring that the projected spectral functional
       $S_\Pi[g, A, \mathcal{D}_{\Pi,g,A}]$ be invariant under $U(1)_Y$ gauge
@@ -200,12 +219,15 @@ from Projective Dirac Admissibility}
       The paper is organised around three independent but compatible results.
 
       \paragraph{Theorem A (Spinorial electroweak bundle).}
-        The admissible Weil module $V_\rho$ induces, via the metaplectic lift and
-        Lorentzian complexification, a $\Spin(3,1)$ spinor bundle $S_\Pi$.
-        Its symmetric and determinant tensor sectors reproduce the $\SU(2)_L \times U(1)_Y$
-        electroweak bundle structure (equations~\eqref{eq:tensor-functors}).
-        This result is algebraic and functorial; it depends on the Lorentzian closure
-        of~\cite{Beau2026q11} for the complexification step.
+        The complexified metaplectic algebra of the admissible Weil module is
+        $\mathfrak{sl}_2(\mathbb{C})$, and on the abstract doublet the symmetric and determinant
+        tensor sectors are the adjoint and the trivial line; a Hermitian form selects the compact real
+        form $\mathfrak{su}(2)$.
+        This part is algebraic and proved.
+        Two physical readings are conditional and distinct: the reading of $S_\Pi$ as a $\Spin(3,1)$
+        spinor bundle of the effective spacetime needs Hypothesis~\ref{hyp:spin-solder}, and the
+        $\SU(2)_L \times U(1)_Y$ electroweak data~\eqref{eq:tensor-functors} need the distinct weak factor of
+        Hypothesis~\ref{hyp:weak-factor}.
 
       \paragraph{Theorem B (Chiral selection and hypercharge rigidity).}
         The projected Dirac operator satisfies the Lichnerowicz-type identity
@@ -219,24 +241,28 @@ from Projective Dirac Admissibility}
         \end{equation}
         where $E_\Pi$ is the internal spectral residue of non-injective projection in the
         spinorial sector.
-        The term $E_\Pi$ is responsible for chiral selection $P_L S_\Pi$, for the
-        $V{-}A$ structure of weak couplings, and for the spectral coherence conditions
-        constraining the hypercharge assignments $Y_R$ via anomaly cancellation.
+        Under the supplied Born--Infeld datum, $E_\Pi$ is left-admissible, $P_R E_\Pi P_R = 0$: a
+        statement about the projective residue and the Lorentz chirality.
+        The chiral selection of the weak coupling, the $V{-}A$ structure, requires in addition the
+        left-handed doublet assignment of Hypothesis~\ref{hyp:weak-factor}, and no argument in this
+        paper derives that assignment from left-admissibility.
+        The same inputs make $U(1)_Y$ invariance impose anomaly-cancellation constraints on the
+        hypercharge assignments $Y_R$.
         This result is spectral and variational; it depends on the gauge sector
         of~\cite{Beau2026q6a,Beau2026q12} and on the gauge--gravity synthesis
         of~\cite{Beau2026q13} for the coupling of the Dirac sector to the joint spectral
         geometry.
+        It is conditional on Hypothesis~\ref{hyp:spin-solder}: the spin connection, the Clifford
+        symbol and the chirality operator $\gamma_5$ all presuppose the Lorentzian spin structure; its
+        gauge part is conditional on Hypothesis~\ref{hyp:weak-factor}.
 
       \paragraph{Theorem C (Generation multiplicity).}
         The admissible saturation invariant $\sigma_c(n_3) = 3$~\cite{Beau2026a27}, a
         supplied selection rule (O23 Theorem~3.1 proves the three-dimensionality of the
         neutral sector of a supplied spinor carrier; the carrier selection and the
         identification of $\Sigma_c$ with that dimension are open),
-        admits two functorially distinct readings of the same rank-three admissible
-        invariant.
-        In the geometric branch it yields the three effective spatial directions
-        (established in~\cite{Beau2026q5b,Beau2026q11}).
-        In the spinorial branch it yields a gauge-singlet generation space
+        admits a spinorial multiplicity reading.
+        It yields a gauge-singlet generation space
       \begin{equation}
         \label{eq:generation-space}
         \mathbb{C}^3_{\mathrm{gen}}
@@ -244,12 +270,10 @@ from Projective Dirac Admissibility}
         \ker\!\left(\operatorname{ad}_{\SU(2)} \oplus Y\right),
         \end{equation}
         which is not identified with $\operatorname{Sym}^2(S_\Pi)$.
-        The three-generation structure is a separate functorial image of the same
-        admissible rank-three invariant, and
-        $\mathbb{R}^3_{\mathrm{space}} \neq \mathbb{C}^3_{\mathrm{gen}}$ is established
-        explicitly in Section~\ref{sec:generations}.
+        The generation factor is a multiplicity space, distinct from the adjoint triplet and from any
+        spatial triplet (Section~\ref{sec:generations}).
         This result is combinatorial and representational; it is conditional on the supplied
-        rank-three selection rule of~\cite{Beau2026a27} (Theorem~3.1).
+        rank-three selection rule of~\cite{Beau2026a27} (Section~4.2; cf.\ Theorem~3.1).
 
   \subsection{Status and dependencies}
     \label{ssec:status}
@@ -271,15 +295,31 @@ from Projective Dirac Admissibility}
     supplied colour module: O31~\cite{Beau2026a35} is a withdrawal notice, and
     $[H\text{-color}]_{\mathrm{pointwise}}$ is among the results it withdraws
     (Section~\ref{ssec:colour-status}).
-    The hypercharge rigidity of Theorem~B and the generation multiplicity of
-    Theorem~C are proved below; they are not assumed as inputs.
+    The hypercharge constraints of Theorem~B and the generation multiplicity of
+    Theorem~C are derived below from their stated hypotheses; they are not assumed as inputs.
 
-    The spinorial lift of BI parity, formerly the only additional technical condition of the
-    fermionic sector, is established as Theorem~\ref{thm:spinorial-bi-lift}.
-    The $V{-}A$ structure of Theorem~B is therefore unconditional \emph{relative to the supplied
-    Heisenberg carrier}: its remaining dependencies are that carrier, the axiomatic chain
-    A1--A4~\cite{Beau2026m} and the upstream BI parity datum~\cite{Beau2026a34,Beau2026u1}.
-    It does not depend on the colour module.
+    Hypotheses~\ref{hyp:spin-solder} ([H-Spin]) and~\ref{hyp:weak-factor} ([H-Weak]) separate the paper
+    into three layers.
+    The algebraic layer uses neither: the complexification
+    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$, the fibrewise tensor
+    identities of Theorem~\ref{thm:spinorial-electroweak-bundle}(a), the grading identity of
+    Lemma~\ref{lem:bi-grading-anticommute} and the quaternionic square $(HK)^2 = -1$ of the internal
+    parity given the supplied Born--Infeld datum, and the linear algebra of
+    Propositions~\ref{prop:dg-static}, \ref{prop:dg-odd} and~\ref{prop:dg-bridge} as statements about
+    operators on $\mathbb{C}^3_{\mathrm{gen}}$.
+    The Lorentz-covariant layer uses [H-Spin]: the spinor bundle as a bundle of spacetime spinors, the
+    projected Dirac operator and its Lichnerowicz form, the chirality operator $\gamma_5$, the
+    covariant structure of Lemma~\ref{lem:covariant-epsilon}, the uniqueness and chirality reversal
+    of the spinorial BI lift (Theorem~\ref{thm:spinorial-bi-lift}), left-admissibility, and the reading
+    of the operators of Section~\ref{sec:dyn-lift} as restrictions of $E_\Pi^2$.
+    The electroweak layer uses both: the $\SU(2)_L \times U(1)_Y$ bundle data, the $V{-}A$ structure of
+    weak couplings, and the anomaly constraints on the hypercharge weights.
+    Both hypotheses are missing identifications, not refutations: no result excludes them, and each
+    layer holds as stated once its hypotheses are supplied.
+    Relative to them, the $V{-}A$ structure of Theorem~B depends on the supplied Heisenberg carrier,
+    the axiomatic chain A1--A4~\cite{Beau2026m}, the Born--Infeld datum supplied as hypotheses
+    (H1)--(H2) of O30~\cite{Beau2026a34}, and the chiral assignment of
+    Hypothesis~\ref{hyp:weak-factor}; it does not depend on the colour module.
     The hypercharge rigidity of Theorem~B is not: the anomaly
     constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed} are weighted by $\dim(R)$, and
     the cubic constraint~\eqref{eq:anomaly-cubic} is the one that carries the colour multiplicity
@@ -290,9 +330,10 @@ from Projective Dirac Admissibility}
     (Section~\ref{ssec:colour-status}).
 
     This paper depends simultaneously on four layers of the programme: the admissible
-    Weil fibre structure (Foundation, HeisenbergStructure, O-series); the closed
-    Lorentzian geometry (Q5b through Q11); the gauge connection (Q6a, Q12); and the
-    gauge--gravity synthesis (Q13, Gravity~3.0).
+    Weil fibre structure (Foundation, HeisenbergStructure, O-series); the effective co-metric
+    of the geometric branch (Q5b, Q8, Q11), which enters only through
+    Hypothesis~\ref{hyp:spin-solder}; the gauge connection (Q6a, Q12); and the
+    gauge--gravity synthesis (Q13, Gravity).
     It is accordingly the first paper of the Q-series whose construction depends on
     the simultaneous use of all four layers.
 
@@ -300,7 +341,7 @@ from Projective Dirac Admissibility}
     \label{ssec:organisation}
 
     Section~\ref{sec:metaplectic} constructs the metaplectic lift and the admissible
-    spinor bundle $S_\Pi$, proving Theorem~A.
+    spinor bundle $S_\Pi$, proving Theorem~A and stating Hypothesis~\ref{hyp:spin-solder}.
     Section~\ref{sec:dirac} defines the projected Dirac operator, identifies $E_\Pi$
     as the spectral residue of non-injective projection in the spinorial sector, and
     proves the chiral selection result of Theorem~B.
@@ -310,8 +351,8 @@ from Projective Dirac Admissibility}
     $\sigma_c(n_3) = 3$ (a supplied selection rule) and proves Theorem~C.
     Section~\ref{sec:dyn-lift} studies the first structural constraint on the spectrum of
     $E_\Pi^2$ on the generation factor: a static $J_\Pi$-real, weight-preserving restriction
-    cannot split the outer pair, whereas the oriented cascade generator carries a non-zero $J_3$
-    component capable of lifting this degeneracy.
+    cannot split the outer pair, whereas the per-step generator of an ordered metaplectic step
+    carries a non-zero $J_3$ component capable of lifting this degeneracy.
     Section~\ref{sec:colour} discusses the colour-coupled quark sector and the status of the
     supplied colour module.
     Section~\ref{sec:conclusion} summarises the results and identifies the remaining
@@ -341,120 +382,196 @@ from Projective Dirac Admissibility}
     The passage to $\Mp(2,\mathbb{R})$ is therefore structural: it is the double cover
     naturally associated with the symplectic action underlying the Weil representation.
 
-  \subsection{Lorentzian complexification}
+  \subsection{Complexification of the metaplectic algebra}
     \label{ssec:lorentzian-complexification}
 
-    The metaplectic lift is initially real and symplectic.
-    The effective geometry closed in the geometric branch is Lorentzian: the effective
-    co-metric established in~\cite{Beau2026q11} satisfies
-    \[
-      g^{\mu\nu} = 2\eta^{\mu\nu}.
-    \]
-    The relevant spin group is therefore not the compact group $\SU(2)$, but
-    $\Spin(3,1) \simeq \SL(2,\mathbb{C})$.
-
-    The Lorentzian closure does not require an independent postulate of a spin group.
-    It complexifies the real metaplectic Lie algebra:
+    The metaplectic lift is real and symplectic.
+    Its Lie algebra is $\mathfrak{sp}(2,\mathbb{R}) = \mathfrak{sl}(2,\mathbb{R})$, since the double cover
+    does not change the Lie algebra, and its complexification is
     \begin{equation}
       \label{eq:metaplectic-complexification}
       \mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C}).
     \end{equation}
-    The Lorentzian spin group integrating this complexified algebra is
+    This is a statement about Lie algebras and uses no metric.
+    The simply connected Lie group integrating $\mathfrak{sl}_2(\mathbb{C})$ is $\SL(2,\mathbb{C})$, and as an
+    abstract Lie group
     \begin{equation}
       \label{eq:spin-group-lorentzian}
       \Spin(3,1) \simeq \SL(2,\mathbb{C}).
     \end{equation}
-    This defines the admissible spinor bundle $S_\Pi$ as the associated bundle
-    carrying the fundamental $\SL(2,\mathbb{C})$ spin representation.
+    An abstract isomorphism with $\Spin(3,1)$ does not make this group the spin group of the effective
+    spacetime.
+    That requires a Lorentzian co-metric on the effective base and an identification of the
+    $\SL(2,\mathbb{C})$ acting on the admissible doublet with the group covering the Lorentz frames of that
+    co-metric: Hypothesis~\ref{hyp:spin-solder} below.
 
-  \subsection{The admissible spin frame bundle}
+    Let $V \simeq \mathbb{C}^2$ denote the admissible doublet, the two-dimensional carrier on which the
+    Born--Infeld datum of Subsection~\ref{ssec:proof-bi-left} acts; it is supplied model data, not derived
+    from the Weil module~\cite{Beau2026a27,Beau2026a34}.
+    It carries the fundamental representation of $\SL(2,\mathbb{C})$ through~\eqref{eq:metaplectic-complexification}.
+
+  \subsection{The admissible spin frame bundle under [H-Spin]}
     \label{ssec:spin-frame-bundle}
 
-    Let $P_\Pi$ denote the principal $\Spin(3,1)$-bundle obtained from the Lorentzian
-    complexification of the metaplectic lift.
-    The admissible spinor bundle is
+    Under Hypothesis~\ref{hyp:spin-solder}, let $P_\Pi$ denote the principal $\Spin(3,1)$-bundle it
+    supplies.
+    The left-handed and right-handed Weyl bundles are
     \[
-      S_\Pi = P_\Pi \times_{\Spin(3,1)} \mathbb{C}^2 .
+      S_L = P_\Pi \times_{\Spin(3,1)} V,
+      \qquad
+      S_R = P_\Pi \times_{\Spin(3,1)} \overline{V},
     \]
-    The construction is projective: $P_\Pi$ is not postulated as an independent spin
-    frame bundle over a pre-existing manifold.
-    It is induced from the Weil fibre through the metaplectic lift and the Lorentzian
-    closure of the effective metric.
+    and the admissible spinor bundle is the Dirac bundle $S_\Pi = S_L \oplus S_R$.
+    The construction is projective in intent: $P_\Pi$ is meant to be induced from the Weil fibre rather
+    than postulated as a spin frame bundle over a pre-existing manifold.
+    Hypothesis~\ref{hyp:spin-solder} is exactly the statement that this induction exists, and no source
+    supplies it.
 
-  \subsection{Electroweak tensor sectors}
+  \subsection{Tensor sectors: the Lorentz reading and the electroweak reading}
     \label{ssec:electroweak-tensors}
 
-    The tensor functors of $S_\Pi$ define the electroweak bundle data.
-    The symmetric square gives the complex adjoint sector:
-    \begin{equation}
-      \label{eq:sym2-adjoint}
-      \operatorname{Sym}^2(S_\Pi) \simeq \operatorname{ad}_{\mathbb{C}}(P_\Pi).
-    \end{equation}
-    Equivalently, fibrewise,
+    On the abstract doublet the tensor identities are
     \begin{equation}
       \label{eq:sym2-fibre}
-      \operatorname{Sym}^2(\mathbb{C}^2) \simeq \mathfrak{sl}_2(\mathbb{C}).
+      \operatorname{Sym}^2(V) \simeq \mathfrak{sl}_2(\mathbb{C}),
+      \qquad
+      \wedge^2(V) \simeq \mathbb{C}_{\det} ,
     \end{equation}
-    The Hermitian structure inherited from the admissible Weil module selects the
-    compact real form
-    \[
-      \mathfrak{su}(2) \subset \mathfrak{sl}_2(\mathbb{C}),
-    \]
-    and hence the $\SU(2)_L$ gauge sector.
+    where $\operatorname{Sym}^2(V)$ carries the adjoint representation and $\wedge^2(V)$ the trivial one,
+    since $\det g = 1$ on $\SL(2,\mathbb{C})$.
+    A Hermitian form on $V$ selects a compact real form $\mathfrak{su}(2) \subset \mathfrak{sl}_2(\mathbb{C})$.
 
-    The antisymmetric square gives the determinant line:
+    These identities admit two readings, which must not be taken for one copy of $V$.
+    In the Lorentz reading, under Hypothesis~\ref{hyp:spin-solder}, $V$ is the Weyl fibre of $S_L$ and
+    \begin{equation}
+      \label{eq:sym2-adjoint}
+      \operatorname{Sym}^2(S_L) \simeq \operatorname{ad}(P_\Pi) ,
+    \end{equation}
+    the bundle of Lorentz Lie algebras with its complex structure, that is the complex self-dual two-forms.
+    It is a Lorentz sector, not a weak adjoint.
+    The line $\wedge^2(S_L)$ is trivial, spanned by the invariant form $\varepsilon$ of
+    Lemma~\ref{lem:covariant-epsilon}, and supplies no non-trivial hypercharge.
+    A compact real form of $\mathfrak{sl}_2(\mathbb{C})$ is then the stabiliser of a time-like direction: a
+    positive Hermitian form on $S_L$ is a time-like vector, and the corresponding $\mathfrak{su}(2)$
+    generates spatial rotations in that frame, not an internal symmetry.
+
+    In the electroweak reading the same identities are applied to a second rank-two factor.
+    On an irreducible Weyl fibre, every complex-linear map commuting with the Lorentz action is scalar
+    (Schur's lemma), so a non-trivial weak $\SU(2)$ action commuting with Lorentz transformations requires
+    an additional space: the field carries two indices,
     \[
-      \wedge^2(S_\Pi) = L_Y .
+      \psi_{\alpha i} \in S_L \otimes E_{\mathrm{weak}},
+      \qquad
+      \rho(\Lambda, u) = \rho_L(\Lambda) \otimes \rho_{\mathrm{weak}}(u),
     \]
-    This line is the geometric support of the $U(1)_Y$ factor.
-    It fixes the existence of the hypercharge line, while the distribution of
-    hypercharge weights is constrained by spectral anomaly cancellation in
-    Section~\ref{sec:anomaly}.
+    as in the Standard Model~\cite{Tong2024SM}, and as diagnosed for this programme in the spin-rotation
+    note~\cite{Beau2026srn}.
+    The factor $E_{\mathrm{weak}}$ is Hypothesis~\ref{hyp:weak-factor}.
+    Under it, $\operatorname{Sym}^2$ applied to the fibre of $E_{\mathrm{weak}}$ gives the complex weak
+    adjoint, whose compact real form selected by the Hermitian structure of $E_{\mathrm{weak}}$ is the
+    $\SU(2)_L$ algebra, and $L_Y := \wedge^2(E_{\mathrm{weak}})$ is the determinant line.
+    The line $L_Y$ carries a non-trivial $U(1)_Y$ action only because the structure group of
+    $E_{\mathrm{weak}}$ is taken to be $U(2)$ rather than $\SU(2)$; that choice is part of
+    Hypothesis~\ref{hyp:weak-factor}.
+    It fixes the existence of the hypercharge line, while the distribution of hypercharge weights is
+    constrained by spectral anomaly cancellation in Section~\ref{sec:anomaly}.
 
     \begin{theorem}[Spinorial electroweak bundle]
       \label{thm:spinorial-electroweak-bundle}
-      The admissible Weil module $V_\rho$ induces, through its metaplectic lift and
-      the Lorentzian complexification forced by the effective metric~\cite{Beau2026q11},
-      an admissible spinor bundle $S_\Pi$.
-      Its tensor sectors satisfy
-      \[
-        \operatorname{Sym}^2(S_\Pi) \simeq \operatorname{ad}_{\mathbb{C}}(P_\Pi),
-        \qquad
-        \wedge^2(S_\Pi) = L_Y .
-      \]
-      After selection of the compact real form, these define the
-      $\SU(2)_L \times U(1)_Y$ electroweak bundle data.
+      \begin{enumerate}
+        \item[\emph{(a)}] The complexified metaplectic algebra of the admissible Weil module
+        satisfies~\eqref{eq:metaplectic-complexification}, integrates to $\SL(2,\mathbb{C})$, and on the
+        abstract doublet $V$ the tensor identities~\eqref{eq:sym2-fibre} hold; a Hermitian form on $V$
+        selects the compact real form $\mathfrak{su}(2)$.
+        \item[\emph{(b)}] Under Hypothesis~\ref{hyp:spin-solder}, $S_\Pi = S_L \oplus S_R$ is a Dirac spinor
+        bundle of the effective Lorentzian co-metric, $\operatorname{Sym}^2(S_L) \simeq
+        \operatorname{ad}(P_\Pi)$ is its Lorentz sector, and $\wedge^2(S_L)$ is trivial.
+        \item[\emph{(c)}] Under Hypothesis~\ref{hyp:weak-factor}, the identities~\eqref{eq:sym2-fibre}
+        applied to $E_{\mathrm{weak}}$ give the complex weak adjoint, with compact real form
+        $\mathfrak{su}(2)_L$, and the determinant line $L_Y = \wedge^2(E_{\mathrm{weak}})$ carrying
+        $U(1)_Y$; together these are the $\SU(2)_L \times U(1)_Y$ electroweak bundle data on
+        $S_\Pi \otimes E_{\mathrm{weak}}$.
+      \end{enumerate}
+      Part~(a) is proved without either hypothesis.
     \end{theorem}
 
     \begin{proof}
-      On the supplied Heisenberg carrier of Subsection~\ref{ssec:weil-metaplectic}, the
-      identification $F_n \simeq V_\rho$ gives the admissible fibre the canonical symplectic
-      structure of the Weil representation~\cite{Beau2026m,Beau2026HeisenbergStructure}.
-      The automorphisms preserving this structure lift to $\Mp(2,\mathbb{R})$.
-      The Lorentzian metric $g^{\mu\nu} = 2\eta^{\mu\nu}$~\cite{Beau2026q11} forces the
-      complexification $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$,
-      whose Lorentzian integration is $\Spin(3,1) \simeq \SL(2,\mathbb{C})$.
-      The associated fundamental bundle is $S_\Pi$.
-      The fibrewise identities
-      \[
-        \operatorname{Sym}^2(\mathbb{C}^2) \simeq \mathfrak{sl}_2(\mathbb{C}),
-        \qquad
-        \wedge^2(\mathbb{C}^2) \simeq \det(\mathbb{C}^2)
-      \]
-      give the complex adjoint sector and the determinant line.
-      The Hermitian admissibility structure selects the compact real form $\mathfrak{su}(2)$,
-      while the determinant line gives $L_Y$.
+      (a) The metaplectic group is a double cover of $\mathrm{Sp}(2,\mathbb{R}) = \SL(2,\mathbb{R})$, so its Lie
+      algebra is $\mathfrak{sl}(2,\mathbb{R})$, whose complexification is $\mathfrak{sl}_2(\mathbb{C})$; the
+      simply connected group with this Lie algebra is $\SL(2,\mathbb{C})$.
+      For the fundamental representation, $\operatorname{Sym}^2(\mathbb{C}^2)$ is the three-dimensional
+      irreducible representation, which is the adjoint, and $\wedge^2(\mathbb{C}^2)$ is the determinant,
+      trivial on $\SL(2,\mathbb{C})$.
+      The unitary group of a positive Hermitian form on $\mathbb{C}^2$ meets $\SL(2,\mathbb{C})$ in a conjugate
+      of $\SU(2)$, whose Lie algebra is a compact real form of $\mathfrak{sl}_2(\mathbb{C})$.
+      (b) Under Hypothesis~\ref{hyp:spin-solder}, the associated-bundle construction applied to the fibrewise
+      identities gives $\operatorname{Sym}^2(S_L) \simeq P_\Pi \times_{\mathrm{Ad}} \mathfrak{sl}_2(\mathbb{C})
+      = \operatorname{ad}(P_\Pi)$ and $\wedge^2(S_L) \simeq P_\Pi \times_{\det} \mathbb{C}$, which is trivial.
+      (c) Under Hypothesis~\ref{hyp:weak-factor}, the same construction applied to the $U(2)$-bundle
+      $E_{\mathrm{weak}}$ gives $\operatorname{Sym}^2(E_{\mathrm{weak}})$, containing the complexified
+      $\mathfrak{su}(2)_L$ adjoint, and $\wedge^2(E_{\mathrm{weak}}) = \det E_{\mathrm{weak}}$, on which
+      $U(2)$ acts through the determinant character.
     \end{proof}
 
-    Fermions arise from the spinorial interpretation of the Weil module after the
-    Lorentzian complexification of its metaplectic Lie-algebraic structure.
+    Fermions are read from the Weil module through the complexification of its metaplectic Lie algebra.
+    The algebra is proved; its reading as spacetime spinors and its reading as weak doublets are two
+    distinct conditions, stated next.
+
+    \begin{hypothesis}[{[H-Spin]}: Lorentzian spin solder; not supplied]
+      \label{hyp:spin-solder}
+      The following two conditions hold.
+      \begin{enumerate}
+        \item[\emph{(i)}] The effective base $M_{\mathrm{eff}}$ carries a four-dimensional Lorentzian co-metric
+        $g$, time- and space-orientable.
+        \item[\emph{(ii)}] There is a principal $\Spin(3,1)$-bundle $P_\Pi \to M_{\mathrm{eff}}$ with a
+        two-to-one equivariant map onto the bundle of oriented, time-oriented orthonormal frames of $g$,
+        such that the $\SL(2,\mathbb{C})$ acting on the admissible doublet $V$
+        through~\eqref{eq:metaplectic-complexification} is the structure group of $P_\Pi$.
+      \end{enumerate}
+    \end{hypothesis}
+
+    Part~(i) is supplied only conditionally by the geometric branch.
+    Under the spatial limit hypothesis [H-L] and the lifting hypothesis [H-lift], the effective co-metric
+    of Q5b has rank three, of signature $(-,+,+)$ under the reduced hyperbolicity hypothesis
+    [H-hyp$_{\mathrm{red}}$], and a full-rank extension is open (Q5b~\cite{Beau2026q5b}, Theorems~5.2
+    and~6.1, open problem Q5b-O2).
+    For a supplied full-rank extension with a spatially $\SU(2)$-invariant principal symbol and a negative
+    ordering term, Q11 obtains $g^{\mu\nu} = \mathrm{diag}(-A_\tau, 2\lambda, 2\lambda, 2\lambda)$ with
+    $A_\tau$ and $\lambda$ independent (Q11~\cite{Beau2026q11}, Corollary~6.1, using
+    Q8~\cite{BeauQ8}); no coefficient value is derived, and only the signature is used here.
+    Part~(ii) is supplied by no source: the metaplectic action is an action on the internal Weil fibre,
+    and no result of the corpus relates it to the frames of $g$.
+    Neither part is excluded, and Hypothesis~\ref{hyp:spin-solder} is a missing identification: the
+    Lorentz-covariant statements of this paper hold as stated once it is supplied.
+
+    \begin{hypothesis}[{[H-Weak]}: distinct weak factor; not supplied]
+      \label{hyp:weak-factor}
+      There is a Hermitian vector bundle $E_{\mathrm{weak}} \to M_{\mathrm{eff}}$ of rank two, with structure
+      group $U(2)$ and a connection, distinct from the factor soldered by
+      Hypothesis~\ref{hyp:spin-solder}, and the fermion fields are sections of the twisted bundle
+      $S_\Pi \otimes E_{\mathrm{weak}}$ with the representation content of the Standard Model: left-handed
+      components in doublets of $E_{\mathrm{weak}}$ and right-handed components in weak singlets.
+    \end{hypothesis}
+
+    This paper does not construct $E_{\mathrm{weak}}$.
+    By Schur's lemma, the admissible doublet can supply at most one of the two rank-two factors: the chain
+    of~\eqref{eq:main-chain} assigns it to the spinor factor, through Hypothesis~\ref{hyp:spin-solder}, and
+    reading it instead as the weak factor would require the spinor bundle to come from elsewhere.
+    Which reading, if either, the admissible Weil fibre realises is not decided here.
 
   \section{The Projected Dirac Operator and the Projective Endomorphism}
   \label{sec:dirac}
 
-  The preceding section constructs the admissible spinor bundle $S_\Pi$.
+  The preceding section constructs the admissible spinor bundle $S_\Pi$ under
+  Hypothesis~\ref{hyp:spin-solder}.
   We now define the Dirac operator carried by this bundle, isolate the endomorphism
   induced by non-injective projection, and establish its role in chiral selection.
+  Throughout Sections~\ref{sec:dirac} and~\ref{sec:anomaly}, Hypothesis~\ref{hyp:spin-solder} is
+  assumed, and the gauge connection acts on the weak factor of Hypothesis~\ref{hyp:weak-factor}.
+  When the connection is included, the Dirac operator acts on the twisted bundle
+  $S_\Pi \otimes E_{\mathrm{weak}}$ (with the appropriate hypercharge and colour factors); we keep the
+  notation $S_\Pi$ for it when no confusion arises, the Clifford matrices and $\gamma_5$ acting on the
+  spinor factor and the gauge generators $T^a_R$ and the hypercharge $Y$ on the internal factors.
 
   \subsection{The minimal spin--gauge Dirac operator}
     \label{ssec:minimal-dirac}
@@ -523,7 +640,7 @@ from Projective Dirac Admissibility}
 
     \begin{lemma}[Projective origin of $E_\Pi$]
       \label{lem:projective-endomorphism}
-      Let $S_\Pi$ be the admissible spinor bundle induced by the Weil fibre, and assume
+      Let $S_\Pi$ be the admissible spinor bundle of Hypothesis~\ref{hyp:spin-solder}, and assume
       that the admissible lift $\Pi_S^*$ is symbol-compatible with the spin--gauge
       connection.
       The projected square $\mathcal{D}_{\Pi,g,A}^2$ then differs from the ordinary
@@ -580,7 +697,7 @@ from Projective Dirac Admissibility}
 
     Let $\gamma_5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3$ be the chirality operator
     of $\mathrm{Cl}(T^* M_{\mathrm{eff}}, g^{\mu\nu})$, whose existence as a global
-    section depends on the Lorentzian closure of~\cite{Beau2026q11}.
+    section depends on the oriented Lorentzian spin structure of Hypothesis~\ref{hyp:spin-solder}.
     Define the chiral projectors
     \[
       P_L = \frac{1}{2}(1 - \gamma_5),
@@ -602,20 +719,20 @@ from Projective Dirac Admissibility}
   \subsection{Spinorial lift of BI parity}
     \label{ssec:proof-bi-left}
 
-    The spinorial lift is established here as a theorem rather than assumed.
-    We work on the limiting spinor bundle, on which the Born--Infeld parity of the conjugate
-    Weil sectors is represented by an exact antilinear involution
+    The spinorial lift is derived here from a supplied Born--Infeld datum.
+    The Weil-action conjugation identity $\rho_{q-c} = \bar\rho_c$~\cite{Beau2026a22} relates the
+    sectors $c$ and $q-c$; turning it into an antilinear involution of one admissible doublet requires
+    an inter-block identification and a weight exchange, which are supplied as hypotheses (H1) and (H2)
+    of O30~\cite{Beau2026a34} and are not derived there.
+    Under these hypotheses the parity is represented by an antilinear involution
     \[
       K : V_\rho \longrightarrow V_\rho,
       \qquad
       K^2 = 1 ,
     \]
-    derived at the scalar Weil level in~\cite{Beau2026c,Beau2026a34}; the finite-$q$ error is
-    confined upstream to the convergence of the Weil block toward $K$, at order
-    $O(q^{-1/2})$~\cite{Beau2026a34,Beau2026u1}.
-    The two BI-conjugate sectors fix a canonical weight decomposition $V_\rho = V_+ \oplus V_-$,
-    which is not an external Cartan choice but the same datum as the parity: $K$ exchanges the two
-    sectors, and the grading
+    on the doublet $V_\rho = V_+ \oplus V_-$ of Section~\ref{sec:metaplectic}.
+    No convergence estimate of the finite-$q$ Weil blocks toward $K$ is supplied by the corpus.
+    By (H2) the involution exchanges the two weight sectors, and the grading
     \[
       H := 2 J_3,
       \qquad
@@ -643,14 +760,15 @@ from Projective Dirac Admissibility}
     \end{proof}
 
     Equation~\eqref{eq:HK-anticommute} is the operator expression of the fact that the BI parity
-    exchanges precisely the two weights that the same BI datum canonically grades.
+    exchanges precisely the two weights that the supplied BI datum grades.
+    Lemma~\ref{lem:bi-grading-anticommute} and its consequence $(HK)^2 = -1$ use no metric; the rest
+    of this subsection assumes Hypothesis~\ref{hyp:spin-solder}.
 
     \begin{lemma}[Unique covariant antilinear structure]
       \label{lem:covariant-epsilon}
-      After the Lorentzian complexification $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq
-      \mathfrak{sl}_2(\mathbb{C})$ of~\cite{Beau2026q11}, the admissible doublet becomes a Weyl
-      representation $S_L \simeq \mathbb{C}^2$ of $\SL(2,\mathbb{C})$, with $S_R \simeq
-      \overline{S_L}$ inequivalent to $S_L$.
+      Assume Hypothesis~\ref{hyp:spin-solder}.
+      Then the admissible doublet is the Weyl fibre $S_L \simeq \mathbb{C}^2$ of the Lorentz spin group
+      $\SL(2,\mathbb{C})$, with $S_R \simeq \overline{S_L}$ inequivalent to $S_L$.
       Consequently no Lorentz-covariant antilinear conjugation $S_L \to S_L$ exists, so any
       covariant antilinear lift must exchange the chiral subbundles
       $P_L S_\Pi \leftrightarrow P_R S_\Pi$, and the unique $\SL(2,\mathbb{C})$-invariant bilinear
@@ -671,14 +789,17 @@ from Projective Dirac Admissibility}
       For the form, invariance $g^{T} B g = B$ under the diagonal torus forces the diagonal entries
       of $B$ to vanish, and invariance under the unipotent forces the off-diagonal entries to be
       opposite, so $B \propto \varepsilon$, which is itself invariant under $\SL(2,\mathbb{C})$.
-      Under the compact form $\mathfrak{su}(2)$ the doublet is pseudoreal~\cite{Beau2026a31}; the
-      Lorentzian complexification is precisely what removes the equivalence
-      $\rho \simeq \overline{\rho}$ and converts the internal weight exchange into a chiral exchange.
+      Under the compact form $\mathfrak{su}(2)$ the doublet is pseudoreal~\cite{FultonHarris1991}; it is
+      the reading of $\SL(2,\mathbb{C})$ as the Lorentz spin group, Hypothesis~\ref{hyp:spin-solder},
+      that removes the equivalence $\rho \simeq \overline{\rho}$ and converts the internal weight exchange
+      into a chiral exchange.
     \end{proof}
 
     \begin{theorem}[Spinorial BI lift]
       \label{thm:spinorial-bi-lift}
-      On the limiting spinor bundle $S_\Pi$ there exists a unique antilinear lift of the BI parity
+      Assume Hypothesis~\ref{hyp:spin-solder} and the Born--Infeld datum $(K,H)$ supplied by
+      (H1)--(H2) of~\cite{Beau2026a34}.
+      On the spinor bundle $S_\Pi$ there exists a unique antilinear lift of the BI parity
       compatible with both the BI datum $(K,H)$ and $\SL(2,\mathbb{C})$-covariance.
       Its internal part is the grading-dressed parity $J_\Pi^{\mathrm{int}} = H K$, which in the
       weight basis ($K = \sigma_x \circ \overline{(\cdot)}$, $H = \sigma_z$) equals the unique
@@ -753,9 +874,23 @@ from Projective Dirac Admissibility}
     and $E_\Pi = P_L E_\Pi P_L$.
     The chiral asymmetry of the projective residue is therefore carried not by a chiral
     commutator but by the diagonal imbalance between $P_L E_\Pi P_L$ and
-    $P_R E_\Pi P_R = 0$, equivalently by the $\gamma_5$-graded trace, which enters both
-    the $V{-}A$ structure and the spectral anomaly condition of
-    Section~\ref{sec:anomaly}.
+    $P_R E_\Pi P_R = 0$, equivalently by the $\gamma_5$-graded trace, which enters the spectral
+    anomaly condition of Section~\ref{sec:anomaly}.
+
+    \begin{remark}[Lorentz chirality and electroweak chiral selection]
+      \label{rem:lorentz-vs-weak-chirality}
+      Proposition~\ref{prop:bi-left-admissibility} is a statement about the projective residue $E_\Pi$
+      and the Lorentz chirality $\gamma_5$ of the spinor factor; it is conditional on
+      Hypothesis~\ref{hyp:spin-solder}, the supplied Born--Infeld datum and the orientation branch.
+      The chiral selection of the weak interaction is a different statement: that the weak gauge action
+      is carried by the left-handed factor alone, with fermions in
+      $P_L S_\Pi \otimes E_{\mathrm{weak}}$ and right-handed components in weak singlets.
+      That is the representation content of Hypothesis~\ref{hyp:weak-factor}.
+      No argument in this paper derives it from $P_R E_\Pi P_R = 0$; relating the two would require a
+      coupling between the projective residue and the weak factor, which is not constructed.
+      The $V{-}A$ structure of weak couplings therefore rests on Hypothesis~\ref{hyp:weak-factor} with
+      that chiral assignment, and left-admissibility is compatible with it but does not select it.
+    \end{remark}
 
   \section{Spectral Anomaly Cancellation and Hypercharge Rigidity}
   \label{sec:anomaly}
@@ -773,7 +908,7 @@ from Projective Dirac Admissibility}
   \subsection{Projected \texorpdfstring{$U(1)_Y$}{U(1)\_Y} variation}
     \label{ssec:u1-variation}
 
-    Let $L_Y = \wedge^2(S_\Pi)$ be the determinant line identified in
+    Let $L_Y = \wedge^2(E_{\mathrm{weak}})$ be the determinant line identified in
     Section~\ref{sec:metaplectic}.
     The projected spinorial sector decomposes into irreducible components
     $S_R \subset S_\Pi$, each carrying a definite chirality and hypercharge weight
@@ -854,7 +989,8 @@ from Projective Dirac Admissibility}
     \begin{remark}
       \label{rem:seeley-dewitt-hierarchy}
       The appearance of the $\gamma_5$-weighted $a_4$ coefficient is consistent with
-      the spectral stratification established in the bosonic sector~\cite{Beau2026q13}.
+      the spectral stratification proposed, as an interpretive reading, in the bosonic
+      sector~\cite{Beau2026q13}.
       In the bosonic variation, the $a_2$ coefficient gives the gravitational response
       and the $a_4$ coefficient gives the gauge response.
       In the spinorial sector, the same $a_4$ level controls the local chiral anomaly
@@ -902,8 +1038,8 @@ from Projective Dirac Admissibility}
 
     Let $\chi_R \in \{+1, -1\}$ denote the chirality eigenvalue of sector $R$:
     $\chi_R = +1$ for left-handed sectors ($S_R \subset P_L S_\Pi$) and
-    $\chi_R = -1$ for right-handed sectors ($S_R \subset P_R S_\Pi$), as determined
-    by the left-admissibility condition of Definition~\ref{def:chiral-admissibility}.
+    $\chi_R = -1$ for right-handed sectors ($S_R \subset P_R S_\Pi$), as fixed by the chiral
+    assignment of Hypothesis~\ref{hyp:weak-factor} (Remark~\ref{rem:lorentz-vs-weak-chirality}).
     The vanishing condition~\eqref{eq:anomaly-vanishing} specialises, at leading
     Seeley--DeWitt order, to the following set of spectral coherence constraints:
     \begin{align}
@@ -922,8 +1058,8 @@ from Projective Dirac Admissibility}
 
     \begin{proposition}[Spectral anomaly constraints]
       \label{prop:spectral-anomaly-constraints}
-      Assume symbol-compatibility and left-admissibility of $E_\Pi$
-      (Theorem~\ref{thm:spinorial-bi-lift},
+      Assume Hypotheses~\ref{hyp:spin-solder} and~\ref{hyp:weak-factor}, symbol-compatibility, and
+      left-admissibility of $E_\Pi$ (Theorem~\ref{thm:spinorial-bi-lift},
       Proposition~\ref{prop:bi-left-admissibility}).
       Then $U(1)_Y$ invariance of the projected spectral functional imposes the
       projected anomaly constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed}
@@ -939,7 +1075,8 @@ from Projective Dirac Admissibility}
 
     \begin{proposition}[Hypercharge rigidity from spectral coherence]
       \label{prop:hypercharge-rigidity}
-      Assume that the projected spinorial sectors are precisely those of the admissible
+      Assume Hypotheses~\ref{hyp:spin-solder} and~\ref{hyp:weak-factor}, and that the projected spinorial
+      sectors are precisely those of the admissible
       matter decomposition~\eqref{eq:matter-content}, with a supplied colour module
       $V_{\mathrm{color}}$ of dimension three (Section~\ref{ssec:colour-status}).
       That module is a hypothesis of this proposition, not a consequence of the preceding
@@ -954,7 +1091,7 @@ from Projective Dirac Admissibility}
 
     \begin{proposition}[Minimal hypercharge assignment]
       \label{prop:minimal-hypercharge}
-      If, in addition, the determinant line $L_Y = \wedge^2(S_\Pi)$ carries the minimal
+      If, in addition, the determinant line $L_Y = \wedge^2(E_{\mathrm{weak}})$ carries the minimal
       integral normalisation compatible with the $U(1)_Y$ action on the projected
       spinorial sectors, then the
       constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed} select the
@@ -968,7 +1105,7 @@ from Projective Dirac Admissibility}
     The three-step derivation is:
     \begin{equation}
       \label{eq:hypercharge-chain}
-      L_Y = \wedge^2(S_\Pi)
+      L_Y = \wedge^2(E_{\mathrm{weak}})
       \;\Rightarrow\;
       \text{support of } U(1)_Y
       \;\Rightarrow\;
@@ -992,13 +1129,15 @@ from Projective Dirac Admissibility}
     \label{eq:sigma-n3}
     \sigma_c(n_3) = 3 .
   \end{equation}
-  This invariant has already been used in the geometric branch of the programme:
-  under the geometric reconstruction functor it yields the three effective spatial
-  directions (Q5b~\cite{Beau2026q5b}, Q11~\cite{Beau2026q11}).
-  The purpose of the present section is to show that the same invariant admits a
-  distinct spinorial multiplicity reading.
+  The purpose of the present section is to show that this invariant admits a spinorial
+  multiplicity reading.
+  No source identifies it with the spatial directions of the geometric branch: Q5b's effective
+  co-metric has rank two on the spatial sector, with the central direction open
+  (Q5b~\cite{Beau2026q5b}, Theorem~5.2 and open problem Q5b-O2), and the three-dimensional spatial
+  sector of Q8 and Q11 carries a supplied spin-one action~\cite{BeauQ8,Beau2026q11}, not the O23
+  invariant.
 
-  \subsection{Two functorial readings of the same invariant}
+  \subsection{A geometric contrast and the spinorial reading}
     \label{ssec:two-functors}
 
     Let $\mathcal{A}_3$ denote the rank-three admissible sector selected at BI
@@ -1009,17 +1148,18 @@ from Projective Dirac Admissibility}
     \end{equation}
     Let $\{e_1, e_2, e_3\}$ be a basis of stable admissible directions in
     $\mathcal{A}_3$, orthogonal with respect to the admissibility form.
-    There are two distinct functorial readings of $\mathcal{A}_3$.
+    The count three invites two readings of $\mathcal{A}_3$, of which only the second is
+    constructed here.
 
-    The geometric reading
+    A geometric reading
     \begin{equation}
       \label{eq:geometric-functor}
       \mathcal{F}_{\mathrm{geom}} \colon \mathcal{A}_3 \longrightarrow
       \mathbb{R}^3_{\mathrm{space}}
     \end{equation}
-    sends each stable admissible direction to a spatial tangent direction.
-    This is the branch used in the reconstruction of the effective Lorentzian
-    metric~\cite{Beau2026q5b,Beau2026q11}.
+    would send each stable admissible direction to a spatial tangent direction.
+    It is recorded here only as a contrast: it is an interpretive parallel, not a construction
+    supplied by the geometric branch, and nothing below uses it.
 
     The spinorial multiplicity reading is defined as follows.
 
@@ -1030,9 +1170,11 @@ from Projective Dirac Admissibility}
       assigns to each stable admissible direction $e \in \mathcal{A}_3$ a copy
       $S_\Pi^{(e)}$ of the admissible spinor bundle, subject to the following conditions:
       \begin{enumerate}
-        \item[\emph{(i)}]   $S_\Pi^{(e)} \cong S_\Pi$ as $\Spin(3,1)$ spinor bundles;
+        \item[\emph{(i)}]   $S_\Pi^{(e)} \cong S_\Pi$ as $\Spin(3,1)$ spinor bundles
+        (Hypothesis~\ref{hyp:spin-solder});
         \item[\emph{(ii)}]  the gauge group $G_\Pi$ acts on $S_\Pi^{(e)}$ via the same
-        representation as on $S_\Pi$;
+        representation as on $S_\Pi$, through the internal factors
+        (Hypothesis~\ref{hyp:weak-factor});
         \item[\emph{(iii)}] the admissible projection $\Pi$ acts on $S_\Pi^{(e)}$ via
         the same kernel structure as on $S_\Pi$;
         \item[\emph{(iv)}]  distinct directions define orthogonal multiplicity sectors:
@@ -1084,9 +1226,8 @@ from Projective Dirac Admissibility}
         \subset
         \ker\!\left(\operatorname{ad}_{\SU(2)} \oplus Y\right).
       \end{equation}
-      The three-generation structure is the spinorial multiplicity image of the same
-      rank-three admissible invariant that yields the three spatial directions in the
-      geometric branch.
+      The three-generation structure is the spinorial multiplicity image of the
+      rank-three admissible invariant.
     \end{theorem}
 
     \begin{proof}
@@ -1109,9 +1250,9 @@ from Projective Dirac Admissibility}
       \label{rem:space-generation-distinction}
       The equality $\dim \mathbb{R}^3_{\mathrm{space}} = \dim \mathbb{C}^3_{\mathrm{gen}} = 3$
       does not identify the two spaces.
-      They are distinct functorial images of the same admissible invariant
-      $\mathcal{A}_3$: the geometric image carries spatial tangent structure, while the
-      multiplicity image carries no electroweak charge.
+      A spatial triplet would carry tangent structure, while the multiplicity image carries no
+      electroweak charge; and no source supplies a geometric image of $\mathcal{A}_3$
+      (Section~\ref{ssec:two-functors}).
       This distinction prevents the generation triplet from being confused with the
       adjoint $\SU(2)$ triplet $\operatorname{Sym}^2(S_\Pi)$.
     \end{remark}
@@ -1134,25 +1275,26 @@ from Projective Dirac Admissibility}
   identified there and in~\cite{Beau2026cho} as a Weyl representation type rather than a function of the cascade
   generator, with the frontier normalisation fixed maximally in the inherited central-phase lift.
 
-  We use the internal structure of the rank-three sector established in the spectral admissibility
-  sub-programme.
-  In the $\End(H_{\mathrm{eff}})$ reading of~\cite{Beau2026a33,Beau2026a34}, the admissible sector
-  is the symmetric square
+  We use a supplied model of the internal structure of the rank-three sector.
+  As supplied model data in O30~\cite{Beau2026a34}, the admissible sector is the symmetric square
   \begin{equation}
     \label{eq:a3-sym2}
     \mathcal{A}_3 \;\cong\; \Sym^2(V)
   \end{equation}
-  of the two-dimensional admissible carrier $V$ (the spin-$\tfrac12$ module
-  of~\cite{Beau2026a33}), carrying the Weil weight grading.
+  of the two-dimensional admissible carrier $V$, the supplied spinor carrier of
+  O23~\cite{Beau2026a27} (Section~4.1), carrying the weight grading of the Born--Infeld datum.
   The orthogonal admissible basis $\{e_1, e_2, e_3\}$ is thereby reorganised into the weight basis
   $\{e_0, e_+, e_-\}$ of $J_3$-weights $\{0, +1, -1\}$, with $e_0$ the central weight-zero
   direction.
-  This is a structural identification, consistent with~\cite{Beau2026a33,Beau2026a34}; it probes
-  the internal structure of $\mathbb{C}^3_{\mathrm{gen}}$ and does not alter its gauge-singlet
+  This identification is supplied, not derived: the finite-precision diagnostics of
+  O29~\cite{Beau2026a33} are compatible with it and do not identify it.
+  It probes the internal structure of $\mathbb{C}^3_{\mathrm{gen}}$ and does not alter its gauge-singlet
   character (Theorem~\ref{thm:generation-multiplicity}).
-  The reality structure is the antilinear $J_\Pi = HK$ of the spinorial BI lift
-  (Theorem~\ref{thm:spinorial-bi-lift}), realising the parity $c \leftrightarrow q-c$, which fixes
-  $e_0$ and exchanges $e_+ \leftrightarrow e_-$ antilinearly (cf.~\eqref{eq:jpi-chiral-exchange}).
+  The reality structure is the internal antilinear parity $J_\Pi = HK$ of
+  Subsection~\ref{ssec:proof-bi-left}, realising the parity $c \leftrightarrow q-c$, which fixes $e_0$
+  and exchanges $e_+ \leftrightarrow e_-$ antilinearly.
+  It uses the supplied Born--Infeld datum and Lemma~\ref{lem:bi-grading-anticommute}, not
+  Hypothesis~\ref{hyp:spin-solder}.
 
   \subsection{Static obstruction}
     \label{ssec:dg-static}
@@ -1188,8 +1330,10 @@ from Projective Dirac Admissibility}
       $a \pm b$ are split whenever $b \neq 0$: the parity fixes the diagonal entries equal but does
       not diagonalise the block.
       The degeneracy requires the static weight-sector preservation~(ii) in addition to~(i).
-      The equatorial covariance $C_c = \operatorname{diag}(1, \tfrac12, \tfrac12)$
-      of~\cite{Beau2026a34} satisfies both hypotheses and is the canonical instance.
+      The matrix $\operatorname{diag}(1, \tfrac12, \tfrac12)$ satisfies both hypotheses; up to
+      normalisation and ordering of the weight basis it is the form of the conditional covariance of
+      O30~\cite{Beau2026a34}, whose identification with a restriction of $E_\Pi^2$ is not
+      available~\cite{Beau2026prs}.
     \end{remark}
 
   \subsection{The oriented odd sector}
@@ -1237,20 +1381,32 @@ from Projective Dirac Admissibility}
   \subsection{The cascade bridge}
     \label{ssec:dg-bridge}
 
-    The cascade generator $\partial_\tau \in \End(\Sym^2(V_\rho))$ is the continuum limit of the
-    cascade increment, as established in~\cite{Beau2026q11}.
-    We model its restriction to the generation factor by the per-step generator of the oriented
-    metaplectic step $g = S_X(t)\, S_Y(s)$, the ordered product of the two horizontal Heisenberg
-    generators in $\SL(2)$ form, lifted to $\Sym^2(V)$ and projected onto the $J_\Pi$-odd sector of
-    Proposition~\ref{prop:dg-odd}.
+    Let $g = S_X(t)\, S_Y(s)$ be the oriented metaplectic step, the ordered product of the two
+    horizontal Heisenberg generators in $\SL(2)$ form, and let
+    \[
+      \mathcal{G}_g := \log g ,
+    \]
+    lifted to $\Sym^2(V)$ and transported to $\mathbb{C}^3_{\mathrm{gen}}$ by~\eqref{eq:a3-sym2}, be
+    its per-step generator.
+    We call $\mathcal{G}_g$ the oriented cascade generator; the name designates this model object
+    and nothing else.
+    Its projection onto the $J_\Pi$-odd sector of Proposition~\ref{prop:dg-odd} is computed below.
+
+    Identifying $\mathcal{G}_g$ with an emergent ordering derivative $\partial_\tau$ would be a
+    separate hypothesis, and no source supplies it.
+    The ordering derivative of~\cite{Beau2026q11} is defined only on functions of the ordering
+    parameter $\tau = n\,\Delta\tau$, with a free step $\Delta\tau$, and defines no operator on a
+    representation space of $\SU(2)$ (Q11 Modelling identification~3.1 and Remark~3.2).
+    Nothing in this section uses that identification: the orientation of $g$ is the order of the
+    product, and the results below are statements about $\mathcal{G}_g$.
 
     \begin{proposition}[Cascade bridge]
       \label{prop:dg-bridge}
-      In this model the $J_\Pi$-odd projection of the cascade generator on
-      $\mathbb{C}^3_{\mathrm{gen}}$ is
+      In this model the $J_\Pi$-odd projection of the oriented cascade generator
+      $\mathcal{G}_g$ on $\mathbb{C}^3_{\mathrm{gen}}$ is
       \begin{equation}
         \label{eq:dg-projection}
-        \Pi_{J_\Pi\text{-odd}}\!\left( \partial_\tau\big|_{\mathbb{C}^3_{\mathrm{gen}}} \right)
+        \Pi_{J_\Pi\text{-odd}}\!\left( \mathcal{G}_g\big|_{\mathbb{C}^3_{\mathrm{gen}}} \right)
         = \alpha\, J_3 + \mu\, R_{\mathrm{mix}}, \qquad \alpha \neq 0 .
       \end{equation}
       The real-split coefficient $\alpha$ is non-vanishing already for symmetric shears $t = s$,
@@ -1274,7 +1430,9 @@ from Projective Dirac Admissibility}
     eigenvalues of $E_\Pi^2$ but by their \emph{deficit} relative to the central level.
     This is the observable that matches the spectral admissibility hierarchy, where the relevant
     quantity is the support-exit distance from the non-exiting central ADE level
-    $\lambda_2 = 1$~\cite{Beau2026a4}.
+    $\lambda_2 = 1$ of O1~\cite{Beau2026a6}, whose levels $\{\tfrac56, 1, \tfrac54\}$ are the
+    non-neutral ord-5 spectral set of~\cite{Beau2026a4} normalised by its central value; the choice of
+    that generator set over the neutral ord-4 set is open there.
 
     \begin{definition}[Exit deficit]
       \label{def:dg-exit-deficit}
@@ -1305,10 +1463,11 @@ from Projective Dirac Admissibility}
         \qquad\Longrightarrow\qquad
         \varepsilon = \tfrac{1}{10}, \quad \kappa = \tfrac{5}{12} .
       \]
-      The generation ordering follows: a larger deficit corresponds to an earlier support exit and
-      hence a heavier generation, so $d_{\mathrm{exit}}(e_0) = 0 < d_{\mathrm{exit}}(e_+) <
-      d_{\mathrm{exit}}(e_-)$ orders the three generations from lightest (central, non-exiting) to
-      heaviest, consistent with the ADE assignment of~\cite{Beau2026a4}.
+      A larger deficit corresponds to an earlier support exit, so
+      $d_{\mathrm{exit}}(e_0) = 0 < d_{\mathrm{exit}}(e_+) < d_{\mathrm{exit}}(e_-)$ reproduces the
+      exit-order mass ordering $M_3 > M_1 > M_2$ of O1~\cite{Beau2026a6} on the levels.
+      Reading it as an ordering of the three generations requires the level-to-generation map, which
+      is not established~\cite{Beau2026a6}.
     \end{proposition}
 
     \begin{proof}
@@ -1328,16 +1487,17 @@ from Projective Dirac Admissibility}
       The two observables are linked by $d_{\mathrm{exit}} = s_0 - s$, so the apparent conflict
       between the central-maximal spectrum here and the central-midpoint level $\lambda_2 = 1$ of the
       ADE picture dissolves: they live in different observables related by a deficit.
-      Consequently $\varepsilon = \tfrac1{10}$ is not a calibration to a desired ratio $3:2$, but the
-      deficit value that renders the $J_3$ lift as a ratio of exit deficits matching the external ADE
-      ratio.
+      The value $\varepsilon = \tfrac1{10}$ is fixed by imposing the external ADE ratio on the exit
+      deficits: it is a matching value, not an independent prediction, and it acquires predictive
+      content only if $\varepsilon$ is computed from the cascade normalisation without that ratio.
     \end{remark}
 
     The common scale $\kappa = \tfrac{5}{12}$ is the passage between the normalised deficit here and
     the ADE distance; it is not yet a mass.
-    The mass hierarchy follows by stratigraphic amplification with exponent governed by
-    $\beta^* = 1/(\delta_{\mathrm{pair}} + \tfrac12) \approx 0.126$~\cite{Beau2026a4,Beau2026a6}, and is deferred
-    together with the cascade normalisation of Subsection~\ref{ssec:dg-status}.
+    A mass hierarchy would require an amplification law; the prescription
+    $\beta^* = 1/(\delta_{\mathrm{pair}} + \tfrac12) \approx 0.126$ is phenomenological and not
+    derived~\cite{Beau2026a26}, so the hierarchy is deferred together with the cascade normalisation of
+    Subsection~\ref{ssec:dg-status}.
 
   \subsection{Status and the amplitude problem}
     \label{ssec:dg-status}
@@ -1346,13 +1506,13 @@ from Projective Dirac Admissibility}
     \begin{equation}
       \label{eq:dg-chain}
       \text{static obstruction} \;\longrightarrow\; \text{oriented lift} \;\longrightarrow\;
-      \partial_\tau \text{ carries } \alpha J_3, \quad \alpha \neq 0 .
+      \mathcal{G}_g \text{ carries } \alpha J_3, \quad \alpha \neq 0 .
     \end{equation}
     The splitting of the two light generations is forbidden statically by $J_\Pi$-reality together
     with weight preservation (Proposition~\ref{prop:dg-static}), lives in the two-dimensional
-    $J_\Pi$-odd sector (Proposition~\ref{prop:dg-odd}), and is carried, in the Q11 diagnostic
-    model, by the oriented cascade generator through its non-zero $J_3$ projection
-    (Proposition~\ref{prop:dg-bridge}).
+    $J_\Pi$-odd sector (Proposition~\ref{prop:dg-odd}), and is carried, in the metaplectic step
+    model of Subsection~\ref{ssec:dg-bridge}, by the oriented cascade generator $\mathcal{G}_g$
+    through its non-zero $J_3$ projection (Proposition~\ref{prop:dg-bridge}).
 
     The value of $\alpha$ obtained in the real shear model is not a mass prediction.
     Only its non-vanishing and its sign reversal under cascade reversal are structural.
@@ -1537,13 +1697,14 @@ from Projective Dirac Admissibility}
         \label{eq:status-table}
         \begin{cases}
           S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}
-          & \text{electroweak/leptonic carrier, no further condition,} \\[4pt]
+          & \text{electroweak/leptonic carrier, no colour condition,} \\[4pt]
           S_\Pi \otimes V_{\mathrm{color}} \otimes \mathbb{C}^3_{\mathrm{gen}}
           & \text{quark carrier, conditional on the supplied } V_{\mathrm{color}}.
         \end{cases}
       \end{equation}
       Both rows are stated relative to the supplied Heisenberg carrier of
-      Subsection~\ref{ssec:weil-metaplectic}, which the whole construction inherits; the
+      Subsection~\ref{ssec:weil-metaplectic} and to Hypotheses~\ref{hyp:spin-solder}
+      and~\ref{hyp:weak-factor}, which the whole physical reading inherits; the
       distinction drawn here is the additional colour condition carried by the second row alone.
     \end{remark}
 
@@ -1551,18 +1712,13 @@ from Projective Dirac Admissibility}
   \section{Conclusion and Open Directions}
   \label{sec:conclusion}
 
-  This paper completes the fermionic step of the spectral stratification programme.
-  The preceding gauge--gravity synthesis showed that gravity and gauge dynamics
-  arise from different Seeley--DeWitt responses of the same admissible spectral
-  functional.
-  The present work extends this principle to the spinorial sector.
-  Fermions are not introduced as external matter fields added to the admissible
-  bundle.
-  They arise as the spinorial face of the Weil module carried by the admissible fibre on a
-  supplied Heisenberg carrier, revealed through the Lorentzian complexification of its metaplectic
-  lift.
+  This paper states what the fermionic sector of the spectral approach requires beyond the admissible
+  Weil fibre.
+  Fermions are not introduced as external matter fields added to the admissible bundle; they are read
+  from the Weil module carried by the admissible fibre on a supplied Heisenberg carrier, through the
+  complexification of its metaplectic Lie algebra.
 
-  The structural chain established in the paper is
+  The structural chain of the paper is
   \[
     \Pi
     \Rightarrow
@@ -1571,36 +1727,43 @@ from Projective Dirac Admissibility}
     \Mp(2,\mathbb{R})
     \Rightarrow
     \mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})
-    \leadsto
+    \overset{\text{[H-Spin]}}{\leadsto}
     \Spin(3,1) \simeq \SL(2,\mathbb{C})
     \Rightarrow
     S_\Pi .
   \]
-  The admissible spinor bundle $S_\Pi$ then generates the electroweak bundle data
-  through its tensor functors:
+  Every arrow before the one marked [H-Spin] is proved relative to the supplied carrier.
+  On the abstract doublet, the symmetric square is the adjoint of $\mathfrak{sl}_2(\mathbb{C})$ and the
+  exterior square is the trivial line.
+  The arrow marked [H-Spin] is Hypothesis~\ref{hyp:spin-solder}: a four-dimensional Lorentzian co-metric
+  on the effective base with a spin structure whose structure group is the $\SL(2,\mathbb{C})$ acting on
+  the doublet.
+  Under it, $\operatorname{Sym}^2(S_L)$ is the Lorentz sector $\operatorname{ad}(P_\Pi)$ and
+  $\wedge^2(S_L)$ is trivial.
+  The electroweak data come from a second factor: by Schur's lemma a weak action commuting with Lorentz
+  transformations needs a distinct rank-two bundle $E_{\mathrm{weak}}$, Hypothesis~\ref{hyp:weak-factor},
+  on which
   \[
-    \operatorname{Sym}^2(S_\Pi)
+    \operatorname{Sym}^2(E_{\mathrm{weak}})
     \Rightarrow
-    \operatorname{ad}_{\mathbb{C}}(P_\Pi),
+    \operatorname{ad}_{\mathbb{C}}(\mathfrak{su}(2)_L),
     \qquad
-    \wedge^2(S_\Pi)
+    \wedge^2(E_{\mathrm{weak}})
     \Rightarrow
-    L_Y .
+    L_Y ,
   \]
-  The first sector gives the complex adjoint, from which the $\SU(2)_L$ triplet is
-  selected by the compact real form.
-  The second gives the determinant line supporting the $U(1)_Y$ factor.
-  This establishes the spinorial electroweak carrier without introducing an
-  independent electroweak matter bundle.
+  the determinant line carrying $U(1)_Y$ because the structure group of $E_{\mathrm{weak}}$ is $U(2)$.
+  The admissible doublet can supply at most one of the two factors, and this paper does not construct
+  the other.
 
-  The projected Dirac operator
+  Under Hypothesis~\ref{hyp:spin-solder}, the projected Dirac operator
   \[
     \mathcal{D}_{\Pi,g,A}
     =
     \Pi_S \circ \mathcal{D}_{g,A} \circ \Pi_S^*
   \]
-  was shown to have a Laplace-type square with standard Clifford principal symbol
-  and a projective zero-order endomorphism $E_\Pi$:
+  has, for a symbol-compatible lift, a Laplace-type square with standard Clifford principal symbol and a
+  projective zero-order endomorphism $E_\Pi$:
   \[
     \mathcal{D}_{\Pi,g,A}^2
     =
@@ -1612,22 +1775,25 @@ from Projective Dirac Admissibility}
     +
     E_\Pi .
   \]
-  The endomorphism $E_\Pi$ is the internal spectral residue of non-injective
-  projection in the spinorial sector.
-  It is the locus where chirality, hypercharge coherence, and fermionic internal
-  structure enter the spectral action.
-  In this sense, the analogue of the finite internal Dirac operator is not postulated
-  as additional data: it is induced by the projective construction.
+  The endomorphism $E_\Pi$ is the internal spectral residue of non-injective projection in the spinorial
+  sector.
+  In this sense, the analogue of the finite internal Dirac operator is not postulated as additional data:
+  it is induced by the projective construction.
 
-  The chiral and hypercharge constraints arise from two complementary uses of
-  $E_\Pi$.
-  First, left-admissibility of the projective endomorphism yields the $V{-}A$
-  structure:
+  The chiral statements separate into two kinds.
+  The first concerns the Lorentz chirality: with the Born--Infeld datum supplied by (H1)--(H2) of O30,
+  the internal parity $J_\Pi = HK$ satisfies $J_\Pi^2 = -1$, and under Hypothesis~\ref{hyp:spin-solder}
+  it is the unique covariant antilinear lift and reverses chirality
+  (Theorem~\ref{thm:spinorial-bi-lift}); on the orientation-compatible branch the projective residue is
+  left-admissible,
   \[
     P_R E_\Pi P_R = 0 .
   \]
-  Second, $U(1)_Y$ invariance of the projected spectral functional imposes the
-  local anomaly-cancellation condition
+  The second concerns the weak interaction: its chiral selection, the $V{-}A$ structure, is the
+  left-handed doublet assignment of Hypothesis~\ref{hyp:weak-factor}, which left-admissibility is
+  compatible with but does not select (Remark~\ref{rem:lorentz-vs-weak-chirality}).
+  Under both hypotheses, $U(1)_Y$ invariance of the projected spectral functional imposes the local
+  anomaly-cancellation condition
   \[
     \operatorname{Tr}_{S_\Pi}
     \!\left(
@@ -1640,24 +1806,20 @@ from Projective Dirac Admissibility}
   \]
   where $\mathcal{A}_\Pi$ is the $\gamma_5$-weighted $a_4$ Seeley--DeWitt density
   of $\mathcal{D}_{\Pi,g,A}^2$.
-  Thus anomaly cancellation is not an additional spectral layer.
-  It is the chiral consistency condition of the same $a_4$ level that yields
-  Yang--Mills dynamics in the bosonic variation.
+  Anomaly cancellation then sits at the same $a_4$ level that the bosonic synthesis reads as the
+  Yang--Mills response.
 
   The third output is generation multiplicity, conditional on the supplied rank-three
   selection rule of O23.
-  The rank-three admissible invariant $\sigma_c(n_3)=3$ has two distinct functorial
-  readings.
-  In the geometric branch, it yields the three effective spatial directions.
-  In the fermionic branch, the spinorial multiplicity functor sends it to a
+  The spinorial multiplicity functor sends the rank-three admissible invariant $\sigma_c(n_3)=3$ to a
   gauge-singlet generation factor:
   \[
     \mathbb{C}^3_{\mathrm{gen}}
     \subset
     \ker\!\left(\operatorname{ad}_{\SU(2)}\oplus Y\right).
   \]
-  This generation space is not the $\SU(2)$ adjoint triplet
-  $\operatorname{Sym}^2(S_\Pi)$.
+  This generation space is neither the adjoint triplet nor a spatial triplet; no source identifies the
+  O23 invariant with spatial directions.
   It is a multiplicity space commuting with the gauge action.
   The resulting fermionic carrier is
   \[
@@ -1665,7 +1827,7 @@ from Projective Dirac Admissibility}
     =
     S_\Pi \otimes \mathbb{C}^3_{\mathrm{gen}}
   \]
-  in the electroweak/leptonic sector.
+  in the electroweak/leptonic sector, with the weak factor of Hypothesis~\ref{hyp:weak-factor}.
 
   The colour-coupled quark sector is obtained by tensoring with the colour module:
   \[
@@ -1686,31 +1848,28 @@ from Projective Dirac Admissibility}
     \otimes
     \mathbb{C}^3_{\mathrm{gen}},
   \]
-  whose first summand carries no condition beyond the supplied Heisenberg carrier, and whose
-  second carries the supplied colour module as well.
+  whose first summand carries the supplied Heisenberg carrier and the two hypotheses, and whose second
+  carries the supplied colour module as well.
 
-  The spinorial lift of BI parity, formerly the technical core of the $V{-}A$ result, is now
-  established: the antilinear conjugation $\pi_{q-c}(v) = \overline{\pi_c(v)}$ lifts to the
-  antilinear endomorphism $J_\Pi = H K$ satisfying~\eqref{eq:jpi-conditions}
-  (Theorem~\ref{thm:spinorial-bi-lift}).
-  Several open directions nevertheless remain sharply delimited.
-  First, the minimal integral normalisation of the determinant line $L_Y$ must be
+  Several open directions are sharply delimited.
+  First, the two hypotheses themselves: constructing the solder of Hypothesis~\ref{hyp:spin-solder}
+  from the metaplectic action, and a second rank-two factor for Hypothesis~\ref{hyp:weak-factor}, or
+  showing that the admissible fibre supplies neither.
+  Second, the minimal integral normalisation of the determinant line $L_Y$ must be
   connected explicitly to the Standard Model hypercharge pattern.
   The anomaly constraints restrict the allowed weights, while the determinant-line
   normalisation fixes their scale.
-  Second, the amplitude of the generation splitting remains open: Section~\ref{sec:dyn-lift}
-  fixes the qualitative mechanism, but the coefficient $\varepsilon$ must still be derived from the
-  cascade normalisation rather than fitted.
-  The operator side of this mechanism is, by contrast, closed.
+  Third, the amplitude of the generation splitting remains open: Section~\ref{sec:dyn-lift}
+  fixes the qualitative mechanism in the metaplectic step model, but the coefficient $\varepsilon$ must
+  still be derived from the cascade normalisation rather than matched.
   Using the O12 fingerprint~\cite{Beau2026a16}, whose pure Weil frequency is $B_c=\sum_i c_i b_i$, the
   residual reflection $R_b$ left by the oriented-frontier diagnostic is forced to be the central Weil
   lift $W(-I)=\mathrm{FT}^2$: preserving $A_c$, including its cocycle term, sends
   $(a_i,b_i)\mapsto(-a_i,-b_i)$.
-  As the centre of the connected spin group $\SL(2,\mathbb{C})$, $R_b$ is scalar on $S_L\oplus S_R$,
-  so $[\gamma_5,R_b]=0$.
-  The $V{-}A$ selector therefore removes the residual obstruction without a spacetime parity; only the
-  amplitude coefficient $\varepsilon$ remains open.
-  Third, possible generation mixing requires the complex metaplectic phase, since the real
+  As the centre of $\SL(2,\mathbb{C})$, $R_b$ is scalar on $S_L\oplus S_R$ under
+  Hypothesis~\ref{hyp:spin-solder}, so $[\gamma_5,R_b]=0$, and the chirality grading removes the residual
+  obstruction without a spacetime parity.
+  Fourth, possible generation mixing requires the complex metaplectic phase, since the real
   symplectic cascade model activates the $J_3$ split direction but not the $R_{\mathrm{mix}}$
   direction.
 
@@ -1721,18 +1880,26 @@ from Projective Dirac Admissibility}
   Section~\ref{sec:dyn-lift} takes the first step on this direction: the
   inter-generation splitting is statically obstructed on $\mathbb{C}^3_{\mathrm{gen}}$ by
   $J_\Pi$-reality together with weight preservation (Proposition~\ref{prop:dg-static}), lives in a
-  two-dimensional $J_\Pi$-odd lift sector (Proposition~\ref{prop:dg-odd}), and is carried by the
-  oriented cascade generator through its non-zero $J_3$ projection
-  (Proposition~\ref{prop:dg-bridge}).
-  The qualitative mechanism of the generation splitting is thereby fixed; its amplitude and the
-  comparison with the charged-lepton mass hierarchy~\cite{Beau2026a4,Beau2026a29} are among the open
-  directions identified above.
+  two-dimensional $J_\Pi$-odd lift sector (Proposition~\ref{prop:dg-odd}), and is carried in the
+  metaplectic step model by the oriented cascade generator $\mathcal{G}_g$ through its non-zero $J_3$
+  projection (Proposition~\ref{prop:dg-bridge}).
+  Identifying $\mathcal{G}_g$ with an emergent ordering derivative is not supplied.
+  The amplitude and the comparison with the charged-lepton mass hierarchy~\cite{Beau2026a4,Beau2026a29}
+  are among the open directions identified above.
 
-  The conclusion of the fermionic step is therefore precise.
-  The Standard Model matter carrier is not postulated as an independent field content.
-  Its spinorial, electroweak, chiral, generation, and colour structures arise from
-  distinct functorial readings of the same admissible Weil fibre.
-  The remaining open problems are specific rigidity problems for $E_\Pi$ and $L_Y$.
+  \subsection*{Interpretive outlook}
+
+  The following is a reading of the results, not a result.
+  The Standard Model does not treat spin and weak isospin as one structure: a left-handed electron is a
+  Lorentz spinor and, separately, a member of a weak doublet.
+  The present analysis reaches the same separation from the other side.
+  The admissible Weil fibre supplies one doublet and its algebra, and that algebra is exactly the
+  algebra of both spin and weak isospin; but one copy cannot carry both roles.
+  Where the fermionic sector meets spacetime and where it meets the weak interaction are therefore two
+  distinct questions, and the question of why weak interactions are left-handed becomes the question of
+  how two such factors are joined.
+  The remaining problems are specific: two hypotheses on how the fibre is soldered, and rigidity problems
+  for $E_\Pi$ and $L_Y$.
 
   \newpage
   \begin{appendix}
