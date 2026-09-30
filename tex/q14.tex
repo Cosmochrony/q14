@@ -85,7 +85,7 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     Lorentz transformations cannot live on the same copy of the doublet, whose symmetric square is then a
     Lorentz sector and whose exterior square carries no hypercharge.
     Under [H-Spin], the projected Dirac operator contains a canonical zero-order endomorphism $E_\Pi$, the
-    spectral residue of non-injective projection; the spinorial lift of the parity is unique and reverses
+    spectral residue of non-injective projection; the spinorial lift of the parity is unique up to a phase and reverses
     chirality, and $E_\Pi$ is left-admissible on the orientation-compatible branch, an input.
     The chiral selection of the weak interaction, the $V{-}A$ structure, and the anomaly-cancellation
     constraints on the hypercharge weights require [H-Weak] as well, and left-admissibility does not
@@ -359,8 +359,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     cancellation.
     Section~\ref{sec:generations} establishes the spinorial multiplicity reading of
     $\sigma_c(n_3) = 3$ (a supplied selection rule) and proves Theorem~C.
-    Section~\ref{sec:dyn-lift} studies the first structural constraint on the spectrum of
-    $E_\Pi^2$ on the generation factor: a static $J_\Pi$-real, weight-preserving restriction
+    Section~\ref{sec:dyn-lift} studies, on model operators standing for $E_\Pi^2$ on the generation
+    factor, the first structural constraint on its spectrum: a static $J_\Pi$-real, weight-preserving restriction
     cannot split the outer pair, whereas the per-step generator of an ordered metaplectic step
     carries a non-zero $J_3$ component capable of lifting this degeneracy.
     Section~\ref{sec:colour} discusses the colour-coupled quark sector and the status of the
@@ -581,8 +581,9 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
         \qquad
         L_Y = \wedge^2(E_{\mathrm{weak}}),
       \]
-      summed over the matter sectors with integer exponents $k$, $m$ reproducing the Standard Model
-      hypercharges (colour factors omitted): left-handed components in weak doublets and right-handed
+      summed over the matter sectors of the Standard Model representation content with integer exponents
+      $k$, $m$ that are not fixed by the hypothesis (colour factors omitted, $E_{\mathrm{weak}}$ normalised
+      on the quark doublet, $k = 0$ there): left-handed components in weak doublets and right-handed
       components in weak singlets.
     \end{hypothesis}
 
@@ -1104,9 +1105,7 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
 
     \begin{proposition}[Spectral anomaly constraints]
       \label{prop:spectral-anomaly-constraints}
-      Assume Hypotheses~\ref{hyp:spin-solder} and~\ref{hyp:weak-factor}, symbol-compatibility, and
-      left-admissibility of $E_\Pi$ (Theorem~\ref{thm:spinorial-bi-lift},
-      Proposition~\ref{prop:bi-left-admissibility}).
+      Assume Hypotheses~\ref{hyp:spin-solder} and~\ref{hyp:weak-factor} and symbol-compatibility.
       Then $U(1)_Y$ invariance of the projected spectral functional imposes the
       projected anomaly constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed}
       on the hypercharge weights $Y_R$.
@@ -1142,12 +1141,18 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
       spinorial sectors, then the
       constraints~\eqref{eq:anomaly-linear}--\eqref{eq:anomaly-mixed}, on the Standard Model
       representation content without a right-handed neutrino and with the charged-lepton singlet
-      hypercharge $Y_e \neq 0$, select the Standard Model hypercharge pattern up to an overall sign and
-      rescaling.
+      hypercharge $Y_e \neq 0$, select the Standard Model hypercharge pattern up to an overall sign,
+      rescaling, and the exchange of the labels $u_R$ and $d_R$; in the twists of
+      Hypothesis~\ref{hyp:weak-factor} this is $k = -2$ on the lepton doublet and $m = 2, -1, -3$ on
+      $u_R$, $d_R$, $e_R$.
     \end{proposition}
 
-    The condition $Y_e \neq 0$ is needed: the constraints also admit the solution
-    $Y_Q = Y_L = Y_e = 0$, $Y_u = -Y_d$, as direct substitution shows.
+    The condition $Y_e \neq 0$ is needed on the representation content alone: the constraints also admit
+    the solution $Y_Q = Y_L = Y_e = 0$, $Y_u = -Y_d$, as direct substitution shows.
+    Under the $U(2)$ structure of Hypothesis~\ref{hyp:weak-factor}, with the determinant character acting
+    non-trivially on the quark doublet, that solution is excluded: a doublet
+    $E_{\mathrm{weak}} \otimes L_Y^{k}$ carries the hypercharge $(1 + 2k)\,Y_Q$ with $1 + 2k$ odd, so
+    $Y_Q \neq 0$.
     The classification of one-generation solutions is the known one~\cite{GengMarshak1989,MinahanRamondWarner1990};
     it is used here and not proved.
 
@@ -1322,8 +1327,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
   inter-generation mass splitting open.
   This section isolates the structural mechanism by which such a splitting can be carried, prior to
   any amplitude analysis.
-  The dimensionless generation structure is probed by the spectrum of $E_\Pi^2$
-  (Definition~\ref{def:projective-endomorphism}) on $\mathbb{C}^3_{\mathrm{gen}}$.
+  The dimensionless generation structure is probed by the spectrum of model operators standing for
+  $E_\Pi^2$ (Definition~\ref{def:projective-endomorphism}) on $\mathbb{C}^3_{\mathrm{gen}}$.
   The physical mass scale and the amplitude of the splitting are not fixed at this stage; they are
   deferred to the normalisation of the admissibility cascade.
   The oriented diagnostic of this cascade splitting is developed in~\cite{Beau2026q11of}; its chiral weight is
@@ -1335,7 +1340,7 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
   $\Sym^2$ of a doublet, we take the admissible sector to be the symmetric square
   \begin{equation}
     \label{eq:a3-sym2}
-    \mathcal{A}_3 \;\cong\; \Sym^2(V_{\mathrm{gen}})
+    \mathcal{A}_3 \otimes \mathbb{C} \;\cong\; \Sym^2(V_{\mathrm{gen}})
   \end{equation}
   of a two-dimensional generation carrier $V_{\mathrm{gen}}$, modelled on the supplied spinor carrier of
   O23~\cite{Beau2026a27} (Section~4.1) and carrying its own copy $(K, H)$ of the Born--Infeld datum.
@@ -1359,17 +1364,23 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
   For an operator $C$ on $\mathbb{C}^3_{\mathrm{gen}}$ we write $C^{\sharp}$ for its entrywise complex
   conjugate in the weight basis.
   The sign on $e_0$ drops out of the conjugation of every operator that preserves the splitting
-  $\mathbb{C} e_0 \oplus \operatorname{span}\{e_+, e_-\}$, which is the case for all operators below, so
-  the real permutation $P$ used in the proofs represents $J_\Pi$-conjugation on them.
+  $\mathbb{C} e_0 \oplus \operatorname{span}\{e_+, e_-\}$, as the operators of
+  Propositions~\ref{prop:dg-static} and~\ref{prop:dg-odd} do, so the real permutation $P$ used in their
+  proofs represents $J_\Pi$-conjugation on them.
+  The step generator of Subsection~\ref{ssec:dg-bridge} does not preserve the splitting, but its
+  components along $J_3$ and $R_{\mathrm{mix}}$ are the same for $P$ and for $J_\Pi$.
   The operators of this section are linear algebra on $\mathbb{C}^3_{\mathrm{gen}}$; reading them as
   restrictions of $E_\Pi^2$ is an identification that is not supplied~\cite{Beau2026prs}.
+  Accordingly, in this section $E_\Pi^2|_{\mathbb{C}^3_{\mathrm{gen}}}$ denotes a model operator on
+  $\mathbb{C}^3_{\mathrm{gen}}$ standing for that restriction, not a computed restriction.
 
   \subsection{Static obstruction}
     \label{ssec:dg-static}
 
     \begin{proposition}[Static obstruction]
       \label{prop:dg-static}
-      Let $C \in \End(\mathbb{C}^3_{\mathrm{gen}})$ be a static restriction of $E_\Pi^2$ to the
+      Let $C \in \End(\mathbb{C}^3_{\mathrm{gen}})$ be a static model operator for the restriction of
+      $E_\Pi^2$ to the
       generation factor satisfying
       \begin{enumerate}
         \item[\emph{(i)}]  $J_\Pi$-reality, $J_\Pi\, C\, J_\Pi^{-1} = C^{\sharp}$, and
@@ -1811,9 +1822,10 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
 
   This paper states what the fermionic sector of the spectral approach requires beyond the admissible
   Weil fibre.
-  Fermions are not introduced as external matter fields added to the admissible bundle; they are read
-  from the Weil module carried by the admissible fibre on a supplied Heisenberg carrier, through the
-  complexification of its metaplectic Lie algebra.
+  Fermions are not introduced as external matter fields added to the admissible bundle; they are sought
+  in the Weil module carried by the admissible fibre on a supplied Heisenberg carrier, through the
+  complexification of the metaplectic Lie algebra of a real model of that carrier, acting on a supplied
+  doublet.
 
   The structural chain of the paper is
   \[
@@ -1882,7 +1894,7 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
   The chiral statements separate into two kinds.
   The first concerns the Lorentz chirality: with the Born--Infeld datum supplied by (H1)--(H2) of O30,
   the internal parity $J_\Pi = HK$ satisfies $J_\Pi^2 = -1$, and under Hypothesis~\ref{hyp:spin-solder}
-  it is the unique covariant antilinear lift and reverses chirality
+  it is, up to a phase, the unique covariant antilinear lift and reverses chirality
   (Theorem~\ref{thm:spinorial-bi-lift}); on the orientation-compatible branch the projective residue is
   left-admissible,
   \[

@@ -125,7 +125,7 @@ print(f"  Tr(G_g)                 : {trace_dtau:+.3e}  (scalar/capacity-decay co
 print(f"  HS norm^2 total         : {tot:.5f}")
 print(f"  sector weights (fraction of HS norm^2):")
 print(f"    scalar  (Id, capacity decay)  : {w_scalar/tot:6.3%}")
-print(f"    adjoint (J: split + mixing)   : {w_adjoint/tot:6.3%}")
+print(f"    adjoint (J_3 and J_+-)        : {w_adjoint/tot:6.3%}")
 print(f"    spin-2  (quadrupole)          : {w_spin2/tot:6.3%}")
 
 # J_3 split coefficient and HS-orthogonality with the scalar (decay) sector
@@ -150,7 +150,7 @@ print("VERDICT")
 print("=" * 72)
 print("  - G_g is TRACELESS (det rho_1 = 1): it carries NO scalar")
 print("    component, hence no net capacity-decay direction. Its content is purely")
-print("    adjoint (J_3 split + mixing) plus spin-2.")
+print("    adjoint (G_g lies in the image of sl2), with no spin-2 component.")
 print("  - The capacity decay sigma_pair(n) ~ n^{-delta_pair} is a magnitude effect:")
 print("    it requires the scalar sector (net norm change), supplied by the")
 print("    non-injective projection, NOT by the metaplectic rotation.")

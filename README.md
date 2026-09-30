@@ -10,7 +10,7 @@ Preprint. DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20218409
 
 The gauge–gravity synthesis of the Cosmochrony programme reads gravity and Yang–Mills dynamics,
 conditionally, as the $a_2$ and $a_4$ Seeley–DeWitt responses of one admissible spectral functional.
-This paper asks what the fermionic sector requires when fermions are read from the Weil module of the
+This paper asks what the fermionic sector requires when fermions are sought in the Weil module of the
 admissible fibre on a supplied Heisenberg carrier, which every result inherits.
 
 1. **Algebra (proved on supplied model data)**: the finite carrier acts through
@@ -24,14 +24,14 @@ admissible fibre on a supplied Heisenberg carrier, which every result inherits.
    acting on the doublet with the spin group of a four-dimensional Lorentzian co-metric; the geometric
    branch supplies such a co-metric only conditionally (Q5b, Q8, Q11). [H-Weak] supplies a distinct
    rank-two weak factor $E_{\mathrm{weak}}$: by Schur's lemma a weak action commuting with Lorentz
-   transformations cannot act on the same copy of the doublet, so $\operatorname{Sym}^2(S_L)$ is a Lorentz
-   sector and $\wedge^2(S_L)$ carries no hypercharge. Both are missing identifications, not refutations.
+   transformations cannot act on the same copy of the doublet. Under [H-Spin],
+   $\operatorname{Sym}^2(S_L)$ is a Lorentz sector and $\wedge^2(S_L)$ carries no hypercharge. Both are missing identifications, not refutations.
 
 3. **Chirality and hypercharge (conditional)**: under [H-Spin], the projected Dirac operator
    $\mathcal{D}_{\Pi,g,A}$ contains a canonical zero-order endomorphism $E_\Pi$, the spinorial lift of the
    parity is unique up to a phase and reverses chirality, and, given the Born–Infeld datum and the
    orientation-compatible branch (an input), $E_\Pi$ is left-admissible, $P_R E_\Pi P_R = 0$; a non-zero
-   left-admissible $E_\Pi$ must break that parity. The
+   left-admissible $E_\Pi \preceq 0$ must break that parity. The
    chiral selection of the weak interaction ($V-A$) and the anomaly constraints on the hypercharge
    weights require [H-Weak] as well; left-admissibility does not select the chiral assignment. The
    hypercharge selection needs in addition $Y_e \neq 0$, which excludes the known degenerate solution.
