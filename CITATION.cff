@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
-title: "Toward Fermionic Matter from Projective Dirac Admissibility: The Electroweak Spinor Algebra, and Chirality Conditional on a Lorentzian Spin Structure"
+title: "Toward Fermionic Matter from Projective Dirac Admissibility: Chirality and Electroweak Structure Require a Lorentzian Spin Solder and a Distinct Weak Factor"
 type: software
 authors:
   - family-names: "Beau"
@@ -12,7 +12,7 @@ doi: "10.5281/zenodo.20218409"
 license: "CC-BY-4.0"
 preferred-citation:
   type: article
-  title: "Toward Fermionic Matter from Projective Dirac Admissibility: The Electroweak Spinor Algebra, and Chirality Conditional on a Lorentzian Spin Structure"
+  title: "Toward Fermionic Matter from Projective Dirac Admissibility: Chirality and Electroweak Structure Require a Lorentzian Spin Solder and a Distinct Weak Factor"
   authors:
     - family-names: "Beau"
       given-names: "Jérôme"

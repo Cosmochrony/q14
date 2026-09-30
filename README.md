@@ -1,4 +1,4 @@
-# Q14 — Toward Fermionic Matter from Projective Dirac Admissibility: The Electroweak Spinor Algebra, and Chirality Conditional on a Lorentzian Spin Structure
+# Q14 — Toward Fermionic Matter from Projective Dirac Admissibility: Chirality and Electroweak Structure Require a Lorentzian Spin Solder and a Distinct Weak Factor
 
 J. Beau, Independent Researcher, France
 
@@ -13,10 +13,11 @@ conditionally, as the $a_2$ and $a_4$ Seeley–DeWitt responses of one admissibl
 This paper asks what the fermionic sector requires when fermions are read from the Weil module of the
 admissible fibre on a supplied Heisenberg carrier, which every result inherits.
 
-1. **Algebra (proved)**: the complexified metaplectic algebra is
-   $\mathfrak{mp}(2,\mathbb{R})_\mathbb{C} \simeq \mathfrak{sl}_2(\mathbb{C})$; on the abstract doublet its
-   symmetric square is the adjoint and its exterior square the trivial line, and a Hermitian form selects
-   the compact real form $\mathfrak{su}(2)$. Given the supplied Born–Infeld datum (hypotheses (H1)–(H2) of
+1. **Algebra (proved on supplied model data)**: the finite carrier acts through
+   $\operatorname{SL}(2,\mathbb{Z}/q\mathbb{Z})$, so a real metaplectic model and a doublet carrying its Lie
+   algebra are supplied. Given them, $\mathfrak{mp}(2,\mathbb{R})_\mathbb{C} \simeq \mathfrak{sl}_2(\mathbb{C})$;
+   the symmetric square of the doublet is the adjoint and its exterior square the trivial line, and a
+   Hermitian form selects the compact real form $\mathfrak{su}(2)$. Given the supplied Born–Infeld datum (hypotheses (H1)–(H2) of
    O30), the internal parity $HK$ satisfies $(HK)^2 = -1$ without any metric.
 
 2. **Two hypotheses, supplied by no source**: [H-Spin] identifies the $\operatorname{SL}(2,\mathbb{C})$
@@ -28,20 +29,25 @@ admissible fibre on a supplied Heisenberg carrier, which every result inherits.
 
 3. **Chirality and hypercharge (conditional)**: under [H-Spin], the projected Dirac operator
    $\mathcal{D}_{\Pi,g,A}$ contains a canonical zero-order endomorphism $E_\Pi$, the spinorial lift of the
-   parity is unique and reverses chirality, and $E_\Pi$ is left-admissible, $P_R E_\Pi P_R = 0$. The
+   parity is unique up to a phase and reverses chirality, and, given the Born–Infeld datum and the
+   orientation-compatible branch (an input), $E_\Pi$ is left-admissible, $P_R E_\Pi P_R = 0$; a non-zero
+   left-admissible $E_\Pi$ must break that parity. The
    chiral selection of the weak interaction ($V-A$) and the anomaly constraints on the hypercharge
-   weights require [H-Weak] as well; left-admissibility does not select the chiral assignment.
+   weights require [H-Weak] as well; left-admissibility does not select the chiral assignment. The
+   hypercharge selection needs in addition $Y_e \neq 0$, which excludes the known degenerate solution.
 
 4. **Generation multiplicity (conditional)**: the supplied rank-three selection rule
    $\sigma_c(n_3) = 3$ (O23) admits a spinorial multiplicity reading, giving a gauge-singlet
-   three-generation factor $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\operatorname{SU}(2)} \oplus Y)$.
+   three-generation factor $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\operatorname{SU}(2)} \oplus Y)$,
+   conditional also on [H-Spin] and [H-Weak] through the bundle it multiplies.
    The quark sector uses a supplied colour module; O31 is a withdrawal notice and no
    $\operatorname{SU}(3)$ is derived.
 
 5. **Generation splitting (qualitative)**: a static $J_\Pi$-real, weight-preserving restriction cannot
-   split the outer pair; in a metaplectic step model the ordered step generator $\mathcal{G}_g = \log g$
-   carries a non-zero $J_3$ component. Its identification with an emergent ordering derivative is not
-   supplied, and the amplitude is open.
+   split the outer pair; in a metaplectic step model on a distinct generation doublet, the ordered step
+   generator $\mathcal{G}_g = \log g$ carries the exact $J_3$ component $\alpha = ts\,\theta/\sinh\theta$
+   ($\cosh\theta = 1 + ts/2$) and no mixing component, for any $\mathfrak{sl}_2(\mathbb{C})$ generator. Its
+   identification with an emergent ordering derivative is not supplied, and the amplitude is open.
 
 ## Position in the programme
 
