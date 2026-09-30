@@ -34,7 +34,9 @@ admissible fibre on a supplied Heisenberg carrier, which every result inherits.
    left-admissible $E_\Pi \preceq 0$ must break that parity. The
    chiral selection of the weak interaction ($V-A$) and the anomaly constraints on the hypercharge
    weights require [H-Weak] as well; left-admissibility does not select the chiral assignment. The
-   hypercharge selection needs in addition $Y_e \neq 0$, which excludes the known degenerate solution.
+   hypercharge selection needs in addition $Y_e \neq 0$, which excludes the known degenerate solution
+   (the $U(2)$ structure of [H-Weak] already excludes it), and holds up to sign, rescaling and the
+   exchange of $u_R$ and $d_R$.
 
 4. **Generation multiplicity (conditional)**: the supplied rank-three selection rule
    $\sigma_c(n_3) = 3$ (O23) admits a spinorial multiplicity reading, giving a gauge-singlet
