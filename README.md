@@ -6,6 +6,8 @@ J. Beau, Independent Researcher, France
 
 Preprint. DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20218409)
 
+Version 3.0 was deposited on 2026-09-30 as [Zenodo record 23071163](https://zenodo.org/record/23071163).
+
 ## Abstract
 
 The gauge–gravity synthesis of the Cosmochrony programme reads gravity and Yang–Mills dynamics,
