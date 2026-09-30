@@ -1,4 +1,4 @@
-# Q14 — Toward Fermionic Matter from Projective Dirac Admissibility: Chirality and Electroweak Structure Require a Lorentzian Spin Solder and a Distinct Weak Factor
+# Q14 — Toward Fermionic Matter from Projective Dirac Admissibility: Chirality and Electroweak Structure Rest on a Lorentzian Spin Solder and a Distinct Weak Factor
 
 J. Beau, Independent Researcher, France
 
