@@ -682,7 +682,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
       The projected square $\mathcal{D}_{\Pi,g,A}^2$ then differs from the ordinary
       spin--gauge Lichnerowicz square by a canonical zero-order endomorphism
       $E_\Pi \in \Gamma(\operatorname{End}(S_\Pi))$.
-      If the spinorial projection is injectively resolved by the effective pair $(g,A)$,
+      If the spinorial projection is injectively resolved by the effective pair $(g,A)$, that is, $\Pi_S$ is a unitary
+      isomorphism of the spinor fibres onto $S_\Pi$,
       then $E_\Pi = 0$.
       Conversely, $E_\Pi \neq 0$ whenever the non-injective spinorial fibres leave a
       non-trivial zero-order trace in the projected square.
@@ -695,8 +696,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
       $\Pi_S^*$ is its inverse and $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$.
       The composition~\eqref{eq:projected-dirac} then reduces to $\mathcal{D}_{g,A}$
       on $S_\Pi$, whose square is the standard Lichnerowicz formula; hence $E_\Pi = 0$.
-      When $\Pi_S$ is not unitary, the squared projected operator
-      contains additional terms controlled by the projection defect.
+      When $\Pi_S$ is not unitary (including an isometric non-surjective $\Pi_S$, for which $\Pi_S\Pi_S^* \neq \mathrm{id}$),
+      the squared projected operator may contain additional terms controlled by the projection defect.
       This includes the case of a coisometry $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$ with non-trivial kernel,
       where $\mathcal{D}_{\Pi,g,A}^2 = \Pi_S \mathcal{D}_{g,A} P_{\mathrm{ref}} \mathcal{D}_{g,A} \Pi_S^*$ with
       $P_{\mathrm{ref}} = \Pi_S^*\Pi_S \neq 1$, so that the identity $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$ alone does not
@@ -914,8 +915,9 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
 
     On the left-admissible branch, the projective residue is chiral block-diagonal.
     Assume in addition that $E_\Pi \preceq 0$; this is an explicit hypothesis here.
-    Reference~\cite{Beau2026prs} establishes, for a contraction $\Pi_S$ and a locking operator, a Schur form $-N^\dagger N \preceq 0$ for the compression remainder
-    $\Pi_S \mathcal{D}_{g,A}(1-P_{\mathrm{ref}})\mathcal{D}_{g,A}\Pi_S^*$, which equals $E_\Pi$ if and only if
+    Reference~\cite{Beau2026prs} establishes, for a contraction $\Pi_S$ and a locking operator, a Schur form $-N^\dagger N \preceq 0$, with $N = (1-P_{\mathrm{ref}})^{1/2}\mathcal{D}_{g,A}\Pi_S^*$ and
+    $P_{\mathrm{ref}} = \Pi_S^*\Pi_S$, for the compression remainder
+    $-\Pi_S \mathcal{D}_{g,A}(1-P_{\mathrm{ref}})\mathcal{D}_{g,A}\Pi_S^*$, which equals $E_\Pi$ if and only if
     $\Pi_S \mathcal{D}_{g,A}^2 \Pi_S^* = \mathrm{Lich}$, an identity that no source states and that forces
     $\Pi_S\Pi_S^* = \mathrm{id}$ at the level of principal symbols; the sign of $E_\Pi$ is therefore not
     inherited from~\cite{Beau2026prs} and is assumed.
