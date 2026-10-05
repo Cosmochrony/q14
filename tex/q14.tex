@@ -1,4 +1,4 @@
-%% Q14 — Toward Fermionic Matter from Projective Dirac Admissibility (3.0)
+%% Q14 — Toward Fermionic Matter from Projective Dirac Admissibility (3.1)
 %% Cosmochrony programme, Q-series paper 14
 %% J. Beau, 2026
 
@@ -641,8 +641,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     $\Pi_S$ after choosing the induced Hermitian structure on the projected spinor
     bundle.
     We do not assume that $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$; this identity holds
-    precisely in the injectively resolved limit and is in general replaced by a
-    non-trivial projector.
+    in the injectively resolved limit and, more generally, when $\Pi_S$ is a coisometry; it is in general replaced by a
+    non-trivial positive operator.
     We assume throughout this section that the admissible lift is symbol-compatible:
     the principal symbol of $\mathcal{D}_{\Pi,g,A}$ coincides with the projected
     Clifford symbol $\gamma^\mu \xi_\mu$.
@@ -691,11 +691,11 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     \end{lemma}
 
     \begin{proof}
-      When $\Pi_S$ is an isomorphism of the spinor fibres onto $S_\Pi$ (the injectively resolved case),
+      When $\Pi_S$ is a unitary isomorphism of the spinor fibres onto $S_\Pi$ (the injectively resolved case),
       $\Pi_S^*$ is its inverse and $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$.
       The composition~\eqref{eq:projected-dirac} then reduces to $\mathcal{D}_{g,A}$
       on $S_\Pi$, whose square is the standard Lichnerowicz formula; hence $E_\Pi = 0$.
-      When $\Pi_S$ is not an isomorphism, the squared projected operator
+      When $\Pi_S$ is not unitary, the squared projected operator
       contains additional terms controlled by the projection defect.
       This includes the case of a coisometry $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$ with non-trivial kernel,
       where $\mathcal{D}_{\Pi,g,A}^2 = \Pi_S \mathcal{D}_{g,A} P_{\mathrm{ref}} \mathcal{D}_{g,A} \Pi_S^*$ with
@@ -909,12 +909,12 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
 
     The branch selection is therefore an input: a non-zero left-admissible residue must break the
     spinorial BI parity, and the orientation that breaks it is not derived here.
-    Reference~\cite{Beau2026prs} proves the same obstruction for the residue of any $J_\Pi$-commuting locking operator,
-    under its chiral-splitting and $J_\Pi$-compatibility hypotheses.
+    Reference~\cite{Beau2026prs} proves the same obstruction on the left-admissible branch for the residue of any
+    $J_\Pi$-commuting locking operator, under its chiral-splitting and $J_\Pi$-compatibility hypotheses.
 
     On the left-admissible branch, the projective residue is chiral block-diagonal.
     Assume in addition that $E_\Pi \preceq 0$; this is an explicit hypothesis here.
-    Reference~\cite{Beau2026prs} establishes a Schur form $-N^\dagger N \preceq 0$ for the compression remainder
+    Reference~\cite{Beau2026prs} establishes, for a contraction $\Pi_S$ and a locking operator, a Schur form $-N^\dagger N \preceq 0$ for the compression remainder
     $\Pi_S \mathcal{D}_{g,A}(1-P_{\mathrm{ref}})\mathcal{D}_{g,A}\Pi_S^*$, which equals $E_\Pi$ if and only if
     $\Pi_S \mathcal{D}_{g,A}^2 \Pi_S^* = \mathrm{Lich}$, an identity that no source states and that forces
     $\Pi_S\Pi_S^* = \mathrm{id}$ at the level of principal symbols; the sign of $E_\Pi$ is therefore not
@@ -1083,7 +1083,7 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     For the abelian factor this gives the cubic $U(1)_Y$ anomaly; for non-abelian
     factors it gives the mixed $U(1)_Y \times G^2$ anomalies.
     The projective endomorphism $E_\Pi$ contributes further terms.
-    Under the assumption $E_\Pi \preceq 0$ made above, $E_\Pi = P_L E_\Pi P_L$ carries the factor $\tfrac12(1 - \gamma_5)$, traces such as
+    Under the assumption $E_\Pi \preceq 0$ made above and on the left-admissible branch, $E_\Pi = P_L E_\Pi P_L$ carries the factor $\tfrac12(1 - \gamma_5)$, traces such as
     $\operatorname{tr}(\gamma_5 Y E_\Pi^2)$, $\operatorname{tr}(\gamma_5 Y R E_\Pi)$ and
     $\operatorname{tr}(\gamma_5 Y \gamma^\mu\gamma^\nu F_{\mu\nu} E_\Pi)$ need not vanish, although they
     contain fewer than four Clifford matrices.
