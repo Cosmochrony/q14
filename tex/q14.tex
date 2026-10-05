@@ -691,12 +691,16 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     \end{lemma}
 
     \begin{proof}
-      When $\Pi_S$ is injective, $\Pi_S^*$ is its right inverse and
-      $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$.
+      When $\Pi_S$ is an isomorphism of the spinor fibres onto $S_\Pi$ (the injectively resolved case),
+      $\Pi_S^*$ is its inverse and $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$.
       The composition~\eqref{eq:projected-dirac} then reduces to $\mathcal{D}_{g,A}$
       on $S_\Pi$, whose square is the standard Lichnerowicz formula; hence $E_\Pi = 0$.
-      When $\Pi_S \Pi_S^* \neq \mathrm{id}_{S_\Pi}$, the squared projected operator
+      When $\Pi_S$ is not an isomorphism, the squared projected operator
       contains additional terms controlled by the projection defect.
+      This includes the case of a coisometry $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$ with non-trivial kernel,
+      where $\mathcal{D}_{\Pi,g,A}^2 = \Pi_S \mathcal{D}_{g,A} P_{\mathrm{ref}} \mathcal{D}_{g,A} \Pi_S^*$ with
+      $P_{\mathrm{ref}} = \Pi_S^*\Pi_S \neq 1$, so that the identity $\Pi_S \Pi_S^* = \mathrm{id}_{S_\Pi}$ alone does not
+      give $E_\Pi = 0$~\cite{Beau2026prs}.
       By symbol-compatibility, these terms do not modify the principal Clifford symbol
       and therefore contribute only to the zero-order part of the Laplace-type operator.
       They are collected canonically in $E_\Pi$ via
@@ -905,10 +909,17 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
 
     The branch selection is therefore an input: a non-zero left-admissible residue must break the
     spinorial BI parity, and the orientation that breaks it is not derived here.
+    Reference~\cite{Beau2026prs} proves the same obstruction for the residue of any $J_\Pi$-commuting locking operator,
+    under its chiral-splitting and $J_\Pi$-compatibility hypotheses.
 
     On the left-admissible branch, the projective residue is chiral block-diagonal.
-    The Schur form $E_\Pi = -M^\dagger M \preceq 0$ established in~\cite{Beau2026prs},
-    together with left-admissibility $P_R E_\Pi P_R = 0$, forces the off-diagonal
+    Assume in addition that $E_\Pi \preceq 0$; this is an explicit hypothesis here.
+    Reference~\cite{Beau2026prs} establishes a Schur form $-N^\dagger N \preceq 0$ for the compression remainder
+    $\Pi_S \mathcal{D}_{g,A}(1-P_{\mathrm{ref}})\mathcal{D}_{g,A}\Pi_S^*$, which equals $E_\Pi$ if and only if
+    $\Pi_S \mathcal{D}_{g,A}^2 \Pi_S^* = \mathrm{Lich}$, an identity that no source states and that forces
+    $\Pi_S\Pi_S^* = \mathrm{id}$ at the level of principal symbols; the sign of $E_\Pi$ is therefore not
+    inherited from~\cite{Beau2026prs} and is assumed.
+    Together with left-admissibility $P_R E_\Pi P_R = 0$, it forces the off-diagonal
     chiral blocks to vanish: a self-adjoint negative-semidefinite operator with a
     vanishing diagonal block has vanishing off-diagonal blocks.
     Consequently
@@ -1072,7 +1083,7 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     For the abelian factor this gives the cubic $U(1)_Y$ anomaly; for non-abelian
     factors it gives the mixed $U(1)_Y \times G^2$ anomalies.
     The projective endomorphism $E_\Pi$ contributes further terms.
-    Since $E_\Pi = P_L E_\Pi P_L$ carries the factor $\tfrac12(1 - \gamma_5)$, traces such as
+    Under the assumption $E_\Pi \preceq 0$ made above, $E_\Pi = P_L E_\Pi P_L$ carries the factor $\tfrac12(1 - \gamma_5)$, traces such as
     $\operatorname{tr}(\gamma_5 Y E_\Pi^2)$, $\operatorname{tr}(\gamma_5 Y R E_\Pi)$ and
     $\operatorname{tr}(\gamma_5 Y \gamma^\mu\gamma^\nu F_{\mu\nu} E_\Pi)$ need not vanish, although they
     contain fewer than four Clifford matrices.
@@ -1370,7 +1381,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
   The step generator of Subsection~\ref{ssec:dg-bridge} does not preserve the splitting, but its
   components along $J_3$ and $R_{\mathrm{mix}}$ are the same for $P$ and for $J_\Pi$.
   The operators of this section are linear algebra on $\mathbb{C}^3_{\mathrm{gen}}$; reading them as
-  restrictions of $E_\Pi^2$ is an identification that is not supplied~\cite{Beau2026prs}.
+  restrictions of $E_\Pi^2$ is an identification that is not derived; \cite{Beau2026prs} states it only as a hypothesis
+  (a reading map).
   Accordingly, in this section $E_\Pi^2|_{\mathbb{C}^3_{\mathrm{gen}}}$ denotes a model operator on
   $\mathbb{C}^3_{\mathrm{gen}}$ standing for that restriction, not a computed restriction.
 
@@ -1412,7 +1424,7 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
       The matrix $\operatorname{diag}(1, \tfrac12, \tfrac12)$ satisfies both hypotheses; up to
       normalisation and ordering of the weight basis it is the form of the conditional covariance of
       O30~\cite{Beau2026a34}, whose identification with a restriction of $E_\Pi^2$ is not
-      available~\cite{Beau2026prs}.
+      derived (\cite{Beau2026prs} states a reading map only as a hypothesis).
     \end{remark}
 
   \subsection{The oriented odd sector}
