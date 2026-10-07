@@ -4,7 +4,7 @@ J. Beau, Independent Researcher, France
 
 ## Status
 
-Preprint, v3.1 (local candidate; last deposited version 3.0). DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20218409)
+Preprint, v3.1. DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20218409)
 
 Version 3.0 was deposited on 2026-09-30 as [Zenodo record 23071163](https://zenodo.org/record/23071163).
 
