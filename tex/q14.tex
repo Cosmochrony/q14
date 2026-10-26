@@ -1,10 +1,13 @@
-%% Q14 — Toward Fermionic Matter from Projective Dirac Admissibility (3.1)
+%% Q14 — Toward Fermionic Matter from Projective Dirac Admissibility (3.2)
 %% Cosmochrony programme, Q-series paper 14
 %% J. Beau, 2026
 
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\input{glyphtounicode}
+\pdfgentounicode=1
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
@@ -59,50 +62,43 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
 \small Independent Researcher, France\\
 \small \texttt{jerome.beau@cosmochrony.org}}
 
-\date{2026}
+\date{2026\\[2pt]\small Version 3.2}
 
 \begin{document}
 
   \maketitle
 
   \begin{abstract}
-    The gauge--gravity synthesis of the Cosmochrony programme reads gravity and Yang--Mills dynamics,
-    conditionally, as the $a_2$ and $a_4$ Seeley--DeWitt responses of one admissible spectral functional.
-    This paper asks what the fermionic sector requires when fermions are sought in the Weil module of the
-    admissible fibre on a supplied Heisenberg carrier, which every result below inherits.
-
-    The finite carrier acts through $\SL(2,\mathbb{Z}/q\mathbb{Z})$, so a real metaplectic model and a
-    doublet carrying its Lie algebra are supplied model data; given them, the algebra is proved:
-    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}} \simeq \mathfrak{sl}_2(\mathbb{C})$, the symmetric square of
-    the doublet is the adjoint and its exterior square the trivial line.
-    Given the supplied Born--Infeld parity datum, the internal parity $HK$ satisfies $(HK)^2 = -1$ without
-    any metric.
-    The physical readings require two distinct hypotheses, stated in the paper and supplied by no source.
-    [H-Spin] identifies the $\SL(2,\mathbb{C})$ acting on the doublet with the spin group of a
-    four-dimensional Lorentzian co-metric on the effective base; the geometric branch supplies such a
-    co-metric only conditionally, and nothing relates the metaplectic action to its frames.
-    [H-Weak] supplies a distinct rank-two weak factor: by Schur's lemma a weak action commuting with
-    Lorentz transformations cannot live on the same copy of the doublet, whose symmetric square is then a
-    Lorentz sector and whose exterior square carries no hypercharge.
-    Under [H-Spin], the projected Dirac operator contains a canonical zero-order endomorphism $E_\Pi$, the
-    spectral residue of non-injective projection; the spinorial lift of the parity is unique up to a phase and reverses
-    chirality, and $E_\Pi$ is left-admissible on the orientation-compatible branch, an input.
-    The chiral selection of the weak interaction, the $V{-}A$ structure, and the anomaly-cancellation
-    constraints on the hypercharge weights require [H-Weak] as well, and left-admissibility does not
-    select the chiral assignment.
-    Both hypotheses are missing identifications, not refutations.
-    The supplied rank-three selection rule $\sigma_c(n_3) = 3$ (O23) admits a spinorial multiplicity
-    reading, giving conditionally a gauge-singlet three-generation factor
-    $\mathbb{C}^3_{\mathrm{gen}} \subset \ker(\operatorname{ad}_{\SU(2)} \oplus Y)$.
+    The Cosmochrony gauge--gravity synthesis conditionally reads gravity and Yang--Mills dynamics as
+    $a_2$ and $a_4$ responses of one spectral functional.
+    This paper asks what its fermionic sector requires.
+    A supplied dictionary identifies the admissible fibre with a Heisenberg carrier $\mathcal{H}_c$;
+    its associated Weil block $V_c \simeq \mathbb{C}^q$ is distinct from the supplied spinor doublet
+    $V_\rho \simeq \mathbb{C}^2$, and no map selecting that doublet is constructed.
+    The finite symplectic group has no Lie algebra.
+    A real metaplectic model and its Lie-algebra action on the doublet are independent model inputs.
+    Given them, $\mathfrak{mp}(2,\mathbb{R})_\mathbb{C} \simeq \mathfrak{sl}_2(\mathbb{C})$;
+    the symmetric square is the adjoint and the exterior square the trivial line.
+    Given the supplied Born--Infeld parity datum, $(HK)^2=-1$ without a metric.
+    The physical readings require two hypotheses supplied by no source.
+    [H-Spin] identifies the doublet action with the spin group of a four-dimensional Lorentzian co-metric,
+    which the geometric branch supplies only conditionally.
+    [H-Weak] supplies a distinct rank-two weak factor: Schur's lemma prevents a commuting weak action
+    on the same Lorentz doublet.
+    Connection-dependent admissible readings also retain Q6a's two unproved continuum hypotheses:
+    a smooth effective fibre bundle and a differentiable spatial continuum, the latter open in Q5a.
+    Under these geometric assumptions the projected Dirac operator contains a zero-order endomorphism $E_\Pi$;
+    the spinorial parity lift is unique up to phase and reverses chirality.
+    Left-admissibility is an input orientation branch.
+    Weak $V{-}A$ selection and hypercharge anomaly constraints additionally require [H-Weak];
+    left-admissibility alone does not select the weak assignment.
+    The supplied rank-three rule $\sigma_c(n_3)=3$ gives a conditional three-generation factor.
     The quark sector uses a supplied colour module; no $\mathrm{SU}(3)$ is derived.
-    Finally, in a metaplectic step model the ordered step generator $\log g$ has a non-zero $J_3$
-    component in the sector that can lift the static degeneracy of the generation factor; its
-    identification with an emergent ordering derivative is not supplied, and the amplitude is open.
-    Interpretive outlook (a reading, not a result): chirality is where the internal algebra of the
-    admissible fibre must meet spacetime geometry and the weak interaction at once.
-    The paper locates that meeting point in two explicit hypotheses, which turns the question of why
-    weak interactions are left-handed into the question of how the metaplectic symmetry of the fibre is
-    joined to Lorentz frames and to a separate internal doublet.
+    An ordered metaplectic step model can lift the static generation degeneracy, but its identification
+    with an ordering derivative and its amplitude remain open.
+    \emph{Interpretive outlook (a reading, not a result).}
+    Chirality locates the missing meeting of internal algebra, Lorentz frames and a separate weak doublet;
+    the paper identifies the assumptions needed to study why weak interactions are left-handed.
   \end{abstract}
 
   \medskip
@@ -164,8 +160,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
       \begin{equation}
         \label{eq:main-chain}
         \Pi
-        \;\Rightarrow\;
-        F_n \simeq V_\rho
+        \;\leadsto\;
+        F_n \overset{\text{model}}{\simeq} \mathcal{H}_c
         \;\overset{\text{model}}{\leadsto}\;
         \Mp(2,\mathbb{R})
         \;\Rightarrow\;
@@ -175,8 +171,12 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
         \;\Rightarrow\;
         S_\Pi .
       \end{equation}
-      The identification $F_n \simeq V_\rho$ is the Weil-module characterisation of the
-      admissible fibre on a \emph{supplied} Heisenberg carrier.
+      The identification $F_n \overset{\text{model}}{\simeq} \mathcal{H}_c$ is a modelling dictionary on a
+      \emph{supplied} Heisenberg carrier.
+      Here $\mathcal{H}_c \simeq \mathbb{C}^q$ carries the Heisenberg action at central character $c$;
+      $V_c$ denotes the same space with its associated Weil action, and neither is the supplied
+      spinor doublet $V_\rho \simeq \mathbb{C}^2$ of O23.
+      No map selecting that doublet from $V_c$ is constructed here.
       It is not derived from the axioms: Foundation~\cite{Beau2026m} and
       HeisenbergStructure~\cite{Beau2026HeisenbergStructure} establish that A1--A3 force
       irreducibility and non-commutation, but neither makes the commutator central nor selects a
@@ -185,7 +185,7 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
       Stone--von Neumann is a conditional endpoint, supplying uniqueness at a fixed non-trivial
       central character once that carrier is given.
       The passage to $\Mp(2,\mathbb{R})$ is not an implication either.
-      On the finite carrier, the automorphisms preserving the centre act on $V_\rho$ through the finite
+      On the finite carrier, the associated symplectic action on $V_c$ factors through the finite
       symplectic group $\SL(2,\mathbb{Z}/q\mathbb{Z})$ and its Weil representation, which has no Lie
       algebra; $\Mp(2,\mathbb{R})$ acts on the infinite-dimensional oscillator representation of the real
       Heisenberg group, which has no finite-dimensional invariant subspace.
@@ -297,7 +297,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     where $V_{\mathrm{color}} \in \Rep(\SU(3))$.
     The following status distinctions apply throughout the paper.
     The electroweak spinorial sector is conditional on Hypotheses~\ref{hyp:spin-solder}
-    and~\ref{hyp:weak-factor}, and Theorem~A itself is conditional on the supplied Heisenberg carrier that fixes $F_n \simeq V_\rho$
+    and~\ref{hyp:weak-factor}, and Theorem~A uses a supplied real metaplectic model and a distinct doublet $V_\rho$.
+    The dictionary $F_n \overset{\text{model}}{\simeq} \mathcal{H}_c$ is supplied independently
     (Subsection~\ref{ssec:weil-metaplectic}); that condition is upstream of, and independent of,
     the colour module below.
     The colour-coupled quark bundle $S_\Pi \otimes V_{\mathrm{color}}$ is \emph{conditional} on a
@@ -342,7 +343,9 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     This paper depends simultaneously on four layers of the programme: the admissible
     Weil fibre structure (Foundation, HeisenbergStructure, O-series); the effective co-metric
     of the geometric branch (Q5b, Q8, Q11), which enters only through
-    Hypothesis~\ref{hyp:spin-solder}; the gauge connection (Q6a, Q12); and the
+    Hypothesis~\ref{hyp:spin-solder}; a supplied gauge connection under the two continuum
+    hypotheses of Q6a (smooth effective fibre bundle and differentiable spatial continuum, the latter
+    open in Q5a); and the
     gauge--gravity synthesis (Q13, Gravity).
     It is accordingly the first paper of the Q-series whose construction depends on
     the simultaneous use of all four layers.
@@ -375,18 +378,21 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
   \subsection{From the Weil module to the metaplectic lift}
     \label{ssec:weil-metaplectic}
 
-    The admissible fibre $F_n$ is identified with the Weil module $V_\rho$ of
-    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ at a fixed non-trivial central character, on a
-    Heisenberg carrier that is supplied rather than selected by the
+    A supplied dictionary identifies $F_n$ with the Heisenberg--Schr\"odinger carrier
+    $\mathcal{H}_c \simeq L^2(\mathbb{Z}/q\mathbb{Z})$ at a fixed non-trivial central character.
+    Foundation distinguishes this action from the associated Weil action on $V_c$ and from the
+    spinor doublet $V_\rho \simeq \mathbb{C}^2$ supplied conditionally by O23.
+    Neither the carrier nor this dictionary is selected by the
     axioms~\cite{Beau2026m,Beau2026HeisenbergStructure}.
-    The Weil module carries the symplectic structure associated with the Heisenberg commutator.
-    On the finite carrier, the automorphisms preserving the centre act on $V_\rho$ through the finite
+    The Heisenberg commutator supplies the symplectic form on the quotient by the centre; it is not
+    an identification of $V_c$ with the spinor doublet.
+    On the finite carrier, the associated symplectic action on $V_c$ factors through the finite
     symplectic group $\SL(2,\mathbb{Z}/q\mathbb{Z})$ and its Weil representation.
     That group has no Lie algebra.
     Its continuum counterpart is the metaplectic group $\Mp(2,\mathbb{R})$, the double cover of
     $\mathrm{Sp}(2,\mathbb{R})$ acting on the oscillator representation of the real Heisenberg group:
     \[
-      F_n \simeq V_\rho
+      F_n \overset{\text{model}}{\simeq} \mathcal{H}_c
       \quad\leadsto\quad
       \Mp(2,\mathbb{R}).
     \]
@@ -614,7 +620,12 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
 
     Let $\nabla^{S,A}$ denote the spin--gauge connection on $S_\Pi$, obtained by
     combining the Levi--Civita spin connection of the effective metric $g$ with the
-    admissible gauge connection $A$ of~\cite{Beau2026q6a,Beau2026q12}.
+    supplied gauge connection $A$ of~\cite{Beau2026q6a,Beau2026q12}.
+    Its interpretation as admissible fibre transport inherits both unproved continuum hypotheses of
+    Q6a, Section~4: an effective smooth fibre bundle and a differentiable base arising from a spatial
+    continuum, which Q5a leaves open.
+    All connection-dependent Dirac, curvature and anomaly statements below inherit these assumptions;
+    supplying a smooth background connection for calculation does not derive its emergence.
     The minimally coupled Dirac operator is
     \begin{equation}
       \label{eq:minimal-dirac}
@@ -623,7 +634,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
     In an ordinary $\mathrm{spin}^c$ geometry over a given manifold, the square of
     this operator is governed by the standard Lichnerowicz formula.
     In the present setting, $S_\Pi$ is not a primitive spinor bundle over a pre-existing
-    manifold: it is the spinorial face of the admissible Weil fibre, and the projection
+    manifold: its proposed reading as a spinorial sector of the admissible fibre requires the supplied
+    doublet and spin solder; the projection
     $\Pi$ acts non-trivially on the spinorial sector.
 
   \subsection{The projective correction and the definition of
@@ -1844,8 +1856,8 @@ a Lorentzian Spin Solder and a Distinct Weak Factor}
   The structural chain of the paper is
   \[
     \Pi
-    \Rightarrow
-    F_n \simeq V_\rho
+    \leadsto
+    F_n \overset{\text{model}}{\simeq} \mathcal{H}_c
     \overset{\text{model}}{\leadsto}
     \Mp(2,\mathbb{R})
     \Rightarrow

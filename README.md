@@ -1,3 +1,5 @@
+Local candidate 3.2; last deposited version 3.1.
+
 # Q14 — Toward Fermionic Matter from Projective Dirac Admissibility: Chirality and Electroweak Structure Rest on a Lorentzian Spin Solder and a Distinct Weak Factor
 
 J. Beau, Independent Researcher, France
@@ -67,3 +69,9 @@ bash compile.sh
 # or manually:
 pdflatex -output-directory=out tex/q14.tex
 ```
+
+## Candidate changes
+
+The admissible Heisenberg carrier, its associated Weil action and the supplied spinor doublet are distinct.
+Connection-dependent admissible interpretations retain Q6a's two unproved continuum hypotheses: a smooth
+effective fibre bundle and a differentiable spatial continuum, the latter open in Q5a.
