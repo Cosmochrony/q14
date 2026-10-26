@@ -70,7 +70,7 @@ bash compile.sh
 pdflatex -output-directory=out tex/q14.tex
 ```
 
-## Candidate changes
+## Changes in version 3.2
 
 The admissible Heisenberg carrier, its associated Weil action and the supplied spinor doublet are distinct.
 Connection-dependent admissible interpretations retain Q6a's two unproved continuum hypotheses: a smooth
