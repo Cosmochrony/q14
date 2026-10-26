@@ -8,6 +8,8 @@ Preprint, v3.2. DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20
 
 Version 3.2 was deposited on 2026-10-26 as [Zenodo record 23667579](https://zenodo.org/record/23667579).
 
+Version 3.1 was deposited on 2026-10-07 as [Zenodo record 23222683](https://zenodo.org/record/23222683).
+
 Version 3.0 was deposited on 2026-09-30 as [Zenodo record 23071163](https://zenodo.org/record/23071163).
 
 ## Abstract
