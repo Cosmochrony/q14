@@ -1,12 +1,12 @@
-Local candidate 3.2; last deposited version 3.1.
-
 # Q14 — Toward Fermionic Matter from Projective Dirac Admissibility: Chirality and Electroweak Structure Rest on a Lorentzian Spin Solder and a Distinct Weak Factor
 
 J. Beau, Independent Researcher, France
 
 ## Status
 
-Preprint, v3.1. DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20218409)
+Preprint, v3.2. DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20218409)
+
+Version 3.2 was deposited on 2026-10-26 as [Zenodo record 23667579](https://zenodo.org/record/23667579).
 
 Version 3.0 was deposited on 2026-09-30 as [Zenodo record 23071163](https://zenodo.org/record/23071163).
 
