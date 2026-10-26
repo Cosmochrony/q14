@@ -4,7 +4,9 @@ J. Beau, Independent Researcher, France
 
 ## Status
 
-Preprint, v3.2. DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20218409)
+Preprint, v3.3. DOI: [10.5281/zenodo.20218409](https://doi.org/10.5281/zenodo.20218409)
+
+Version 3.3 was deposited on 2026-10-27 as [Zenodo record 23678683](https://zenodo.org/record/23678683).
 
 Version 3.2 was deposited on 2026-10-26 as [Zenodo record 23667579](https://zenodo.org/record/23667579).
 
@@ -71,6 +73,12 @@ bash compile.sh
 # or manually:
 pdflatex -output-directory=out tex/q14.tex
 ```
+
+## Changes in version 3.3
+
+The admissibility axioms A1–A3 give irreducibility and non-commutation only under a representation-theoretic
+dictionary and an additional sector reading of A3, not derived (Foundation 2.6, Lemma 5.6). No other statement is
+changed.
 
 ## Changes in version 3.2
 
