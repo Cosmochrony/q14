@@ -28,7 +28,7 @@ import matplotlib.pyplot as plt
 
 # --------------------------------------------------------------------------- #
 DELTA_PAIR = 7.44          # fibre-level capacity exponent (O16-O21)
-N_SAT = 13                 # n_3^obs proxy (intrinsic saturation rank, O21 scale)
+N_SAT = 13                 # saturation-depth proxy at the O21 scale (the O21 crossing rank is normalisation dependent, not intrinsic)
 OUT_PNG = "epi_transfer_kernel.png"
 
 n = np.arange(0, N_SAT + 1)
