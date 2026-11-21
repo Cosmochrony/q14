@@ -4,5 +4,5 @@
   "main_tex": "tex/q14.tex",
   "zenodo_id": 20218409,
   "doi": "10.5281/zenodo.20218409",
-  "notes": "Version 3.3.2. The bibliography entry for O22 carries its version-1.19 title, 'Projection Locking of the Saturation Depth: A Discrete Admissibility Theorem under Born-Infeld Saturation' (formerly 'Shell-Alignment from Projection Locking'). No other change."
+  "notes": "Version 3.3.2. The bibliography entry for O22 carries its version-1.19 title, 'Projection Locking of the Saturation Depth: A Discrete Admissibility Theorem under Born-Infeld Saturation' (formerly 'Shell-Alignment from Projection Locking'). One code comment (code/epi_transfer_kernel.py) no longer calls the O21 crossing rank intrinsic. No other change."
 }
